@@ -1,10 +1,11 @@
-import { View, Text } from 'react-native'
+import { View, SafeAreaView, Text, StatusBar } from 'react-native'
 import React from 'react'
+import { CircleButton } from '../components/Button';
 
-const SecondIntroduction = () => {
+const SecondIntroduction = ({}) => {
   return (
     <View>
-      <Text>Felix</Text>
+      <Text>Olá Alek</Text>
     </View>
   )
 }
