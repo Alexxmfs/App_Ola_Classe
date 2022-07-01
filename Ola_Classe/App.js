@@ -3,8 +3,11 @@ import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import 'react-native-gesture-handler';
 
-import FirstIntroduction from "./src/Screens/FirstIntroduction";
-import SecondIntroduction from "./src/Screens/SecondIntroduction";
+import FirstIntroduction from "./src/Screens/introduce/FirstIntroduction";
+import SecondIntroduction from "./src/Screens/introduce/SecondIntroduction";
+import ThirdIntroduction from "./src/Screens/introduce/ThirdIntroduction";
+import Registry from "./src/Screens/Registry";
+import SignUp from "./src/Screens/SignUp";
 
 const Stack = createStackNavigator();
 
@@ -33,6 +36,9 @@ const App = () => {
       initialRouteName="FirstIntroduction">
         <Stack.Screen name="FirstIntroduction" component={FirstIntroduction} />
         <Stack.Screen name="SecondIntroduction" component={SecondIntroduction} />
+        <Stack.Screen name="ThirdIntroduction" component={ThirdIntroduction} />
+        <Stack.Screen name="Registry" component={Registry} />
+        <Stack.Screen name="SignUp" component={SignUp} />
       </Stack.Navigator>
     </NavigationContainer>
   );
