@@ -41,7 +41,7 @@ const Registry = (props) => {
     <View style={{marginLeft: 112, top: 2}}>
     <ButtonWhite 
  
-    onPress={() => props.navigation.navigate("")}
+    onPress={() => props.navigation.navigate("SignIn")}
     />
   </View>
 

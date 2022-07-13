@@ -8,6 +8,7 @@ import SecondIntroduction from "./src/Screens/introduce/SecondIntroduction";
 import ThirdIntroduction from "./src/Screens/introduce/ThirdIntroduction";
 import Registry from "./src/Screens/Registry";
 import SignUp from "./src/Screens/SignUp";
+import SignIn from "./src/Screens/SignIn";
 
 const Stack = createStackNavigator();
 
@@ -33,12 +34,13 @@ const App = () => {
   return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator screenOptions={{ headerShown: false }}
-      initialRouteName="SignUp">
+      initialRouteName="SignIn">
         <Stack.Screen name="FirstIntroduction" component={FirstIntroduction} />
         <Stack.Screen name="SecondIntroduction" component={SecondIntroduction} />
         <Stack.Screen name="ThirdIntroduction" component={ThirdIntroduction} />
         <Stack.Screen name="Registry" component={Registry} />
         <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="SignIn" component={SignIn} />
       </Stack.Navigator>
     </NavigationContainer>
   );

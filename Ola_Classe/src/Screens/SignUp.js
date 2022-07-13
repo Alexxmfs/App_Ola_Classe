@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { CustomInput, CustomInputDate} from '../components/CustomInput';
 import { CircleButton, ButtonCreateAccount } from '../components/Button';
@@ -66,6 +66,7 @@ const SignUp = (props) => {
         <ButtonCreateAccount />
       </View>
       <View style={{height: 50}}>
+      <TouchableOpacity  onPress={() => props.navigation.navigate("SignIn")}>
           <View style={{marginTop: 10, marginLeft: 20}}>
            <Text style={{color: '#A09C9C'}}>
            <Text>Já tem uma conta?</Text>
@@ -73,7 +74,7 @@ const SignUp = (props) => {
             </Text>
         </Text>
       </View>
-       
+      </TouchableOpacity>
       </View>
       </ScrollView>
     </View>

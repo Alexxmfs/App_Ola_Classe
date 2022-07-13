@@ -88,7 +88,7 @@ export const ButtonWhite = ({ onPress }) => {
       style={{
         marginTop: 20,
         width: 350,
-        padding: 15,
+        padding: 10,
         backgroundColor: '#0A58EE',
         borderRadius: 13,
         alignItems: 'center',
