@@ -33,7 +33,7 @@ const App = () => {
   return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator screenOptions={{ headerShown: false }}
-      initialRouteName="FirstIntroduction">
+      initialRouteName="SignUp">
         <Stack.Screen name="FirstIntroduction" component={FirstIntroduction} />
         <Stack.Screen name="SecondIntroduction" component={SecondIntroduction} />
         <Stack.Screen name="ThirdIntroduction" component={ThirdIntroduction} />

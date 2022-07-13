@@ -80,3 +80,25 @@ export const ButtonWhite = ({ onPress }) => {
       </TouchableOpacity>
     )
   }
+
+  export const ButtonCreateAccount = ({ onPress }) => {
+  return (
+    <View style={{ alignItems: 'center', justifyContent: 'center'}}>
+    <TouchableOpacity
+      style={{
+        marginTop: 20,
+        width: 350,
+        padding: 15,
+        backgroundColor: '#0A58EE',
+        borderRadius: 13,
+        alignItems: 'center',
+        justifyContent: 'center',
+       }}
+       onPress={onPress}>
+        <Text style={{ color: '#FFF', fontSize: 25, justifyContent: 'center', fontWeight: '700', alignItems: 'center', justifyContent: 'center'}}>
+          Criar Conta
+        </Text>
+    </TouchableOpacity>
+    </View>
+  );  
+} 

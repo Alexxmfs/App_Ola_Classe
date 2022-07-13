@@ -3,6 +3,7 @@ import onlineSchool from "../assets/image/onlineSchool.png";
 import findCourse from "../assets/image/findCourse.png";
 import next from "../assets/icons/next.png";
 import register from "../assets/image/register.png";
+import eye from '../assets/icons/eye.png';
 
 export default { 
 
@@ -11,6 +12,7 @@ onlineSchool,
 findCourse,
 next,
 register,
+eye
 
 };
 
