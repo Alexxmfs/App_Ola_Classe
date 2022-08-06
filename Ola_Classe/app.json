@@ -24,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/iconLogo.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.zprinted.Ola_Classe"
     },
     "web": {
       "favicon": "./assets/favicon.png"

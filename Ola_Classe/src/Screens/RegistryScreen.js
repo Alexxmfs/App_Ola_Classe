@@ -3,9 +3,9 @@ import React from 'react';
 import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../constants';
 import { CircleButton, ButtonWhite, ButtonBlue} from '../components/Button';
 
-const Registry = (props) => {
+const RegistryScreen = ({navigation}) => {
   return (
-    <View style={{ flex: 1,  alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{ flex: 1,  alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', backgroundColor: '#FFF'}}>
 
     <Image
     source={assets.register}
@@ -34,14 +34,14 @@ const Registry = (props) => {
     
     <View style={{marginTop: 60, top: 52, marginRight: 10}}>
     <ButtonBlue 
-    onPress={() => props.navigation.navigate("SignUp")}
+    onPress={() => navigation.navigate("StudentOrTeacher")}
     />
 </View>
 
     <View style={{marginLeft: 112, top: 2}}>
     <ButtonWhite 
  
-    onPress={() => props.navigation.navigate("SignIn")}
+    onPress={() => navigation.navigate("LoginScreen")}
     />
   </View>
 
@@ -52,4 +52,4 @@ const Registry = (props) => {
   )
 }
 
-export default Registry
+export default RegistryScreen

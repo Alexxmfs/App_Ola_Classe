@@ -3,10 +3,10 @@ import React from 'react'
 import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../../constants'
 import { CircleButton } from '../../components/Button';
 
-const SecondIntroduction = (props) => {
+const SecondIntroduction = ({navigation}) => {
   return (
-  <SafeAreaView>
-    <View style={{ width: "100%", alignItems: 'center', justifyContent: 'center' }}>
+  <SafeAreaView style={{width: '100%', height: '100%', backgroundColor: '#FFF'}}>
+    <View style={{ width: "100%", alignItems: 'center', justifyContent: 'center', backgroundColor: '#FFF' }}>
       <Image 
       source={assets.onlineSchool}
       resizeMode= "cover"
@@ -28,11 +28,11 @@ const SecondIntroduction = (props) => {
       Qualquer lugar, qualquer hora. Comece a aprender hoje!
     </Text>
 
-    <View style={{ left: 135, marginTop: 90}}>
+    <View style={{ left: 135, marginTop: 90, backgroundColor: '#FFF'}}>
     <CircleButton 
     style = {{right: 145}}
     imgUrl = {assets.next}
-    onPress={() => props.navigation.navigate("ThirdIntroduction")}
+    onPress={() => navigation.navigate("ThirdIntroduction")}
     />
         </View>
     </View>

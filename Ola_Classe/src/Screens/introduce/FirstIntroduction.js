@@ -3,7 +3,7 @@ import React from 'react'
 import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../../constants'
 import { CircleButton } from '../../components/Button'
 
-const FirstIntroduction = (props) => {
+const FirstIntroduction = ({navigation}) => {
   return (
     <View style={{ flex: 1,  alignItems: 'center', justifyContent: 'center', paddingTop: 50 }}>
 
@@ -33,7 +33,7 @@ const FirstIntroduction = (props) => {
  
     <CircleButton 
     imgUrl = {assets.next}
-    onPress={() => props.navigation.navigate("SecondIntroduction")}
+    onPress={() => navigation.navigate("SecondIntroduction")}
     />
         </View>
     </View>
