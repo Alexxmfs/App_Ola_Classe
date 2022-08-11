@@ -13,10 +13,18 @@ import RegistryScreen from "./src/Screens/RegistryScreen";
 import SignUpScreen from "./src/Screens/SignUpScreen";
 import LoginScreen from "./src/Screens/LoginScreen";
 import HomeScreen from './src/Screens/HomeScreen';
-
 import StudentOrTeacher from './src/Screens/StudentOrTeacher';
 import TeacherLang from './src/Screens/languagesScreens/TeacherLang'
 import StudentLang from './src/Screens/languagesScreens/StudentLang';
+
+import VideoScreen from "./src/Screens/VideoScreen";
+import CreatePostScreen from "./src/Screens/CreatePostScreen";
+import ChatScreen from "./src/Screens/ChatScreen";
+import NotificationScreen from "./src/Screens/NotificationScreen";
+
+
+
+
 
 const Stack = createStackNavigator();
 
@@ -44,6 +52,10 @@ export const SignedInStack = () => {
       <Stack.Navigator screenOptions={{ headerShown: false }}
       initialRouteName="HomeScreen">
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="VideoScreen" component={VideoScreen} />
+        <Stack.Screen name="CreatePostScreen" component={CreatePostScreen} />
+        <Stack.Screen name="ChatScreen" component={ChatScreen} />
+        <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
@@ -67,7 +79,7 @@ export const SignedOutStack = () => {
   <NavigationContainer>
     <Stack.Navigator
     screenOptions={{ headerShown: false }}
-    initialRouteName='HomeScreen'>
+    initialRouteName='FirstIntroduction'>
         <Stack.Screen name="FirstIntroduction" component={FirstIntroduction} />
         <Stack.Screen name="SecondIntroduction" component={SecondIntroduction} />
         <Stack.Screen name="ThirdIntroduction" component={ThirdIntroduction} />
@@ -77,6 +89,7 @@ export const SignedOutStack = () => {
         <Stack.Screen name="StudentOrTeacher" component={StudentOrTeacher} />
         <Stack.Screen name="TeacherLang" component={TeacherLang} />
         <Stack.Screen name="StudentLang" component={StudentLang} />
+        {/* <Stack.Screen name="VideoScreen" component={VideoScreen} /> */}
         {/* ⚠️HomeScreem Apaga pra n da merda⚠️*/}
         {/* <Stack.Screen name="HomeScreen" component={HomeScreen} /> */}
         {/* ⚠️HomeScreem Apaga pra n da merda⚠️ */}
