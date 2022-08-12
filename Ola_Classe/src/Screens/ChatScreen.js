@@ -3,10 +3,10 @@ import { ScrollView, Animated, Image, StyleSheet, Text, TouchableOpacity, View, 
 import React, { useRef, useState } from 'react';
 import Header from '../components/Header';
 // import { useNavigation } from '@react-navigation/native';
-import { NavBarHome } from '../components/Navbar';
+import { NavBarChat } from '../components/Navbar';
 
 
-const HomeScreen = ({navigation}) => {
+const ChatScreen = ({navigation}) => {
   const [showMenu, setShowMenu] = useState(false);
   const offsetValue = useRef(new Animated.Value(0)).current;
   const scaleValue = useRef(new Animated.Value(1)).current;
@@ -96,7 +96,7 @@ const HomeScreen = ({navigation}) => {
             <Header navigation={navigation} />
 
             <View style={{marginTop: -20}}>
-            <NavBarHome />
+            <NavBarChat />
 
             </View>
 
@@ -106,47 +106,47 @@ const HomeScreen = ({navigation}) => {
 
 
 
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
+            <Text>Tela de CHAAAAAAAAAAAAAAAAAATTTTTT</Text>
             <Text>CAAAAATEEEEEGORIAAAA</Text>
             <Text>CAAAAATEEEEEGORIAAAA</Text>
             <Text>CAAAAATEEEEEGORIAAAA</Text>
@@ -322,4 +322,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen
+export default ChatScreen

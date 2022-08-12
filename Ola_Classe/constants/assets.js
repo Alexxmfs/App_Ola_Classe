@@ -32,6 +32,21 @@ import iconTermsUse from '../assets/image/iconTermsUse.png';
 import iconConfig from '../assets/image/iconConfig.png';
 import menu from  '../assets/image/menu.png';
 import close from  '../assets/image/close.png';
+import iconSearch from '../assets/icons/iconSearch.png';
+
+import iconHome from '../assets/icons/iconHome.png';
+import iconHomeActivated from '../assets/icons/iconHomeActivated.png';
+
+import iconVideo from '../assets/icons/iconVideo.png';
+import iconVideoActivated from '../assets/icons/iconVideoActivated.png';
+
+import iconPost from '../assets/icons/iconPost.png';
+
+import iconChat from '../assets/icons/iconChat.png';
+import iconChatActivated from '../assets/icons/iconChatActivated.png'
+
+import iconBell from '../assets/icons/iconBell.png';
+import iconBellActivated from '../assets/icons/iconBellActivated.png';
 
 
 export default { 
@@ -51,6 +66,16 @@ iconTermsUse,
 iconConfig,
 menu,
 close,
+iconSearch,
+iconHome,
+iconHomeActivated,
+iconVideo,
+iconVideoActivated,
+iconPost,
+iconChat,
+iconChatActivated,
+iconBell,
+iconBellActivated,
 
 
 };
