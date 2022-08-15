@@ -5,6 +5,7 @@ import { SIZES, assets } from '../../constants';
 import { CircleButton } from '../components/Button';
 import LottieView from 'lottie-react-native';
 
+
 const SignupScreen = ({navigation}) => (
 <View style={styles.container}>
     <ScrollView>

@@ -33,20 +33,18 @@ import iconConfig from '../assets/image/iconConfig.png';
 import menu from  '../assets/image/menu.png';
 import close from  '../assets/image/close.png';
 import iconSearch from '../assets/icons/iconSearch.png';
-
 import iconHome from '../assets/icons/iconHome.png';
 import iconHomeActivated from '../assets/icons/iconHomeActivated.png';
-
 import iconVideo from '../assets/icons/iconVideo.png';
 import iconVideoActivated from '../assets/icons/iconVideoActivated.png';
-
 import iconPost from '../assets/icons/iconPost.png';
-
 import iconChat from '../assets/icons/iconChat.png';
 import iconChatActivated from '../assets/icons/iconChatActivated.png'
-
 import iconBell from '../assets/icons/iconBell.png';
 import iconBellActivated from '../assets/icons/iconBellActivated.png';
+
+import imgAsh from '../assets/image/imgAsh.png'
+import imgJordan from '../assets/image/imgJordan.png'
 
 
 export default { 
@@ -54,20 +52,8 @@ export default {
 easyAccess, onlineSchool, findCourse, next, register, animationSignUp,
 logo, teacher, student, circleCat, python, html, CSharp, java,
 javascript, css, flutter, react, swift, kotlin, dart, typescript,
-angular,
-node,
-vueJS,
-pensando,
-LogoOlaClasse,
-iconFriends,
-iconCategory,
-iconSaved,
-iconTermsUse,
-iconConfig,
-menu,
-close,
-iconSearch,
-iconHome,
+angular, node, vueJS, pensando, LogoOlaClasse, iconFriends, iconCategory,
+iconSaved, iconTermsUse, iconConfig, menu, close, iconSearch, iconHome,
 iconHomeActivated,
 iconVideo,
 iconVideoActivated,
@@ -76,6 +62,7 @@ iconChat,
 iconChatActivated,
 iconBell,
 iconBellActivated,
-
+imgAsh,
+imgJordan
 
 };

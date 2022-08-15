@@ -421,6 +421,60 @@ export default class ButtonCat extends React.Component {
   }
 }
 
+export const ButtonFriends = ({ onPress }) => {
+  return (
+    <View style={{ alignItems: 'center', justifyContent: 'center'}}>
+    <TouchableOpacity
+      style={{
+        width: 100,
+        padding: 5,
+        backgroundColor: '#ACD3FC',
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+       }}
+       onPress={onPress}>
+        <Text 
+          style={{fontSize: 16,
+            justifyContent: 'center',
+            fontWeight: '500',
+            alignItems: 'center',
+            justifyContent: 'center'
+            }}>
+          Amigos
+        </Text>
+    </TouchableOpacity>
+    </View>
+  );  
+}
+
+export const DeleteButton = ({ onPress }) => {
+  return (
+    <View style={{ alignItems: 'center', justifyContent: 'center'}}>
+    <TouchableOpacity
+      style={{
+        width: 100,
+        padding: 5,
+        backgroundColor: '#D9D9D9',
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+       }}
+       onPress={onPress}>
+        <Text 
+          style={{fontSize: 16,
+            justifyContent: 'center',
+            fontWeight: '500',
+            alignItems: 'center',
+            justifyContent: 'center'
+            }}>
+          Excluir
+        </Text>
+    </TouchableOpacity>
+    </View>
+  );  
+} 
+
 const styles = StyleSheet.create({
   container: {
     marginTop: 25,

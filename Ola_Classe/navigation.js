@@ -22,6 +22,8 @@ import CreatePostScreen from "./src/Screens/CreatePostScreen";
 import ChatScreen from "./src/Screens/ChatScreen";
 import NotificationScreen from "./src/Screens/NotificationScreen";
 
+import FriendsMenu from "./src/Screens/FriendsMenu";
+import CategoryMenu from "./src/Screens/CategoryMenu";
 
 
 
@@ -56,6 +58,8 @@ export const SignedInStack = () => {
         <Stack.Screen name="CreatePostScreen" component={CreatePostScreen} />
         <Stack.Screen name="ChatScreen" component={ChatScreen} />
         <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
+        <Stack.Screen name="FriendsMenu" component={FriendsMenu} />
+        <Stack.Screen name="CategoryMenu" component={CategoryMenu} />
 
       </Stack.Navigator>
     </NavigationContainer>
