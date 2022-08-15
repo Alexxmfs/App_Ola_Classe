@@ -39,12 +39,15 @@ import iconVideo from '../assets/icons/iconVideo.png';
 import iconVideoActivated from '../assets/icons/iconVideoActivated.png';
 import iconPost from '../assets/icons/iconPost.png';
 import iconChat from '../assets/icons/iconChat.png';
-import iconChatActivated from '../assets/icons/iconChatActivated.png'
+import iconChatActivated from '../assets/icons/iconChatActivated.png';
 import iconBell from '../assets/icons/iconBell.png';
 import iconBellActivated from '../assets/icons/iconBellActivated.png';
 
-import imgAsh from '../assets/image/imgAsh.png'
-import imgJordan from '../assets/image/imgJordan.png'
+import imgAsh from '../assets/image/imgAsh.png';
+import imgJordan from '../assets/image/imgJordan.png';
+import CatAngularMenu from '../assets/image/CatAngular.png';
+import CatCSharpMenu from '../assets/image/CatCSharpMenu.png';
+import CatHtmlMenu from '../assets/image/CatHtmlMenu.png';
 
 
 export default { 
@@ -63,6 +66,8 @@ iconChatActivated,
 iconBell,
 iconBellActivated,
 imgAsh,
-imgJordan
-
+imgJordan,
+CatAngularMenu,
+CatCSharpMenu,
+CatHtmlMenu,
 };
