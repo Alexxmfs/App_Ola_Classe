@@ -1,9 +1,9 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState, useEffect }from 'react'
 import { assets } from '../../constants'
 import { Divider } from 'react-native-elements'
 import { useNavigation } from '@react-navigation/native';
-
+import * as ImagePicker from 'expo-image-picker';
 
 export const NavBarHome = () => {
   const navigation = useNavigation();
@@ -16,7 +16,7 @@ export const NavBarHome = () => {
                  style={{width: 1000,  marginLeft: -400}} />  
             </View>
 
-        <View style={{flexDirection: 'row', marginLeft: -8}}>
+        <View style={{flexDirection: 'row'}}>
 
           <TouchableOpacity>
             <Image 
@@ -33,10 +33,9 @@ export const NavBarHome = () => {
             style={{width: 40, height: 40, marginLeft: 30}}
             source={assets.iconVideo}
             />
-
             </TouchableOpacity>
 
-          <TouchableOpacity
+            <TouchableOpacity
             onPress={() => navigation.navigate("CreatePostScreen")}
            >
             <Image 
@@ -45,8 +44,7 @@ export const NavBarHome = () => {
             />
 
             </TouchableOpacity>
-
-
+            
             <TouchableOpacity
             onPress={() => navigation.navigate("ChatScreen")}
             >
@@ -64,10 +62,7 @@ export const NavBarHome = () => {
             source={assets.iconBell}
             />
             </TouchableOpacity>
-
-
         </View>
-
     </View>
   )
 }

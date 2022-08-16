@@ -42,12 +42,16 @@ import iconChat from '../assets/icons/iconChat.png';
 import iconChatActivated from '../assets/icons/iconChatActivated.png';
 import iconBell from '../assets/icons/iconBell.png';
 import iconBellActivated from '../assets/icons/iconBellActivated.png';
-
 import imgAsh from '../assets/image/imgAsh.png';
 import imgJordan from '../assets/image/imgJordan.png';
 import CatAngularMenu from '../assets/image/CatAngular.png';
 import CatCSharpMenu from '../assets/image/CatCSharpMenu.png';
-import CatHtmlMenu from '../assets/image/CatHtmlMenu.png';
+import CathtmMenu from '../assets/image/CathtmMenu.jpg';
+import CatCSSMenu from '../assets/image/CatCSSMenu.png';
+import CatJsMenu from '../assets/image/CatJsMenu.png';
+import CatDartMenu from '../assets/image/CatDartMenu.png';
+import CatJavaMenu from '../assets/image/CatJavaMenu.png';
+import CatKotlinMenu from '../assets/image/CatKotlinMenu.png';
 
 
 export default { 
@@ -57,17 +61,21 @@ logo, teacher, student, circleCat, python, html, CSharp, java,
 javascript, css, flutter, react, swift, kotlin, dart, typescript,
 angular, node, vueJS, pensando, LogoOlaClasse, iconFriends, iconCategory,
 iconSaved, iconTermsUse, iconConfig, menu, close, iconSearch, iconHome,
-iconHomeActivated,
-iconVideo,
-iconVideoActivated,
-iconPost,
-iconChat,
-iconChatActivated,
-iconBell,
-iconBellActivated,
-imgAsh,
-imgJordan,
+iconHomeActivated, iconVideo, iconVideoActivated, iconPost, iconChat,
+iconChatActivated, iconBell, iconBellActivated, imgAsh, imgJordan,
 CatAngularMenu,
 CatCSharpMenu,
-CatHtmlMenu,
+CathtmMenu,
+CatCSSMenu,
+CatJsMenu,
+CatDartMenu,
+CatJavaMenu,
+CatKotlinMenu,
+
+
+
+
+
+
+
 };

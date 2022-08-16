@@ -2,7 +2,7 @@ import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../constants';
 import { ScrollView, Animated, Image, StyleSheet, Text, TouchableOpacity, View, SafeAreaView } from 'react-native';
 import React, { useRef, useState } from 'react';
 import Header from '../components/Header';
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { NavBarVideo } from '../components/Navbar';
 
 
@@ -171,8 +171,8 @@ const VideoScreen = ({navigation}) => {
   );
 }
 
-const Menu = ({navigation}) => {
-  // const navigation = useNavigation(); 
+const Menu = () => {
+  const navigation = useNavigation(); 
   return (
     <>
   <TouchableOpacity 
@@ -303,7 +303,6 @@ const Menu = ({navigation}) => {
   </>
 );
 }
-
 
 const styles = StyleSheet.create({
   container: {

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'rea
 import { CircleButton } from '../components/Button';
 import { SIZES, assets } from '../../constants';
 
-const CategoryMenu = () => {
+const CategoryMenu = ({navigation}) => {
   return (
 <View>
   <ScrollView>
@@ -47,11 +47,11 @@ const CategoryMenu = () => {
           <View style={[styles.card, styles.elevation, styles.center]}>
             <View style={styles.center}>
                 <Image 
-                  source={assets.CatHtmlMenu}
+                  source={assets.CatCSharpMenu}
                   style={{width: 300, height: 175, borderRadius: 10}}
                    />
                  <Text style={styles.heading}>
-                   Angular
+                   C Sharp
                   </Text>
               </View>
             </View>
@@ -61,11 +61,81 @@ const CategoryMenu = () => {
           <View style={[styles.card, styles.elevation, styles.center]}>
             <View style={styles.center}>
                 <Image 
-                  source={assets.CatAngularMenu}
+                  source={assets.CathtmMenu}
                   style={{width: 300, height: 175, borderRadius: 10}}
                    />
                  <Text style={styles.heading}>
-                   Angular
+                   HTML
+                  </Text>
+              </View>
+            </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.center}>
+          <View style={[styles.card, styles.elevation, styles.center]}>
+            <View style={styles.center}>
+                <Image 
+                  source={assets.CatCSSMenu}
+                  style={{width: 300, height: 175, borderRadius: 10}}
+                   />
+                 <Text style={styles.heading}>
+                   CSS
+                  </Text>
+              </View>
+            </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.center}>
+          <View style={[styles.card, styles.elevation, styles.center]}>
+            <View style={styles.center}>
+                <Image 
+                  source={assets.CatJsMenu}
+                  style={{width: 300, height: 175, borderRadius: 10}}
+                   />
+                 <Text style={styles.heading}>
+                   JavaScript
+                  </Text>
+              </View>
+            </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.center}>
+          <View style={[styles.card, styles.elevation, styles.center]}>
+            <View style={styles.center}>
+                <Image 
+                  source={assets.CatDartMenu}
+                  style={{width: 300, height: 175, borderRadius: 10}}
+                   />
+                 <Text style={styles.heading}>
+                   Dart
+                  </Text>
+              </View>
+            </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.center}>
+          <View style={[styles.card, styles.elevation, styles.center]}>
+            <View style={styles.center}>
+                <Image 
+                  source={assets.CatJavaMenu}
+                  style={{width: 300, height: 175, borderRadius: 10}}
+                   />
+                 <Text style={styles.heading}>
+                   Java
+                  </Text>
+              </View>
+            </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.center}>
+          <View style={[styles.card, styles.elevation, styles.center]}>
+            <View style={styles.center}>
+                <Image 
+                  source={assets.CatKotlinMenu}
+                  style={{width: 300, height: 175, borderRadius: 10}}
+                   />
+                 <Text style={styles.heading}>
+                   Kotlin
                   </Text>
               </View>
             </View>

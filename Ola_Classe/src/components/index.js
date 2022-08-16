@@ -1,7 +1,7 @@
 import { CircleButton, ButtonRegister, CustomInput, CustomInputDate,
-         Navbar, ButtonFriends } from "./Button";
+         Navbar, ButtonFriends, uploadImage } from "./Button";
 
 export {
     CircleButton, ButtonRegister, CustomInput, CustomInputDate,
-     ButtonCreateAccount, Navbar, ButtonFriends
+     ButtonCreateAccount, Navbar, ButtonFriends, uploadImage
 }

@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import { useNavigation } from '@react-navigation/native';
 import { NavBarHome } from '../components/Navbar';
 
-
 const HomeScreen = ({navigation}) => {
   const [showMenu, setShowMenu] = useState(false);
   const offsetValue = useRef(new Animated.Value(0)).current;
@@ -95,16 +94,14 @@ const HomeScreen = ({navigation}) => {
           <View style={styles.HeaderOlaClasse}>
             <Header navigation={navigation} />
 
-            <View style={{marginTop: -20}}>
+            <View style={{marginTop: -25}}>
             <NavBarHome />
 
             </View>
 
             </View>
-          <View style={{width: '100%', height:'82%', alignItems: 'center', justifyContent: 'center', marginTop: -10}}>
+          <View style={{width: '100%', height:'82%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
             <ScrollView style={{width: '100%' , height: '60%'}}>
-
-
 
             <Text>CAAAAATEEEEEGORIAAAA</Text>
             <Text>CAAAAATEEEEEGORIAAAA</Text>
@@ -300,6 +297,8 @@ const Menu = () => {
       }}>Configuração</Text>
     </View>
     </TouchableOpacity>
+<View>
+</View>
   </>
 );
 }
