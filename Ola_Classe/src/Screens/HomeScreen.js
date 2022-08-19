@@ -15,12 +15,6 @@ const HomeScreen = ({navigation, item}) => {
   const scaleValue = useRef(new Animated.Value(1)).current;
   const closeButtonOffset = useRef(new Animated.Value(0)).current;
 
-
-
-  // const FormikPostUploader = ({navigation}) => {
-  //   const [thumbnailUrl, setThumbnailUrl] = useState(PLACEHOLDER_IMG)
-  //   const [currentLoggedInUser, setCurrentLoggedInUser] = useState(null)
-  
     const getUsers = () => {
       db.collection('users')
       .get()
@@ -43,22 +37,6 @@ const HomeScreen = ({navigation, item}) => {
       });
 
     };
-
-    // const getUsername = () => {
-    //     const user = firebase.auth().currentUser
-    //     const unsubscribe = db
-    //     .collection('users')
-    //     .where('owner_uid', '==', user.uid).limit(1).onSnapshot(
-    //         snapshot => snapshot.docs.map(doc => {
-    //             setCurrentLoggedInUser({
-    //                 username: doc.data().username,
-    //                 profilePicture: doc.data(). profile_picture
-    //           }
-    //         )})
-            
-    //     )
-    //     return unsubscribe
-    // }
   
     useEffect(() => {
       getUsers()
@@ -102,9 +80,9 @@ const HomeScreen = ({navigation, item}) => {
             renderItem={({item}) =>{
               return (
                 <View style={{marginLeft: 80, marginTop: 10}}>
-
-                  <TouchableOpacity>
-
+                  <TouchableOpacity
+                    onPress={() => navigation.navigate("profileScreen")}
+                  >
                      <Text
                       style={{
                         fontSize: 16,
@@ -255,7 +233,7 @@ const HomeScreen = ({navigation, item}) => {
 const Menu = () => {
   const navigation = useNavigation(); 
   return (
-    <>
+    <View style={{top: -50}}>
   <TouchableOpacity 
   onPress={() => navigation.navigate("FriendsMenu")}
   >
@@ -266,7 +244,7 @@ const Menu = () => {
       paddingLeft: 13,
       paddingRight: 35,
       borderRadius: 8,
-      marginTop: -40
+      marginTop: -42
     }}>
       
       <Image source={assets.iconFriends} style={{
@@ -383,7 +361,7 @@ const Menu = () => {
     </TouchableOpacity>
 <View>
 </View>
-  </>
+  </View>
 );
 }
 

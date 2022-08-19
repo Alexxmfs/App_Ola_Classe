@@ -16,14 +16,14 @@ import HomeScreen from './src/Screens/HomeScreen';
 import StudentOrTeacher from './src/Screens/StudentOrTeacher';
 import TeacherLang from './src/Screens/languagesScreens/TeacherLang'
 import StudentLang from './src/Screens/languagesScreens/StudentLang';
-
 import VideoScreen from "./src/Screens/VideoScreen";
 import CreatePostScreen from "./src/Screens/CreatePostScreen";
 import ChatScreen from "./src/Screens/ChatScreen";
 import NotificationScreen from "./src/Screens/NotificationScreen";
-
 import FriendsMenu from "./src/Screens/FriendsMenu";
 import CategoryMenu from "./src/Screens/CategoryMenu";
+
+import profileScreen from './src/Screens/profileScreen'
 
 
 
@@ -60,6 +60,7 @@ export const SignedInStack = () => {
         <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
         <Stack.Screen name="FriendsMenu" component={FriendsMenu} />
         <Stack.Screen name="CategoryMenu" component={CategoryMenu} />
+        <Stack.Screen name="profileScreen" component={profileScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
