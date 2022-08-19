@@ -52,7 +52,7 @@ import CatJsMenu from '../assets/image/CatJsMenu.png';
 import CatDartMenu from '../assets/image/CatDartMenu.png';
 import CatJavaMenu from '../assets/image/CatJavaMenu.png';
 import CatKotlinMenu from '../assets/image/CatKotlinMenu.png';
-
+import ImgProfileMenu from '../assets/image/profileImg.png'
 
 export default { 
 
@@ -71,7 +71,7 @@ CatJsMenu,
 CatDartMenu,
 CatJavaMenu,
 CatKotlinMenu,
-
+ImgProfileMenu,
 
 
 

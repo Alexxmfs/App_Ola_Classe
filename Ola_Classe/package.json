@@ -10,6 +10,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-firebase/firestore": "^15.3.0",
     "@react-navigation/native": "6.0.10",
     "@react-navigation/stack": "6.2.1",
     "email-validator": "2.0.4",

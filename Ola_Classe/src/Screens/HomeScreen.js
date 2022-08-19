@@ -1,16 +1,70 @@
 import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../constants';
-import { ScrollView, Animated, Image, StyleSheet, Text, TouchableOpacity, View, SafeAreaView } from 'react-native';
-import React, { useRef, useState } from 'react';
+import { ScrollView, FlatList, Animated, Image, StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Button } from 'react-native';
+import React, { useRef, useState, useEffect } from 'react';
 import Header from '../components/Header';
 import { useNavigation } from '@react-navigation/native';
 import { NavBarHome } from '../components/Navbar';
 
-const HomeScreen = ({navigation}) => {
+import { firebase, db } from '../../firebase';
+
+const HomeScreen = ({navigation, item}) => {
+  const [data, setData] = useState([]);
+
   const [showMenu, setShowMenu] = useState(false);
   const offsetValue = useRef(new Animated.Value(0)).current;
   const scaleValue = useRef(new Animated.Value(1)).current;
   const closeButtonOffset = useRef(new Animated.Value(0)).current;
 
+
+
+  // const FormikPostUploader = ({navigation}) => {
+  //   const [thumbnailUrl, setThumbnailUrl] = useState(PLACEHOLDER_IMG)
+  //   const [currentLoggedInUser, setCurrentLoggedInUser] = useState(null)
+  
+    const getUsers = () => {
+      db.collection('users')
+      .get()
+      .then((querySnapshot) => {
+        let d = [];
+        querySnapshot.forEach((doc) => {
+          console.log(doc.owner_uid, '=>', doc.data());
+          const user = {
+            owner_uid: doc.owner_uid,
+            username: doc.data().username,
+            email: doc.data().email,
+          };
+          d.push(user);
+        });
+        // console.log(d);
+        setData(d);
+      })
+      .catch(() => {
+        console.log('erroooooooooooooo!!!')
+      });
+
+    };
+
+    // const getUsername = () => {
+    //     const user = firebase.auth().currentUser
+    //     const unsubscribe = db
+    //     .collection('users')
+    //     .where('owner_uid', '==', user.uid).limit(1).onSnapshot(
+    //         snapshot => snapshot.docs.map(doc => {
+    //             setCurrentLoggedInUser({
+    //                 username: doc.data().username,
+    //                 profilePicture: doc.data(). profile_picture
+    //           }
+    //         )})
+            
+    //     )
+    //     return unsubscribe
+    // }
+  
+    useEffect(() => {
+      getUsers()
+  }, [])
+
+  
   return (
     <SafeAreaView style={styles.container}>
             <View style={{ justifyContent: 'flex-start'}}>
@@ -31,10 +85,38 @@ const HomeScreen = ({navigation}) => {
           }}>Menu</Text>
         </TouchableOpacity>
 
+          <View style={{top: 370, marginLeft: 20}}>
+              <Image 
+                style={{width: 60, height: 60, borderRadius: 50}}
+                source={assets.ImgProfileMenu}
+              />
+          </View>
+
         <View style={{ flexGrow: 1, marginTop: 10,  padding: 15, height: '66%' }}>
 
           {Menu("Menu")}
 
+          <FlatList 
+            data={data}
+            keyExtractor={(item) => item.username}
+            renderItem={({item}) =>{
+              return (
+                <View style={{marginLeft: 80, marginTop: 10}}>
+
+                  <TouchableOpacity>
+
+                     <Text
+                      style={{
+                        fontSize: 16,
+                         fontWeight: '600'
+                         }}>
+                          {item.username}
+                      </Text>
+                  </TouchableOpacity>
+                </View>
+              )
+            }}
+            />
         </View>
         
         <Animated.View style={{
@@ -103,7 +185,9 @@ const HomeScreen = ({navigation}) => {
           <View style={{width: '100%', height:'82%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
             <ScrollView style={{width: '100%' , height: '60%'}}>
 
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
+          
+
+
             <Text>CAAAAATEEEEEGORIAAAA</Text>
             <Text>CAAAAATEEEEEGORIAAAA</Text>
             <Text>CAAAAATEEEEEGORIAAAA</Text>
@@ -302,6 +386,7 @@ const Menu = () => {
   </>
 );
 }
+
 
 
 const styles = StyleSheet.create({
