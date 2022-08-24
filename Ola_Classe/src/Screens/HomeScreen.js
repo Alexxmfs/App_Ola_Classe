@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import Header from '../components/Header';
 import { useNavigation } from '@react-navigation/native';
 import { NavBarHome } from '../components/Navbar';
+import  IconLike   from '../components/IconLike';
 
 import { firebase, db } from '../../firebase';
 
@@ -69,7 +70,7 @@ const HomeScreen = ({navigation, item}) => {
                 source={assets.ImgProfileMenu}
               />
           </View>
-
+          
         <View style={{ flexGrow: 1, marginTop: 10,  padding: 15, height: '66%' }}>
 
           {Menu("Menu")}
@@ -79,18 +80,20 @@ const HomeScreen = ({navigation, item}) => {
             keyExtractor={(item) => item.username}
             renderItem={({item}) =>{
               return (
-                <View style={{marginLeft: 80, marginTop: 10}}>
+                <View style={{marginLeft: 80, marginTop: -200}}>
                   <TouchableOpacity
                     onPress={() => navigation.navigate("profileScreen")}
                   >
                      <Text
                       style={{
                         fontSize: 16,
+                        paddingVertical: 140,
                          fontWeight: '600'
                          }}>
                           {item.username}
                       </Text>
                   </TouchableOpacity>
+
                 </View>
               )
             }}
@@ -164,8 +167,28 @@ const HomeScreen = ({navigation, item}) => {
             <ScrollView style={{width: '100%' , height: '60%'}}>
 
           
+            <TouchableOpacity style={styles.center}>
+        
+        <View style={[styles.card, styles.elevation, styles.center]}>
+          <View style={styles.center}>
+            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 220}}>
+              <Image 
+              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+              source={assets.imgAsh}
+              />
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Ash</Text>
+               </View>
+              <Image 
+                source={assets.CatAngularMenu}
+                style={{width: 300, height: 175, borderRadius: 10}}
+                 />
+            </View>
+            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
+                    <IconLike />
+                    </View>
+          </View>
+          </TouchableOpacity>
 
-
             <Text>CAAAAATEEEEEGORIAAAA</Text>
             <Text>CAAAAATEEEEEGORIAAAA</Text>
             <Text>CAAAAATEEEEEGORIAAAA</Text>
@@ -175,49 +198,7 @@ const HomeScreen = ({navigation, item}) => {
             <Text>CAAAAATEEEEEGORIAAAA</Text>
             <Text>CAAAAATEEEEEGORIAAAA</Text>
             <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>zzzzzzzzzzzzzzzzzzzzzzzzzz</Text>
-            <Text>zzzzzzzzzzzzzzzzzzzzzzzzzz</Text>
-            <Text>zzzzzzzzzzzzzzzzzzzzzzzzzz</Text>
-            <Text>zzzzzzzzzzzzzzzzzzzzzzzzzz</Text>
+ 
               </ScrollView>
             </View>
             
@@ -359,8 +340,6 @@ const Menu = () => {
       }}>Configuração</Text>
     </View>
     </TouchableOpacity>
-<View>
-</View>
   </View>
 );
 }
@@ -382,6 +361,30 @@ const styles = StyleSheet.create({
     marginTop: -69,
     marginLeft: 12
   },
+  heading: {
+    paddingTop: 5,
+    fontSize: 17,
+    fontWeight: '600',
+  },
+
+  card: {
+    backgroundColor: 'white',
+    borderRadius: 8,
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    width: '95%',
+    marginVertical: 5,
+  },
+
+  elevation: {
+    elevation: 20,
+    shadowColor: '#52006A',
+  },
+  center: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 290
+  }
 });
 
 export default HomeScreen

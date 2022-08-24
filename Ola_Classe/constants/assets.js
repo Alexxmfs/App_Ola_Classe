@@ -55,6 +55,7 @@ import CatKotlinMenu from '../assets/image/CatKotlinMenu.png';
 import ImgProfileMenu from '../assets/image/profileImg.png'
 import iconCam from '../assets/image/iconCam.png'
 import backgroundProfile from '../assets/image/backgroundProfile.png'
+import likeAnimation from '../assets/icons/like.json';
 
 export default { 
 
@@ -76,7 +77,7 @@ CatKotlinMenu,
 ImgProfileMenu,
 iconCam,
 backgroundProfile,
-
+likeAnimation
 
 
 
