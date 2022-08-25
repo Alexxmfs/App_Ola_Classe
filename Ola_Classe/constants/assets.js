@@ -62,6 +62,7 @@ import IconComment  from "../assets/icons/iconComment.png";
 import postMeme  from "../assets/icons/postMeme.png";
 import TumbnailGuanabara from "../assets/image/TumbnailGuanabara.png";
 import placeholderImg from "../assets/image/placeholderImg.png";
+import ImgCursoEmVideo from "../assets/image/ImgCursoEmVideo.png";
 
 
 
@@ -97,7 +98,7 @@ postMeme,
 GuanabaraVideo,
 TumbnailGuanabara,
 placeholderImg,
-
+ImgCursoEmVideo,
 
 
 };

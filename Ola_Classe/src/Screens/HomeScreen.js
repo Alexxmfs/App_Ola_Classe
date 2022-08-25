@@ -196,12 +196,12 @@ const HomeScreen = ({navigation, item}) => {
     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         <View style={[styles.card, styles.elevation, styles.center]}>
           <View style={styles.center}>
-            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 220}}>
+            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 130}}>
               <Image 
               style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
-              source={assets.imgAsh}
+              source={assets.ImgCursoEmVideo}
               />
-               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Ash</Text>
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
                </View>
 
                <TouchableOpacity
