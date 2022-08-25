@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { TouchableOpacity, StyleSheet, View, Image, ActivityIndicator, Text } from 'react-native';
+import { CircleButton } from '../components/Button';
+import { assets } from '../../constants';
 
 import * as Firebase from 'firebase'
 import * as ImagePicker from 'expo-image-picker'
 
 import { firebase } from '../../firebase';
 
-export default function CreatePostScreen() {
+export default function CreatePostScreen({navigation}) {
 
 
   if(!Firebase.apps.length){
     Firebase.initializeApp(firebase)
   }
-
-
 
   const [image, setImage] = useState("");
   const [uploading, setUploading] = useState(false);
@@ -59,8 +59,8 @@ export default function CreatePostScreen() {
       xhr.send(null);
     });
 
-
-    const ref = Firebase.storage().ref().child(new Date().toISOString())
+    //tirar o ('images')
+    const ref = Firebase.storage().ref('images').child(new Date().toISOString())
     const snapshot = ref.put(blob);
   
     snapshot.on(Firebase.storage.TaskEvent.STATE_CHANGED,()=>{
@@ -83,10 +83,29 @@ export default function CreatePostScreen() {
     );
   }
 
-  return (
+  return (    
     <View style={styles.container}>
-      <Image source={{uri: image}} style={{width: 300, height:300, borderRadius: 8}}/>
-      <View style={{marginTop: 50}}>
+
+      <View style={styles.circleButton}>
+             <CircleButton 
+                imgUrl = {assets.next}
+                onPress={() => navigation.navigate("HomeScreen")}
+        />
+        
+      </View>
+
+      <View style={{marginTop: 5}}>
+        <Image
+        style={{width: 300, height: 300, borderRadius: 8}}
+        source={assets.placeholderImg}
+        />
+        </View>
+
+      <View style={{top: -300}}>
+          <Image source={{uri: image}} style={{width: 300, height:300, borderRadius: 8}}/>
+      </View>
+
+      <View style={{marginTop: -220}}>
       <TouchableOpacity style={styles.button} onPress={pickImage}>
         <Text style={styles.text}>Escolha uma imagem</Text>
       </TouchableOpacity>
@@ -130,6 +149,11 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     top: -7
   },
+  circleButton: {
+    top: -70,
+    right: 150,
+    transform: [{ rotate: "180deg"}]
+},
   
 });
 

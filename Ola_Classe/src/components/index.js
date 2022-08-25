@@ -1,9 +1,11 @@
 import { CircleButton, ButtonRegister, CustomInput, CustomInputDate, ButtonCreateAccount,
          Navbar, ButtonFriends, uploadImage } from "./Button";
 
-import IconLike  from "./IconLike";
+import IconsCard  from "./IconsCard";
+
+import Videos from './Videos'
 
 export {
     CircleButton, ButtonRegister, CustomInput, CustomInputDate,
-     ButtonCreateAccount, Navbar, ButtonFriends, uploadImage, IconLike
+     ButtonCreateAccount, Navbar, ButtonFriends, uploadImage, IconsCard, Videos
 }

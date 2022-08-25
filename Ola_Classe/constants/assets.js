@@ -56,6 +56,22 @@ import ImgProfileMenu from '../assets/image/profileImg.png'
 import iconCam from '../assets/image/iconCam.png'
 import backgroundProfile from '../assets/image/backgroundProfile.png'
 import likeAnimation from '../assets/icons/like.json';
+import iconDenunciation  from "../assets/icons/iconWarning.png";
+import IconSave  from "../assets/icons/iconSave.png";
+import IconComment  from "../assets/icons/iconComment.png";
+import postMeme  from "../assets/icons/postMeme.png";
+import TumbnailGuanabara from "../assets/image/TumbnailGuanabara.png";
+import placeholderImg from "../assets/image/placeholderImg.png";
+
+
+
+
+
+
+
+// VIDEOS
+import GuanabaraVideo  from "../assets/videos/GuanabaraVideo.mp4";
+
 
 export default { 
 
@@ -66,18 +82,21 @@ angular, node, vueJS, pensando, LogoOlaClasse, iconFriends, iconCategory,
 iconSaved, iconTermsUse, iconConfig, menu, close, iconSearch, iconHome,
 iconHomeActivated, iconVideo, iconVideoActivated, iconPost, iconChat,
 iconChatActivated, iconBell, iconBellActivated, imgAsh, imgJordan,
-CatAngularMenu,
-CatCSharpMenu,
-CathtmMenu,
-CatCSSMenu,
-CatJsMenu,
+CatAngularMenu, CatCSharpMenu, CathtmMenu, CatCSSMenu, CatJsMenu,
 CatDartMenu,
 CatJavaMenu,
 CatKotlinMenu,
 ImgProfileMenu,
 iconCam,
 backgroundProfile,
-likeAnimation
+likeAnimation,
+iconDenunciation,
+IconSave,
+IconComment,
+postMeme,
+GuanabaraVideo,
+TumbnailGuanabara,
+placeholderImg,
 
 
 

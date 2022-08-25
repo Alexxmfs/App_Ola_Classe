@@ -141,12 +141,6 @@ const CategoryMenu = ({navigation}) => {
             </View>
             </TouchableOpacity>
 
-
-
-
-
-
-
        </View>
     </View>
     </ScrollView>

@@ -22,10 +22,8 @@ import ChatScreen from "./src/Screens/ChatScreen";
 import NotificationScreen from "./src/Screens/NotificationScreen";
 import FriendsMenu from "./src/Screens/FriendsMenu";
 import CategoryMenu from "./src/Screens/CategoryMenu";
-
 import profileScreen from './src/Screens/profileScreen'
-
-
+import OpenVideoGuanabara from './src/Screens/videosScreen/OpenVideoGuanabara'
 
 
 const Stack = createStackNavigator();
@@ -61,6 +59,7 @@ export const SignedInStack = () => {
         <Stack.Screen name="FriendsMenu" component={FriendsMenu} />
         <Stack.Screen name="CategoryMenu" component={CategoryMenu} />
         <Stack.Screen name="profileScreen" component={profileScreen} />
+        <Stack.Screen name="OpenVideoGuanabara" component={OpenVideoGuanabara} />
 
       </Stack.Navigator>
     </NavigationContainer>

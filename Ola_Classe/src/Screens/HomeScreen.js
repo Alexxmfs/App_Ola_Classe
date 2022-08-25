@@ -4,9 +4,10 @@ import React, { useRef, useState, useEffect } from 'react';
 import Header from '../components/Header';
 import { useNavigation } from '@react-navigation/native';
 import { NavBarHome } from '../components/Navbar';
-import  IconLike   from '../components/IconLike';
+import { IconLike, IconWarning, IconSave, IconComment }   from '../components/IconsCard';
 
 import { firebase, db } from '../../firebase';
+
 
 const HomeScreen = ({navigation, item}) => {
   const [data, setData] = useState([]);
@@ -167,8 +168,7 @@ const HomeScreen = ({navigation, item}) => {
             <ScrollView style={{width: '100%' , height: '60%'}}>
 
           
-            <TouchableOpacity style={styles.center}>
-        
+    <View style={styles.center}>
         <View style={[styles.card, styles.elevation, styles.center]}>
           <View style={styles.center}>
             <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 220}}>
@@ -179,15 +179,51 @@ const HomeScreen = ({navigation, item}) => {
                <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Ash</Text>
                </View>
               <Image 
-                source={assets.CatAngularMenu}
+                source={assets.postMeme}
                 style={{width: 300, height: 175, borderRadius: 10}}
                  />
             </View>
             <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
                     <IconLike />
+                    <IconWarning />
+                    <IconSave />
+                    <IconComment />
+
+                    </View>
+               </View>
+          </View>
+
+    <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+        <View style={[styles.card, styles.elevation, styles.center]}>
+          <View style={styles.center}>
+            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 220}}>
+              <Image 
+              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+              source={assets.imgAsh}
+              />
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Ash</Text>
+               </View>
+
+               <TouchableOpacity
+                    onPress={() => navigation.navigate("OpenVideoGuanabara")}
+                  >
+                   <Image 
+                    source={assets.TumbnailGuanabara}
+                    style={{width: 300, height: 175, borderRadius: 10}}
+                    />
+                  </TouchableOpacity>  
+            </View>
+            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
+                    <IconLike />
+                    <IconWarning />
+                    <IconSave />
+                    <IconComment />
                     </View>
           </View>
-          </TouchableOpacity>
+          </View>
+            
+            
+
 
             <Text>CAAAAATEEEEEGORIAAAA</Text>
             <Text>CAAAAATEEEEEGORIAAAA</Text>
