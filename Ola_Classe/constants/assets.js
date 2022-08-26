@@ -63,6 +63,8 @@ import postMeme  from "../assets/icons/postMeme.png";
 import TumbnailGuanabara from "../assets/image/TumbnailGuanabara.png";
 import placeholderImg from "../assets/image/placeholderImg.png";
 import ImgCursoEmVideo from "../assets/image/ImgCursoEmVideo.png";
+import tumbnailDechamps from "../assets/image/tumbnailDechamps.png";
+import memeCebola from "../assets/image/memeCebola.png";
 
 
 
@@ -72,6 +74,7 @@ import ImgCursoEmVideo from "../assets/image/ImgCursoEmVideo.png";
 
 // VIDEOS
 import GuanabaraVideo  from "../assets/videos/GuanabaraVideo.mp4";
+import DechampsVideo  from "../assets/videos/DechampsVideo.mp4";
 
 
 export default { 
@@ -99,6 +102,7 @@ GuanabaraVideo,
 TumbnailGuanabara,
 placeholderImg,
 ImgCursoEmVideo,
-
-
+tumbnailDechamps,
+DechampsVideo,
+memeCebola,
 };

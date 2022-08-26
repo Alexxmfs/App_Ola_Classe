@@ -164,8 +164,8 @@ const HomeScreen = ({navigation, item}) => {
             </View>
 
             </View>
-          <View style={{width: '100%', height:'82%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
-            <ScrollView style={{width: '100%' , height: '60%'}}>
+          <View style={{width: '100%', height:'78%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
+            <ScrollView style={{width: '100%' , height: '66%'}}>
 
           
     <View style={styles.center}>
@@ -221,20 +221,61 @@ const HomeScreen = ({navigation, item}) => {
                     </View>
           </View>
           </View>
-            
+
+    <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+        <View style={[styles.card, styles.elevation, styles.center]}>
+          <View style={styles.center}>
+            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 130}}>
+              <Image 
+              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+              source={assets.ImgCursoEmVideo}
+              />
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
+               </View>
+
+               <TouchableOpacity
+                    onPress={() => navigation.navigate("OpenVideoDechamps")}
+                  >
+                   <Image 
+                    source={assets.tumbnailDechamps}
+                    style={{width: 300, height: 175, borderRadius: 10}}
+                    />
+                  </TouchableOpacity>  
+            </View>
+            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
+                    <IconLike />
+                    <IconWarning />
+                    <IconSave />
+                    <IconComment />
+                  </View>
+              </View>
+          </View>
+
+    <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+        <View style={[styles.card, styles.elevation, styles.center]}>
+          <View style={styles.center}>
+            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 185}}>
+              <Image 
+              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+              source={assets.imgJordan}
+              />
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Jordan</Text>
+               </View>
+                   <Image 
+                    source={assets.memeCebola}
+                    style={{width: 300, height: 175, borderRadius: 10}}
+                    />
+            </View>
+            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
+                    <IconLike />
+                    <IconWarning />
+                    <IconSave />
+                    <IconComment />
+                  </View>
+              </View>
+          </View>
             
 
-
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
- 
               </ScrollView>
             </View>
             

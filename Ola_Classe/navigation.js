@@ -23,7 +23,8 @@ import NotificationScreen from "./src/Screens/NotificationScreen";
 import FriendsMenu from "./src/Screens/FriendsMenu";
 import CategoryMenu from "./src/Screens/CategoryMenu";
 import profileScreen from './src/Screens/profileScreen'
-import OpenVideoGuanabara from './src/Screens/videosScreen/OpenVideoGuanabara'
+import OpenVideoGuanabara from './src/Screens/videosScreen/OpenVideoGuanabara';
+import OpenVideoDechamps from './src/Screens/videosScreen/OpenVideoDechamps';
 
 
 const Stack = createStackNavigator();
@@ -60,6 +61,7 @@ export const SignedInStack = () => {
         <Stack.Screen name="CategoryMenu" component={CategoryMenu} />
         <Stack.Screen name="profileScreen" component={profileScreen} />
         <Stack.Screen name="OpenVideoGuanabara" component={OpenVideoGuanabara} />
+        <Stack.Screen name="OpenVideoDechamps" component={OpenVideoDechamps} />
 
       </Stack.Navigator>
     </NavigationContainer>

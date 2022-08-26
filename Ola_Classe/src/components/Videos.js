@@ -21,6 +21,24 @@ export const VideoGuanabara = () => {
   );
 }
 
+export const VideoDechamps = () => {
+  const video = React.useRef(null);
+  const [status, setStatus] = React.useState({});
+  return (
+    <View style={styles.container}>
+      <Video
+        ref={video}
+        style={styles.video}
+        source={assets.DechampsVideo}
+        useNativeControls
+        resizeMode="cover"
+        isLooping
+        onPlaybackStatusUpdate={status => setStatus(() => status)}
+      />
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
