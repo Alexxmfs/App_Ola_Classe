@@ -47,13 +47,14 @@ const HomeScreen = ({navigation, item}) => {
   
   return (
     <SafeAreaView style={styles.container}>
-            <View style={{ justifyContent: 'flex-start'}}>
+      <View style={{ justifyContent: 'flex-start'}}>
         <Image source={assets.LogoOlaClasse} style={{
           width: 230,
-          height: 230,
+          height: 200,
           borderRadius: 10,
-          marginTop: 15,
-          marginRight: 10
+          marginTop: 5,
+          marginRight: 10,
+          top: 20
         }}></Image>
 
         <TouchableOpacity>
@@ -65,7 +66,7 @@ const HomeScreen = ({navigation, item}) => {
           }}>Menu</Text>
         </TouchableOpacity>
 
-          <View style={{top: 370, marginLeft: 20}}>
+          <View style={{top: 400, marginLeft: 20}}>
               <Image 
                 style={{width: 60, height: 60, borderRadius: 50}}
                 source={assets.ImgProfileMenu}
@@ -81,7 +82,7 @@ const HomeScreen = ({navigation, item}) => {
             keyExtractor={(item) => item.username}
             renderItem={({item}) =>{
               return (
-                <View style={{marginLeft: 80, marginTop: -200}}>
+                <View style={{marginLeft: 80, marginTop: -187}}>
                   <TouchableOpacity
                     onPress={() => navigation.navigate("profileScreen")}
                   >
@@ -196,7 +197,7 @@ const HomeScreen = ({navigation, item}) => {
     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         <View style={[styles.card, styles.elevation, styles.center]}>
           <View style={styles.center}>
-            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 130}}>
+            <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 5, marginRight: 130}}>
               <Image 
               style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
               source={assets.ImgCursoEmVideo}
@@ -212,8 +213,18 @@ const HomeScreen = ({navigation, item}) => {
                     style={{width: 300, height: 175, borderRadius: 10}}
                     />
                   </TouchableOpacity>  
+                     <View style={{paddingTop: 5}}>
+                       <Text
+                        style={{
+                          fontWeight: '700',
+                          fontSize: 16
+                        }}>
+                             Curso Pyhton #01 - Seja Programador
+                        </Text>
+                     </View>
             </View>
-            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
+
+            <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
                     <IconLike />
                     <IconWarning />
                     <IconSave />
@@ -282,8 +293,9 @@ const HomeScreen = ({navigation, item}) => {
 
         </Animated.View>
 
-      </Animated.View>
-      </View>
+           </Animated.View>
+         </View>
+
     </SafeAreaView>
   );
 }
