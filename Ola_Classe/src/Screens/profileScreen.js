@@ -228,6 +228,7 @@ const profileScreen = ({navigation}) => {
                      <Text
                       style={{
                         fontSize: 16,
+                        color: '#898989'
                          }}>
                           {item.email}
                       </Text>
@@ -239,7 +240,16 @@ const profileScreen = ({navigation}) => {
             />
         </View>
 
-          
+          <View style={{width: '100%', height: 90, marginLeft: 70, top: -130, flexDirection: 'row', paddingVertical: 5}}>
+              <Text style={{marginLeft: -19, fontSize: 15, color: '#898989'}}>Seguidores</Text>
+              <Text style={{paddingHorizontal: 50, fontSize: 15, color: '#898989'}}>Posts</Text>
+              <Text style={{ fontSize: 15, color: '#898989'}}>Seguindo</Text>
+                <View style={{flexDirection: 'row', paddingTop: 20}}>
+                    <Text style={{paddingHorizontal: 10, right: 260, fontSize: 17, fontWeight: '600'}}>0</Text>
+                    <Text style={{right: 168, fontSize: 17, fontWeight: '600'}}>0</Text>
+                    <Text style={{paddingHorizontal: 10, right: 85, fontSize: 17, fontWeight: '600'}}>0</Text>
+                </View>
+          </View>
 
     </View>
   )

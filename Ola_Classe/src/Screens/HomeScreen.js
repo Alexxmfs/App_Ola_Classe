@@ -165,8 +165,8 @@ const HomeScreen = ({navigation, item}) => {
             </View>
 
             </View>
-          <View style={{width: '100%', height:'78%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
-            <ScrollView style={{width: '100%' , height: '66%'}}>
+          <View style={{width: '100%', height:'82%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
+            <ScrollView style={{width: '100%' , height: '75%'}}>
 
           
     <View style={styles.center}>
