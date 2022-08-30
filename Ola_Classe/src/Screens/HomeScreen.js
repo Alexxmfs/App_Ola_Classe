@@ -165,7 +165,7 @@ const HomeScreen = ({navigation, item}) => {
             </View>
 
             </View>
-          <View style={{width: '100%', height:'82%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
+          <View style={{width: '100%', height:'80%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
             <ScrollView style={{width: '100%' , height: '75%'}}>
 
           
@@ -236,12 +236,12 @@ const HomeScreen = ({navigation, item}) => {
     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         <View style={[styles.card, styles.elevation, styles.center]}>
           <View style={styles.center}>
-            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 130}}>
+            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 110}}>
               <Image 
-              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
-              source={assets.ImgCursoEmVideo}
+              style={{width: 40, height: 40, marginRight: 235, marginTop: -8, borderRadius: 50}}
+              source={assets.imgDechamps}
               />
-               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Filipe Deschamps</Text>
                </View>
 
                <TouchableOpacity
