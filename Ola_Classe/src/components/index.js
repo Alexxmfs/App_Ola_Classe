@@ -7,5 +7,5 @@ import Videos from './Videos'
 
 export {
     CircleButton, ButtonRegister, CustomInput, CustomInputDate,
-     ButtonCreateAccount, Navbar, ButtonFriends, uploadImage, IconsCard, Videos
+     ButtonCreateAccount, Navbar, ButtonFriends, uploadImage, IconsCard, Videos, 
 }

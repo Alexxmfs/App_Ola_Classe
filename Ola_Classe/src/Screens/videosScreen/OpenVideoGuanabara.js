@@ -4,7 +4,7 @@ import { VideoGuanabara } from '../../components/Videos'
 import { CircleButton } from '../../components/Button';
 import { assets } from '../../../constants';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { IconLike, IconWarning, IconSave, IconComment }   from '../../components/IconsCard';
+import { IconLike, IconWarning, IconSave, IconComment, IconDislike }   from '../../components/IconsCard';
 
 
 const OpenVideoGuanabara = ({navigation}) => {
@@ -42,8 +42,16 @@ const OpenVideoGuanabara = ({navigation}) => {
             </View>
 
             <View style={styles.containerIcons}>
-                  <View style={{marginRight: 95, width: '100%'}}>
-                    <IconLike />
+                  <View style={{marginRight: 90, width: '100%'}}>
+                      <View style={{marginTop: 25}}>
+                        <IconLike />
+                      </View>
+                          <View style={{left: 85, marginTop: -62}}>
+                            <IconDislike />
+                          </View>
+                              <View style={{left: 40, top: -75}}>
+                               <IconComment />
+                             </View>
                   </View>
             </View>
     </View>
@@ -85,9 +93,10 @@ const styles = StyleSheet.create({
   containerIcons: {
     marginTop: 15,
     flexDirection: 'row',
-    backgroundColor: '#ACD3FC',
-    width: 150,
-    height: 50,
+    borderWidth: 2,
+    borderColor: '#ACD3FC',
+    width: 155,
+    height: 60,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',

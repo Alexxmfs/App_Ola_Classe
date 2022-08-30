@@ -65,7 +65,8 @@ import placeholderImg from "../assets/image/placeholderImg.png";
 import ImgCursoEmVideo from "../assets/image/ImgCursoEmVideo.png";
 import tumbnailDechamps from "../assets/image/tumbnailDechamps.png";
 import memeCebola from "../assets/image/memeCebola.png";
-
+import icon_Dislike from '../assets/icons/dislike.json';
+import imgDechamps from "../assets/image/imgDechamps.png";
 
 
 
@@ -87,11 +88,7 @@ iconSaved, iconTermsUse, iconConfig, menu, close, iconSearch, iconHome,
 iconHomeActivated, iconVideo, iconVideoActivated, iconPost, iconChat,
 iconChatActivated, iconBell, iconBellActivated, imgAsh, imgJordan,
 CatAngularMenu, CatCSharpMenu, CathtmMenu, CatCSSMenu, CatJsMenu,
-CatDartMenu,
-CatJavaMenu,
-CatKotlinMenu,
-ImgProfileMenu,
-iconCam,
+CatDartMenu, CatJavaMenu, CatKotlinMenu, ImgProfileMenu, iconCam,
 backgroundProfile,
 likeAnimation,
 iconDenunciation,
@@ -105,4 +102,6 @@ ImgCursoEmVideo,
 tumbnailDechamps,
 DechampsVideo,
 memeCebola,
+icon_Dislike,
+imgDechamps,
 };

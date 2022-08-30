@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../constants';
 import { CircleButton, ButtonWhite, ButtonBlue} from '../components/Button';
-import { View, TouchableOpacity, Text, StyleSheet, Image, FlatList } from "react-native";
+import { View, TouchableOpacity, Text, StyleSheet, Image, FlatList, SafeAreaView } from "react-native";
 import { firebase, db } from '../../firebase';
 
 import Constants from "expo-constants";
@@ -130,7 +130,7 @@ export const UploadBackground = () => {
           <View>
         <TouchableOpacity style={styles.button} onPress={imagePickerCallBackground}>
             <Image 
-                style={{top: -45, marginLeft: 330, borderColor: 'red'}}
+                style={{top: -45, marginLeft: 330}}
                 source={assets.iconCam}
             />
         </TouchableOpacity>
@@ -173,8 +173,7 @@ const profileScreen = ({navigation}) => {
 
 
   return (
-    <View>
-
+      <SafeAreaView style={{marginTop: -25}}>
         <View style={{marginTop: 25}}>
         <Image 
         style={{width: 395}}
@@ -239,8 +238,8 @@ const profileScreen = ({navigation}) => {
             }}
             />
         </View>
-
-          <View style={{width: '100%', height: 90, marginLeft: 70, top: -130, flexDirection: 'row', paddingVertical: 5}}>
+        <>
+          <View style={{width: '100%', height: 90, marginLeft: 70, marginTop: -120, flexDirection: 'row', paddingVertical: 5}}>
               <Text style={{marginLeft: -19, fontSize: 15, color: '#898989'}}>Seguidores</Text>
               <Text style={{paddingHorizontal: 50, fontSize: 15, color: '#898989'}}>Posts</Text>
               <Text style={{ fontSize: 15, color: '#898989'}}>Seguindo</Text>
@@ -250,8 +249,8 @@ const profileScreen = ({navigation}) => {
                     <Text style={{paddingHorizontal: 10, right: 85, fontSize: 17, fontWeight: '600'}}>0</Text>
                 </View>
           </View>
-
-    </View>
+        </>
+        </SafeAreaView>
   )
 }
 

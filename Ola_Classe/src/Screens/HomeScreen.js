@@ -111,7 +111,7 @@ const HomeScreen = ({navigation, item}) => {
         left: 0,
         right: 0,
         paddingHorizontal: 15,
-        paddingVertical: 20,
+         paddingVertical: 10,
         borderRadius: showMenu ? 15 : 0,
         transform: [
           { scale: scaleValue },

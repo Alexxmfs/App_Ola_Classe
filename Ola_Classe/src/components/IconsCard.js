@@ -26,6 +26,29 @@ export const IconLike = () => {
     );
   }
 
+export const IconDislike = () => {
+    const lottieRef = useRef(null);
+    return(
+    <View>
+        <TouchableOpacity
+            onPress={() => {
+               lottieRef.current.play()
+               setTimeout(() => {
+               lottieRef.current.pause()
+           }, 1700)
+         }}
+        >
+          <LottieView 
+            style={{ width: 70, height: 70 }}
+            source={assets.icon_Dislike}
+            ref={lottieRef}
+          />
+  
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
 export const IconWarning = () => {
     return(
     <View style={{top: 25, left: 250}}>
@@ -65,4 +88,6 @@ export const IconComment = () => {
       </View>
     );
   }
+  
+
   

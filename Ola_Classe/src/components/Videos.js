@@ -31,7 +31,7 @@ export const VideoDechamps = () => {
         style={styles.video}
         source={assets.DechampsVideo}
         useNativeControls
-        resizeMode="cover"
+        resizeMode="container"
         isLooping
         onPlaybackStatusUpdate={status => setStatus(() => status)}
       />
@@ -44,6 +44,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ecf0f1',
+    resizeMode: 'cover',
+    width: 300
   },
   video: {
     alignSelf: 'center',
