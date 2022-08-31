@@ -13,7 +13,7 @@ const LoginForm = ({navigation}) => {
         email: Yup.string().email().required('An email is required'),
         password: Yup.string()
         .required()
-        .min(8, 'Your password has to have at least 8 characters')
+        .min(6, 'Your password has to have at least 8 characters')
     })
 
     const onLogin = async (email, password) => {

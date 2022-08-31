@@ -1,20 +1,53 @@
 import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../constants';
-import { ScrollView, Animated, Image, StyleSheet, Text, TouchableOpacity, View, SafeAreaView } from 'react-native';
-import React, { useRef, useState } from 'react';
+import { ScrollView, FlatList, Animated, Image, StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Button } from 'react-native';
+import React, { useRef, useState, useEffect } from 'react';
 import Header from '../components/Header';
 import { useNavigation } from '@react-navigation/native';
 import { NavBarVideo } from '../components/Navbar';
+import { IconLike, IconWarning, IconSave, IconComment }   from '../components/IconsCard';
+
+import { firebase, db } from '../../firebase';
 
 
-const VideoScreen = ({navigation}) => {
+const HomeScreen = ({navigation, item}) => {
+  const [data, setData] = useState([]);
+
   const [showMenu, setShowMenu] = useState(false);
   const offsetValue = useRef(new Animated.Value(0)).current;
   const scaleValue = useRef(new Animated.Value(1)).current;
   const closeButtonOffset = useRef(new Animated.Value(0)).current;
 
+    const getUsers = () => {
+      db.collection('users')
+      .get()
+      .then((querySnapshot) => {
+        let d = [];
+        querySnapshot.forEach((doc) => {
+          console.log(doc.owner_uid, '=>', doc.data());
+          const user = {
+            owner_uid: doc.owner_uid,
+            username: doc.data().username,
+            email: doc.data().email,
+          };
+          d.push(user);
+        });
+        // console.log(d);
+        setData(d);
+      })
+      .catch(() => {
+        console.log('erroooooooooooooo!!!')
+      });
+
+    };
+  
+    useEffect(() => {
+      getUsers()
+  }, [])
+
+  
   return (
     <SafeAreaView style={styles.container}>
-            <View style={{ justifyContent: 'flex-start'}}>
+      <View style={{ justifyContent: 'flex-start'}}>
         <Image source={assets.LogoOlaClasse} style={{
           width: 230,
           height: 230,
@@ -32,10 +65,40 @@ const VideoScreen = ({navigation}) => {
           }}>Menu</Text>
         </TouchableOpacity>
 
+          <View style={{top: 370, marginLeft: 20}}>
+              <Image 
+                style={{width: 60, height: 60, borderRadius: 50}}
+                source={assets.ImgProfileMenu}
+              />
+          </View>
+          
         <View style={{ flexGrow: 1, marginTop: 10,  padding: 15, height: '66%' }}>
 
           {Menu("Menu")}
 
+          <FlatList 
+            data={data}
+            keyExtractor={(item) => item.username}
+            renderItem={({item}) =>{
+              return (
+                <View style={{marginLeft: 80, marginTop: -200}}>
+                  <TouchableOpacity
+                    onPress={() => navigation.navigate("profileScreen")}
+                  >
+                     <Text
+                      style={{
+                        fontSize: 16,
+                        paddingVertical: 140,
+                         fontWeight: '600'
+                         }}>
+                          {item.username}
+                      </Text>
+                  </TouchableOpacity>
+
+                </View>
+              )
+            }}
+            />
         </View>
         
         <Animated.View style={{
@@ -95,70 +158,124 @@ const VideoScreen = ({navigation}) => {
           <View style={styles.HeaderOlaClasse}>
             <Header navigation={navigation} />
 
-            <View style={{marginTop: -20}}>
+            <View style={{marginTop: -25}}>
             <NavBarVideo />
 
             </View>
 
             </View>
-          <View style={{width: '100%', height:'82%', alignItems: 'center', justifyContent: 'center', marginTop: -10}}>
-            <ScrollView style={{width: '100%' , height: '60%'}}>
+          <View style={{width: '100%', height:'78%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
+            <ScrollView style={{width: '100%' , height: '66%'}}>
 
+          
+    <View style={styles.center}>
+        <View style={[styles.card, styles.elevation, styles.center]}>
+          <View style={styles.center}>
+            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 220}}>
+              <Image 
+              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+              source={assets.imgAsh}
+              />
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Ash</Text>
+               </View>
+              <Image 
+                source={assets.postMeme}
+                style={{width: 300, height: 175, borderRadius: 10}}
+                 />
+            </View>
+            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
+                    <IconLike />
+                    <IconWarning />
+                    <IconSave />
+                    <IconComment />
 
+                    </View>
+               </View>
+          </View>
 
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>Tela de VIDEEEEEOOOOOOO</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>CAAAAATEEEEEGORIAAAA</Text>
-            <Text>zzzzzzzzzzzzzzzzzzzzzzzzzz</Text>
-            <Text>zzzzzzzzzzzzzzzzzzzzzzzzzz</Text>
-            <Text>zzzzzzzzzzzzzzzzzzzzzzzzzz</Text>
-            <Text>zzzzzzzzzzzzzzzzzzzzzzzzzz</Text>
+    <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+        <View style={[styles.card, styles.elevation, styles.center]}>
+          <View style={styles.center}>
+            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 130}}>
+              <Image 
+              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+              source={assets.ImgCursoEmVideo}
+              />
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
+               </View>
+
+               <TouchableOpacity
+                    onPress={() => navigation.navigate("OpenVideoGuanabara")}
+                  >
+                   <Image 
+                    source={assets.TumbnailGuanabara}
+                    style={{width: 300, height: 175, borderRadius: 10}}
+                    />
+                  </TouchableOpacity>  
+            </View>
+            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
+                    <IconLike />
+                    <IconWarning />
+                    <IconSave />
+                    <IconComment />
+                    </View>
+          </View>
+          </View>
+
+    <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+        <View style={[styles.card, styles.elevation, styles.center]}>
+          <View style={styles.center}>
+            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 130}}>
+              <Image 
+              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+              source={assets.ImgCursoEmVideo}
+              />
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
+               </View>
+
+               <TouchableOpacity
+                    onPress={() => navigation.navigate("OpenVideoDechamps")}
+                  >
+                   <Image 
+                    source={assets.tumbnailDechamps}
+                    style={{width: 300, height: 175, borderRadius: 10}}
+                    />
+                  </TouchableOpacity>  
+            </View>
+            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
+                    <IconLike />
+                    <IconWarning />
+                    <IconSave />
+                    <IconComment />
+                  </View>
+              </View>
+          </View>
+
+    <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+        <View style={[styles.card, styles.elevation, styles.center]}>
+          <View style={styles.center}>
+            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 185}}>
+              <Image 
+              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+              source={assets.imgJordan}
+              />
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Jordan</Text>
+               </View>
+                   <Image 
+                    source={assets.memeCebola}
+                    style={{width: 300, height: 175, borderRadius: 10}}
+                    />
+            </View>
+            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
+                    <IconLike />
+                    <IconWarning />
+                    <IconSave />
+                    <IconComment />
+                  </View>
+              </View>
+          </View>
+            
+
               </ScrollView>
             </View>
             
@@ -174,7 +291,7 @@ const VideoScreen = ({navigation}) => {
 const Menu = () => {
   const navigation = useNavigation(); 
   return (
-    <>
+    <View style={{top: -50}}>
   <TouchableOpacity 
   onPress={() => navigation.navigate("FriendsMenu")}
   >
@@ -185,7 +302,7 @@ const Menu = () => {
       paddingLeft: 13,
       paddingRight: 35,
       borderRadius: 8,
-      marginTop: -40
+      marginTop: -42
     }}>
       
       <Image source={assets.iconFriends} style={{
@@ -300,16 +417,17 @@ const Menu = () => {
       }}>Configuração</Text>
     </View>
     </TouchableOpacity>
-  </>
+  </View>
 );
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#98C2FF',
-    // alignItems: 'flex-start',
-    // justifyContent: 'flex-start',
+
   },
   containerSafeArea: {
     flex: 1,
@@ -319,6 +437,30 @@ const styles = StyleSheet.create({
     marginTop: -69,
     marginLeft: 12
   },
+  heading: {
+    paddingTop: 5,
+    fontSize: 17,
+    fontWeight: '600',
+  },
+
+  card: {
+    backgroundColor: 'white',
+    borderRadius: 8,
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    width: '95%',
+    marginVertical: 5,
+  },
+
+  elevation: {
+    elevation: 20,
+    shadowColor: '#52006A',
+  },
+  center: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 290
+  }
 });
 
-export default VideoScreen
+export default HomeScreen

@@ -55,6 +55,34 @@ import CatKotlinMenu from '../assets/image/CatKotlinMenu.png';
 import ImgProfileMenu from '../assets/image/profileImg.png'
 import iconCam from '../assets/image/iconCam.png'
 import backgroundProfile from '../assets/image/backgroundProfile.png'
+import likeAnimation from '../assets/icons/like.json';
+import iconDenunciation  from "../assets/icons/iconWarning.png";
+import IconSave  from "../assets/icons/iconSave.png";
+import IconComment  from "../assets/icons/iconComment.png";
+import postMeme  from "../assets/icons/postMeme.png";
+import TumbnailGuanabara from "../assets/image/TumbnailGuanabara.png";
+import tumbnailGuanabara2 from "../assets/image/tumbnailGuanabara2.png";
+import placeholderImg from "../assets/image/placeholderImg.png";
+import ImgCursoEmVideo from "../assets/image/ImgCursoEmVideo.png";
+import tumbnailDechamps from "../assets/image/tumbnailDechamps.png";
+import memeCebola from "../assets/image/memeCebola.png";
+import icon_Dislike from '../assets/icons/dislike.json';
+import imgDechamps from "../assets/image/imgDechamps.png";
+import iconLogout  from "../assets/icons/iconLogout.png";
+import tumbnailSujeitoProgram from "../assets/image/tumbnailSujeitoProgram.png";
+import imgSujeitoProgramador from "../assets/image/imgSujeitoProgramador.png";
+
+
+
+
+
+
+
+
+// VIDEOS
+import GuanabaraVideo  from "../assets/videos/GuanabaraVideo.mp4";
+import DechampsVideo  from "../assets/videos/DechampsVideo.mp4";
+
 
 export default { 
 
@@ -65,19 +93,23 @@ angular, node, vueJS, pensando, LogoOlaClasse, iconFriends, iconCategory,
 iconSaved, iconTermsUse, iconConfig, menu, close, iconSearch, iconHome,
 iconHomeActivated, iconVideo, iconVideoActivated, iconPost, iconChat,
 iconChatActivated, iconBell, iconBellActivated, imgAsh, imgJordan,
-CatAngularMenu,
-CatCSharpMenu,
-CathtmMenu,
-CatCSSMenu,
-CatJsMenu,
-CatDartMenu,
-CatJavaMenu,
-CatKotlinMenu,
-ImgProfileMenu,
-iconCam,
-backgroundProfile,
-
-
-
+CatAngularMenu, CatCSharpMenu, CathtmMenu, CatCSSMenu, CatJsMenu,
+CatDartMenu, CatJavaMenu, CatKotlinMenu, ImgProfileMenu, iconCam,
+backgroundProfile, likeAnimation, iconDenunciation, IconSave,
+IconComment,
+postMeme,
+GuanabaraVideo,
+TumbnailGuanabara,
+tumbnailGuanabara2,
+placeholderImg,
+ImgCursoEmVideo,
+tumbnailDechamps,
+DechampsVideo,
+memeCebola,
+icon_Dislike,
+imgDechamps,
+iconLogout,
+tumbnailSujeitoProgram,
+imgSujeitoProgramador,
 
 };
