@@ -32,7 +32,7 @@ const HomeScreen = ({navigation, item}) => {
           width: 230,
           height: 200,
           borderRadius: 10,
-          marginTop: 5,
+          marginTop: 15,
           marginRight: 10,
           top: 20
         }}></Image>
@@ -148,8 +148,8 @@ const HomeScreen = ({navigation, item}) => {
             </View>
 
             </View>
-          <View style={{width: '100%', height:'80%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
-            <ScrollView style={{width: '100%' , height: '75%'}}>
+          <View style={{width: '100%', height:'85%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
+            <ScrollView style={{width: '100%' , height: '80%'}}>
 
           
     <View style={styles.center}>

@@ -13,7 +13,7 @@ export const NavBarHome = () => {
         
     <View style={{top: 38}}>
         <Divider width={2} orientation='vertical' 
-                 style={{width: 1000,  marginLeft: -400}} />  
+                 style={{width: 1000,  marginLeft: -30}} />  
             </View>
 
         <View style={{flexDirection: 'row'}}>
