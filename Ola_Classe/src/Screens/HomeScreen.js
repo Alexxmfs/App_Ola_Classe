@@ -451,7 +451,7 @@ const Menu = () => {
               return (
                 <View style={{marginLeft: 80, marginTop: -190}}>
                   <TouchableOpacity
-                    onPress={() => navigation.navigate("profileScreen")}
+                    onPress={() => navigation.navigate("UserProfileScreen")}
                   >
                      <Text
                       style={{
@@ -467,8 +467,6 @@ const Menu = () => {
               )
             }}
             />
-
-
   </View>
 );
 }

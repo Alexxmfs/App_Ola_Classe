@@ -140,7 +140,7 @@ export const UploadBackground = () => {
     );
   }
 
-const profileScreen = ({navigation}) => {
+const UserProfileScreen = ({navigation}) => {
   const [data, setData] = useState([]);
 
     const getUsers = () => {
@@ -287,4 +287,4 @@ const styles = StyleSheet.create({
 
 
 
-export default profileScreen
+export default UserProfileScreen
