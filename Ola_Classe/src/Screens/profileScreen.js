@@ -193,7 +193,7 @@ const profileScreen = ({navigation}) => {
 
 
 
-        <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+        <View style={{alignItems: 'center', justifyContent: 'center', top: 50}}>
           <Image 
               source={assets.ImgProfileMenu}
              style={{width: 100, height: 100, borderRadius: 50}}
@@ -201,9 +201,7 @@ const profileScreen = ({navigation}) => {
 
         </View>
 
-             <View style={{top: 21}}>
-                 <Upload />
-              </View>
+
 
 
               {/* username */}
@@ -239,6 +237,10 @@ const profileScreen = ({navigation}) => {
             />
         </View>
         <>
+        <View style={{top: -235}}>
+                 <Upload />
+              </View>
+
           <View style={{width: '100%', height: 90, marginLeft: 70, marginTop: -120, flexDirection: 'row', paddingVertical: 5}}>
               <Text style={{marginLeft: -19, fontSize: 15, color: '#898989'}}>Seguidores</Text>
               <Text style={{paddingHorizontal: 50, fontSize: 15, color: '#898989'}}>Posts</Text>
