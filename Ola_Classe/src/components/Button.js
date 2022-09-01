@@ -21,7 +21,7 @@ export const CircleButton =({ imgUrl, onPress }) => {
             />
 
         </TouchableOpacity>
-        )
+        );
 }
 
 export const ButtonWhite = ({ onPress }) => {
@@ -52,7 +52,7 @@ export const ButtonWhite = ({ onPress }) => {
       </Text>
   
       </TouchableOpacity>
-    )
+    );
   }
 
   export const ButtonBlue = ({ onPress }) => {
@@ -79,7 +79,69 @@ export const ButtonWhite = ({ onPress }) => {
       </Text>
   
       </TouchableOpacity>
-    )
+    );
+  }
+
+  export const ButtonImagens = ({ onPress }) => {
+    return (
+      <View style={{marginRight: -30}}>
+      <TouchableOpacity
+      style={{
+        width: 134,
+        height: 45,
+        borderWidth: 2,
+        borderColor: '#E8E8E8',
+        backgroundColor: COLORS.white,
+        borderRadius: SIZES.medium - 3,
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+      onPress={onPress}
+    >
+
+      <Text style={{ 
+        color: 'black',
+        fontSize: SIZES.font + 2,
+        marginRight: 20,
+        marginTop: -3
+      }}>
+        Imagens
+      </Text>
+  
+      </TouchableOpacity>
+    </View>
+    );
+  }
+
+export const ButtonVideos = ({ onPress }) => {
+    return (
+      <View>
+      <TouchableOpacity
+      style={{
+        width: 134,
+        height: 45,
+        backgroundColor: '#E8E8E8',
+        borderRadius: SIZES.medium - 3,
+        borderColor: COLORS.DarkBlue,
+
+        padding: SIZES.small - 2,
+      }}
+      onPress={onPress}
+    >
+
+      <Text style={{ 
+        color: 'black',
+        fontSize: SIZES.font + 2,
+        textAlign: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+        Vídeos
+      </Text>
+  
+      </TouchableOpacity>
+      </View>
+    );
   }
 
   export const ButtonCreateAccount = ({ onPress }) => {

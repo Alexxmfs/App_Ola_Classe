@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../constants';
-import { CircleButton, ButtonWhite, ButtonBlue} from '../components/Button';
+import { CircleButton, ButtonImagens, ButtonVideos } from '../components/Button';
 import { View, TouchableOpacity, Text, StyleSheet, Image, FlatList, SafeAreaView } from "react-native";
 import { firebase, db } from '../../firebase';
 
@@ -173,12 +173,12 @@ const profileScreen = ({navigation}) => {
 
 
   return (
-      <SafeAreaView style={{marginTop: -25}}>
+      <SafeAreaView style={{marginTop: -5}}>
         <View style={{marginTop: 25}}>
-        <Image 
-        style={{width: 395}}
-        source={assets.backgroundProfile}
-        />
+           <Image 
+              style={{width: 395}}
+              source={assets.backgroundProfile}
+          />
         </View>
         <View style={{top: -75}}>
                 <UploadBackground />
@@ -207,13 +207,13 @@ const profileScreen = ({navigation}) => {
 
 
               {/* username */}
-        <View>
+        <View  style={{marginTop: -400, alignItems: 'center', justifyContent: 'center'}}>
           <FlatList 
             data={data}
             keyExtractor={(item) => item.username}
             renderItem={({item}) =>{
               return (
-                <View style={{marginTop: -200, alignItems: 'center', justifyContent: 'center'}}>
+                <View style={{ alignItems: 'center', justifyContent: 'center'}}>
                      <Text
                       style={{
                         fontSize: 20,
@@ -249,9 +249,14 @@ const profileScreen = ({navigation}) => {
                     <Text style={{paddingHorizontal: 10, right: 85, fontSize: 17, fontWeight: '600'}}>0</Text>
                 </View>
           </View>
+
+          <View style={{alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}}>
+            <ButtonImagens />
+            <ButtonVideos />
+          </View>
         </>
         </SafeAreaView>
-  )
+  );
 }
 
 const styles = StyleSheet.create({

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Image, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { VideoGuanabara } from '../../components/Videos'
-import { CircleButton } from '../../components/Button';
+import { CircleButton, ButtonImagens, ButtonVideos } from '../../components/Button';
 import { assets } from '../../../constants';
 import { IconLike, IconWarning, IconSave, IconComment, IconDislike }   from '../../components/IconsCard';
 

@@ -1,5 +1,5 @@
 import { CircleButton, ButtonRegister, CustomInput, CustomInputDate, ButtonCreateAccount,
-         Navbar, ButtonFriends, uploadImage } from "./Button";
+         Navbar, ButtonFriends, uploadImage, ButtonImagens, ButtonVideos } from "./Button";
 
 import IconsCard  from "./IconsCard";
 
@@ -7,5 +7,5 @@ import Videos from './Videos'
 
 export {
     CircleButton, ButtonRegister, CustomInput, CustomInputDate,
-     ButtonCreateAccount, Navbar, ButtonFriends, uploadImage, IconsCard, Videos, 
+     ButtonCreateAccount, Navbar, ButtonFriends, uploadImage, IconsCard, Videos, ButtonImagens, ButtonVideos
 }
