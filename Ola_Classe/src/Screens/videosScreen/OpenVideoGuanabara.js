@@ -1,15 +1,15 @@
 import React from 'react';
-import { StyleSheet, View, Image, Text } from 'react-native';
+import { StyleSheet, View, Image, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { VideoGuanabara } from '../../components/Videos'
-import { CircleButton } from '../../components/Button';
+import { CircleButton, ButtonImagens, ButtonVideos } from '../../components/Button';
 import { assets } from '../../../constants';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { IconLike, IconWarning, IconSave, IconComment, IconDislike }   from '../../components/IconsCard';
 
 
 const OpenVideoGuanabara = ({navigation}) => {
   return (
-    <View style={{ alignItems: 'center', justifyContent: 'center'}}>
+      <ScrollView>
+      <View style={{ alignItems: 'center', justifyContent: 'center'}}>
         <View style={styles.circleButton}>
              <CircleButton 
                 imgUrl = {assets.next}
@@ -54,8 +54,92 @@ const OpenVideoGuanabara = ({navigation}) => {
                              </View>
                   </View>
             </View>
-    </View>
-  )
+
+
+
+      <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+        <Text style={{fontSize: 16, fontWeight: '700', marginRight: 290}}>Videos</Text>
+        <View style={[styles.card, styles.elevation, styles.centerVideo]}>
+          <View style={styles.centerVideo}>
+            <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 5, marginRight: 130}}>
+              <Image 
+              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+              source={assets.ImgCursoEmVideo}
+              />
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
+               </View>
+
+               <TouchableOpacity
+                    onPress={() => navigation.navigate("OpenVideoGuanabara")}
+                  >
+                   <Image 
+                    source={assets.tumbnailGuanabara2}
+                    style={{width: 300, height: 175, borderRadius: 10}}
+                    />
+                  </TouchableOpacity>  
+                     <View style={{paddingTop: 5}}>
+                       <Text
+                        style={{
+                          fontWeight: '700',
+                          fontSize: 16
+                        }}>
+                             Curso Python #02 - Para que serve o Python?
+                        </Text>
+                     </View>
+            </View>
+
+            <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
+                    <IconLike />
+                    <IconWarning />
+                    <IconSave />
+                    <IconComment />
+                    </View>
+          </View>
+          </View>
+
+      <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+        <View style={[styles.card, styles.elevation, styles.centerVideo]}>
+          <View style={styles.centerVideo}>
+            <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 5, marginRight: 85}}>
+              <Image 
+              style={{width: 40, height: 40, borderRadius: 50, marginRight: 235, marginTop: -8}}
+              source={assets.imgSujeitoProgramador}
+              />
+               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Sujeito Programador</Text>
+               </View>
+
+               <TouchableOpacity
+                    onPress={() => navigation.navigate("OpenVideoGuanabara")}
+                  >
+                   <Image 
+                    source={assets.tumbnailSujeitoProgram}
+                    style={{width: 300, height: 175, borderRadius: 10}}
+                    />
+                  </TouchableOpacity>  
+                     <View style={{paddingTop: 5}}>
+                       <Text
+                        style={{
+                          fontWeight: '700',
+                          fontSize: 16
+                        }}>
+                             Entender Context API com React Native de uma vez por todas! ✅
+                        </Text>
+                     </View>
+            </View>
+
+            <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
+                    <IconLike />
+                    <IconWarning />
+                    <IconSave />
+                    <IconComment />
+                    </View>
+          </View>
+          </View>
+
+
+          </View>
+    </ScrollView>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -63,8 +147,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     height: 250,
-    backgroundColor: 'red',
-    marginTop: 5
+    marginTop: 5,
   },
   circleButton: {
     marginTop: 50,
@@ -100,7 +183,27 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
-  }
+  },
+  centerVideo: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 310,
+  },
+  card: {
+    backgroundColor: 'white',
+    borderRadius: 10,
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    paddingTop: 5,
+    width: 325,
+    marginVertical: 5,
+  },
+
+  elevation: {
+    elevation: 20,
+    shadowColor: '#52006A',
+  },
+
 });
 
 export default OpenVideoGuanabara

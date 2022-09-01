@@ -61,12 +61,18 @@ import IconSave  from "../assets/icons/iconSave.png";
 import IconComment  from "../assets/icons/iconComment.png";
 import postMeme  from "../assets/icons/postMeme.png";
 import TumbnailGuanabara from "../assets/image/TumbnailGuanabara.png";
+import tumbnailGuanabara2 from "../assets/image/tumbnailGuanabara2.png";
 import placeholderImg from "../assets/image/placeholderImg.png";
 import ImgCursoEmVideo from "../assets/image/ImgCursoEmVideo.png";
 import tumbnailDechamps from "../assets/image/tumbnailDechamps.png";
 import memeCebola from "../assets/image/memeCebola.png";
 import icon_Dislike from '../assets/icons/dislike.json';
 import imgDechamps from "../assets/image/imgDechamps.png";
+import iconLogout  from "../assets/icons/iconLogout.png";
+import tumbnailSujeitoProgram from "../assets/image/tumbnailSujeitoProgram.png";
+import imgSujeitoProgramador from "../assets/image/imgSujeitoProgramador.png";
+
+
 
 
 
@@ -89,14 +95,12 @@ iconHomeActivated, iconVideo, iconVideoActivated, iconPost, iconChat,
 iconChatActivated, iconBell, iconBellActivated, imgAsh, imgJordan,
 CatAngularMenu, CatCSharpMenu, CathtmMenu, CatCSSMenu, CatJsMenu,
 CatDartMenu, CatJavaMenu, CatKotlinMenu, ImgProfileMenu, iconCam,
-backgroundProfile,
-likeAnimation,
-iconDenunciation,
-IconSave,
+backgroundProfile, likeAnimation, iconDenunciation, IconSave,
 IconComment,
 postMeme,
 GuanabaraVideo,
 TumbnailGuanabara,
+tumbnailGuanabara2,
 placeholderImg,
 ImgCursoEmVideo,
 tumbnailDechamps,
@@ -104,4 +108,8 @@ DechampsVideo,
 memeCebola,
 icon_Dislike,
 imgDechamps,
+iconLogout,
+tumbnailSujeitoProgram,
+imgSujeitoProgramador,
+
 };

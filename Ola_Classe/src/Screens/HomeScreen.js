@@ -10,40 +10,20 @@ import { firebase, db } from '../../firebase';
 
 
 const HomeScreen = ({navigation, item}) => {
-  const [data, setData] = useState([]);
 
   const [showMenu, setShowMenu] = useState(false);
   const offsetValue = useRef(new Animated.Value(0)).current;
   const scaleValue = useRef(new Animated.Value(1)).current;
   const closeButtonOffset = useRef(new Animated.Value(0)).current;
 
-    const getUsers = () => {
-      db.collection('users')
-      .get()
-      .then((querySnapshot) => {
-        let d = [];
-        querySnapshot.forEach((doc) => {
-          console.log(doc.owner_uid, '=>', doc.data());
-          const user = {
-            owner_uid: doc.owner_uid,
-            username: doc.data().username,
-            email: doc.data().email,
-          };
-          d.push(user);
-        });
-        // console.log(d);
-        setData(d);
-      })
-      .catch(() => {
-        console.log('erroooooooooooooo!!!')
-      });
-
-    };
-  
-    useEffect(() => {
-      getUsers()
-  }, [])
-
+  const handleSignout = async () => {
+    try {
+        await firebase.auth().signOut()
+        console.log('Signed out succesfully!')
+    } catch (error) {
+        console.log(error)
+        }
+    }
   
   return (
     <SafeAreaView style={styles.container}>
@@ -66,7 +46,7 @@ const HomeScreen = ({navigation, item}) => {
           }}>Menu</Text>
         </TouchableOpacity>
 
-          <View style={{top: 400, marginLeft: 20}}>
+          <View style={{top: 340, marginLeft: 20}}>
               <Image 
                 style={{width: 60, height: 60, borderRadius: 50}}
                 source={assets.ImgProfileMenu}
@@ -77,30 +57,33 @@ const HomeScreen = ({navigation, item}) => {
 
           {Menu("Menu")}
 
-          <FlatList 
-            data={data}
-            keyExtractor={(item) => item.username}
-            renderItem={({item}) =>{
-              return (
-                <View style={{marginLeft: 80, marginTop: -187}}>
-                  <TouchableOpacity
-                    onPress={() => navigation.navigate("profileScreen")}
-                  >
-                     <Text
-                      style={{
-                        fontSize: 16,
-                        paddingVertical: 140,
-                         fontWeight: '600'
-                         }}>
-                          {item.username}
-                      </Text>
-                  </TouchableOpacity>
 
-                </View>
-              )
-            }}
-            />
-        </View>
+              <TouchableOpacity 
+                 onPress={handleSignout}
+                 >
+              <View style={{
+                flexDirection: "row",
+                alignItems: 'center',
+                paddingVertical: 8,
+                paddingLeft: 13,
+                paddingRight: 35,
+                borderRadius: 8,
+                marginTop: -120,
+                backgroundColor: '#98C2FF'
+              }}>
+                
+                <Image source={assets.iconLogout} style={{
+                  width: 35, height: 35,
+                }}></Image>
+
+                <Text style={{
+                  fontSize: 17,
+                  fontWeight: 'bold',
+                  paddingLeft: 15,
+                }}>Sair</Text>
+              </View>
+              </TouchableOpacity>
+      </View>
         
         <Animated.View style={{
         flexGrow: 1,
@@ -301,7 +284,38 @@ const HomeScreen = ({navigation, item}) => {
 }
 
 const Menu = () => {
-  const navigation = useNavigation(); 
+  const navigation = useNavigation();
+  const [data, setData] = useState([]);
+
+  const getUsers = () => {
+    db.collection('users')
+    .get()
+    .then((querySnapshot) => {
+      let d = [];
+      querySnapshot.forEach((doc) => {
+        console.log(doc.owner_uid, '=>', doc.data());
+        const user = {
+          owner_uid: doc.owner_uid,
+          username: doc.data().username,
+          email: doc.data().email,
+        };
+        d.push(user);
+      });
+      // console.log(d);
+      setData(d);
+    })
+    .catch(() => {
+      console.log('erroooooooooooooo!!!')
+    });
+
+  };
+
+  useEffect(() => {
+    getUsers()
+}, [])
+
+
+
   return (
     <View style={{top: -50}}>
   <TouchableOpacity 
@@ -429,6 +443,32 @@ const Menu = () => {
       }}>Configuração</Text>
     </View>
     </TouchableOpacity>
+
+    <FlatList 
+            data={data}
+            keyExtractor={(item) => item.username}
+            renderItem={({item}) =>{
+              return (
+                <View style={{marginLeft: 80, marginTop: -190}}>
+                  <TouchableOpacity
+                    onPress={() => navigation.navigate("profileScreen")}
+                  >
+                     <Text
+                      style={{
+                        fontSize: 16,
+                        paddingVertical: 140,
+                         fontWeight: '600'
+                         }}>
+                          {item.username}
+                      </Text>
+                  </TouchableOpacity>
+
+                </View>
+              )
+            }}
+            />
+
+
   </View>
 );
 }
