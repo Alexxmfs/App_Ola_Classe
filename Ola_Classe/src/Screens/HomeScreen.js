@@ -266,19 +266,22 @@ const HomeScreen = ({navigation, item}) => {
                     <IconSave />
                     <IconComment />
                   </View>
+                  <View>
+
+                  </View>
               </View>
           </View>
             
+                  
+                    <Text>ignora</Text>
+                    <Text>ignora</Text>
+                    <Text>ignora</Text>
 
-              </ScrollView>
-            </View>
-            
-
-        </Animated.View>
-
+                  </ScrollView>
+                </View>
+              </Animated.View>
            </Animated.View>
          </View>
-
     </SafeAreaView>
   );
 }

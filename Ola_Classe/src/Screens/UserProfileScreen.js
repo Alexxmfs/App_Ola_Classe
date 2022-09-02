@@ -62,7 +62,6 @@ export const Upload = () => {
           style={styles.avatar}
         />
 
-
           <View>
         <TouchableOpacity style={styles.button} onPress={imagePickerCall}>
             <Image 
@@ -75,6 +74,7 @@ export const Upload = () => {
       </View>
     );
   }
+  
 export const UploadBackground = () => {
     const [avatar, setAvatar] = useState();
   
@@ -131,6 +131,71 @@ export const UploadBackground = () => {
         <TouchableOpacity style={styles.button} onPress={imagePickerCallBackground}>
             <Image 
                 style={{top: -45, marginLeft: 330}}
+                source={assets.iconCam}
+            />
+        </TouchableOpacity>
+        </View>
+  
+      </View>
+    );
+  }
+
+export const UploadPost = () => {
+    const [avatar, setAvatar] = useState();
+  
+    async function imagePickerCallBackground() {
+      if (Constants.platform.ios) {
+        const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+  
+        if (status !== "granted") {
+          alert("Nós precisamos dessa permissão.");
+          return;
+        }
+      }
+  
+      const data3 = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ImagePicker.MediaTypeOptions.All
+      });
+  
+      if (data3.cancelled) {
+        return;
+      }
+  
+      if (!data3.uri) {
+        return;
+      }
+  
+      setAvatar(data3);
+    }
+  
+    async function uploadImage() {
+      const data3 = new FormData();
+  
+      data3.append("avatar", {
+        uri: avatar.uri,
+        type: avatar.type
+      });
+  
+      await Axios.post("http://localhost:3333/files", data3);
+    }
+  
+    return (
+        <View style={styles.container}>
+
+        <Image
+          source={{
+            uri: avatar
+              ? avatar.uri
+              : "https://mltmpgeox6sf.i.optimole.com/w:761/h:720/q:auto/https://redbanksmilesnj.com/wp-content/uploads/2015/11/man-avatar-placeholder.png"
+          }}
+          style={styles.avatar}
+        />
+
+
+          <View>
+        <TouchableOpacity style={styles.button} onPress={imagePickerCallBackground}>
+            <Image 
+                style={{top: 50, marginRight: 80 }}
                 source={assets.iconCam}
             />
         </TouchableOpacity>
@@ -256,6 +321,12 @@ const UserProfileScreen = ({navigation}) => {
             <ButtonImagens />
             <ButtonVideos />
           </View>
+
+
+            {/* <View style={{alignItems: 'center', justifyContent: 'center'}}>
+              <UploadPost />
+            </View> */}
+
         </>
         </SafeAreaView>
   );
