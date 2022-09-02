@@ -25,7 +25,7 @@ import CategoryMenu from "./src/Screens/CategoryMenu";
 import UserProfileScreen from './src/Screens/UserProfileScreen'
 import OpenVideoGuanabara from './src/Screens/videosScreen/OpenVideoGuanabara';
 import OpenVideoDechamps from './src/Screens/videosScreen/OpenVideoDechamps';
-
+import CategoryAngularScreen from './src/Screens/Category_Languages/CategoryAngularScreen';
 
 const Stack = createStackNavigator();
 
@@ -62,6 +62,7 @@ export const SignedInStack = () => {
         <Stack.Screen name="UserProfileScreen" component={UserProfileScreen} />
         <Stack.Screen name="OpenVideoGuanabara" component={OpenVideoGuanabara} />
         <Stack.Screen name="OpenVideoDechamps" component={OpenVideoDechamps} />
+        <Stack.Screen name="CategoryAngularScreen" component={CategoryAngularScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>

@@ -69,7 +69,10 @@ import memeCebola from "../assets/image/memeCebola.png";
 import icon_Dislike from '../assets/icons/dislike.json';
 import imgDechamps from "../assets/image/imgDechamps.png";
 import iconLogout  from "../assets/icons/iconLogout.png";
-import tumbnailSujeitoProgram from "../assets/image/tumbnailSujeitoProgram.png";
+import tumbnailSujeitoProgram from "../assets/image/tumbnailSujeitoProgram.png"; 
+import tumbnailAngular from "../assets/image/tumbnailAngular.png"; 
+import tumbnailAngular2 from "../assets/image/tumbnailAngular2.png"; 
+import tumbnailAngular3 from "../assets/image/tumbnailAngular3.png"; 
 import imgSujeitoProgramador from "../assets/image/imgSujeitoProgramador.png";
 
 
@@ -111,5 +114,8 @@ imgDechamps,
 iconLogout,
 tumbnailSujeitoProgram,
 imgSujeitoProgramador,
+tumbnailAngular,
+tumbnailAngular2,
+tumbnailAngular3,
 
 };

@@ -28,7 +28,9 @@ const CategoryMenu = ({navigation}) => {
 
                   
        <View style={styles.center}>
-       <TouchableOpacity style={styles.center}>
+       <TouchableOpacity style={styles.center}
+        onPress={() => navigation.navigate("CategoryAngularScreen")}
+       >
         
           <View style={[styles.card, styles.elevation, styles.center]}>
             <View style={styles.center}>
