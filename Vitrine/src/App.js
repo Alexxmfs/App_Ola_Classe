@@ -5,7 +5,7 @@ const App = () => {
   return(
     <>
       <SectionWrapper
-        title="Vamos desenvolver novas habilidades e conhecimentos"
+        title="Vamos Desenvolver Novas Habilidades & Conhecimentos"
         description="Quer aprender uma nova linguagem de programação? Entende de lógica e gostaria de compartilhar este conhecimento com mais pessoas? Junte-se a maior e única rede social de aprendizado para dar também o seu 'Olá, classe!'"
 
         showBtn
@@ -13,7 +13,7 @@ const App = () => {
         banner="banner"
       />
       <SectionWrapper
-        title="Interface fácil e intuitiva para os usuários"
+        title="Interface Fácil e Intuitiva Para os Usuários"
         description="Toda a experiência de rede social enquanto aprende algo novo."
 
         mockupImg={assets.homeCards}
@@ -27,7 +27,7 @@ const App = () => {
         reverse
 />
       <SectionWrapper
-        title="Conteúdo direcionado"
+        title="Conteúdo Direcionado"
         description="É possível salvar, curtir e interagir nas postagens e o conteúdo da sua página será de acordo com seus interesses."
 
         mockupImg={assets.video}
