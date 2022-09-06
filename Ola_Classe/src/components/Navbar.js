@@ -11,7 +11,7 @@ export const NavBarHome = () => {
   return (
     <View styles={{ alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         
-    <View style={{top: 38}}>
+    <View style={{top: 35}}>
         <Divider width={2} orientation='vertical' 
                  style={{width: 1000,  marginLeft: -30}} />  
             </View>
@@ -74,7 +74,7 @@ export const NavBarVideo = () => {
   return (
     <View styles={{ alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         
-    <View style={{top: 38}}>
+    <View style={{top: 40}}>
         <Divider width={2} orientation='vertical' 
                  style={{width: 1000,  marginLeft: -400}} />  
             </View>

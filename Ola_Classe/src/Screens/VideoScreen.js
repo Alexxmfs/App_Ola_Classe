@@ -8,52 +8,32 @@ import { IconLike, IconWarning, IconSave, IconComment }   from '../components/Ic
 
 import { firebase, db } from '../../firebase';
 
-
-const HomeScreen = ({navigation, item}) => {
-  const [data, setData] = useState([]);
+const VideoScreen = ({navigation, item}) => {
 
   const [showMenu, setShowMenu] = useState(false);
   const offsetValue = useRef(new Animated.Value(0)).current;
   const scaleValue = useRef(new Animated.Value(1)).current;
   const closeButtonOffset = useRef(new Animated.Value(0)).current;
 
-    const getUsers = () => {
-      db.collection('users')
-      .get()
-      .then((querySnapshot) => {
-        let d = [];
-        querySnapshot.forEach((doc) => {
-          console.log(doc.owner_uid, '=>', doc.data());
-          const user = {
-            owner_uid: doc.owner_uid,
-            username: doc.data().username,
-            email: doc.data().email,
-          };
-          d.push(user);
-        });
-        // console.log(d);
-        setData(d);
-      })
-      .catch(() => {
-        console.log('erroooooooooooooo!!!')
-      });
-
-    };
-  
-    useEffect(() => {
-      getUsers()
-  }, [])
-
+  const handleSignout = async () => {
+    try {
+        await firebase.auth().signOut()
+        console.log('Signed out succesfully!')
+    } catch (error) {
+        console.log(error)
+        }
+    }
   
   return (
     <SafeAreaView style={styles.container}>
       <View style={{ justifyContent: 'flex-start'}}>
         <Image source={assets.LogoOlaClasse} style={{
           width: 230,
-          height: 230,
+          height: 200,
           borderRadius: 10,
           marginTop: 15,
-          marginRight: 10
+          marginRight: 10,
+          top: 20
         }}></Image>
 
         <TouchableOpacity>
@@ -65,7 +45,7 @@ const HomeScreen = ({navigation, item}) => {
           }}>Menu</Text>
         </TouchableOpacity>
 
-          <View style={{top: 370, marginLeft: 20}}>
+          <View style={{top: 340, marginLeft: 20}}>
               <Image 
                 style={{width: 60, height: 60, borderRadius: 50}}
                 source={assets.ImgProfileMenu}
@@ -76,30 +56,33 @@ const HomeScreen = ({navigation, item}) => {
 
           {Menu("Menu")}
 
-          <FlatList 
-            data={data}
-            keyExtractor={(item) => item.username}
-            renderItem={({item}) =>{
-              return (
-                <View style={{marginLeft: 80, marginTop: -200}}>
-                  <TouchableOpacity
-                    onPress={() => navigation.navigate("profileScreen")}
-                  >
-                     <Text
-                      style={{
-                        fontSize: 16,
-                        paddingVertical: 140,
-                         fontWeight: '600'
-                         }}>
-                          {item.username}
-                      </Text>
-                  </TouchableOpacity>
 
-                </View>
-              )
-            }}
-            />
-        </View>
+              <TouchableOpacity 
+                 onPress={handleSignout}
+                 >
+              <View style={{
+                flexDirection: "row",
+                alignItems: 'center',
+                paddingVertical: 8,
+                paddingLeft: 13,
+                paddingRight: 35,
+                borderRadius: 8,
+                marginTop: -120,
+                backgroundColor: '#98C2FF'
+              }}>
+                
+                <Image source={assets.iconLogout} style={{
+                  width: 35, height: 35,
+                }}></Image>
+
+                <Text style={{
+                  fontSize: 17,
+                  fontWeight: 'bold',
+                  paddingLeft: 15,
+                }}>Sair</Text>
+              </View>
+              </TouchableOpacity>
+      </View>
         
         <Animated.View style={{
         flexGrow: 1,
@@ -110,7 +93,7 @@ const HomeScreen = ({navigation, item}) => {
         left: 0,
         right: 0,
         paddingHorizontal: 15,
-        paddingVertical: 20,
+         paddingVertical: 10,
         borderRadius: showMenu ? 15 : 0,
         transform: [
           { scale: scaleValue },
@@ -163,133 +146,260 @@ const HomeScreen = ({navigation, item}) => {
 
             </View>
 
-            </View>
-          <View style={{width: '100%', height:'78%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
-            <ScrollView style={{width: '100%' , height: '66%'}}>
-
-          
-    <View style={styles.center}>
-        <View style={[styles.card, styles.elevation, styles.center]}>
-          <View style={styles.center}>
-            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 220}}>
-              <Image 
-              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
-              source={assets.imgAsh}
-              />
-               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Ash</Text>
-               </View>
-              <Image 
-                source={assets.postMeme}
-                style={{width: 300, height: 175, borderRadius: 10}}
-                 />
-            </View>
-            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
-                    <IconLike />
-                    <IconWarning />
-                    <IconSave />
-                    <IconComment />
-
-                    </View>
-               </View>
-          </View>
-
-    <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
-        <View style={[styles.card, styles.elevation, styles.center]}>
-          <View style={styles.center}>
-            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 130}}>
-              <Image 
-              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
-              source={assets.ImgCursoEmVideo}
-              />
-               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
-               </View>
-
-               <TouchableOpacity
-                    onPress={() => navigation.navigate("OpenVideoGuanabara")}
-                  >
-                   <Image 
-                    source={assets.TumbnailGuanabara}
-                    style={{width: 300, height: 175, borderRadius: 10}}
-                    />
-                  </TouchableOpacity>  
-            </View>
-            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
-                    <IconLike />
-                    <IconWarning />
-                    <IconSave />
-                    <IconComment />
-                    </View>
-          </View>
-          </View>
-
-    <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
-        <View style={[styles.card, styles.elevation, styles.center]}>
-          <View style={styles.center}>
-            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 130}}>
-              <Image 
-              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
-              source={assets.ImgCursoEmVideo}
-              />
-               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
-               </View>
-
-               <TouchableOpacity
-                    onPress={() => navigation.navigate("OpenVideoDechamps")}
-                  >
-                   <Image 
-                    source={assets.tumbnailDechamps}
-                    style={{width: 300, height: 175, borderRadius: 10}}
-                    />
-                  </TouchableOpacity>  
-            </View>
-            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
-                    <IconLike />
-                    <IconWarning />
-                    <IconSave />
-                    <IconComment />
-                  </View>
-              </View>
-          </View>
-
-    <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
-        <View style={[styles.card, styles.elevation, styles.center]}>
-          <View style={styles.center}>
-            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 185}}>
-              <Image 
-              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
-              source={assets.imgJordan}
-              />
-               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Jordan</Text>
-               </View>
-                   <Image 
-                    source={assets.memeCebola}
-                    style={{width: 300, height: 175, borderRadius: 10}}
-                    />
-            </View>
-            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
-                    <IconLike />
-                    <IconWarning />
-                    <IconSave />
-                    <IconComment />
-                  </View>
-              </View>
-          </View>
+            </View>            
             
+            <ScrollView style={{width: '100%' , height: '80%'}}>
+         
+                    <View> 
+                      <Text style={{fontSize: 18, fontWeight: '700', paddingTop: 18, paddingLeft: 5}}>Top Cursos</Text>
+                        <View style={{flexDirection: 'row', paddingTop: 15}}>
+                              <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                                     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: -45, height: '100%'}}>
+                                          <View style={[styles.card, styles.elevation, styles.center]}>
+                                                    <View style={styles.center}>
+                                                      <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 8, marginRight: 130}}>
+                                                        <Image 
+                                                        style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+                                                        source={assets.ImgCursoEmVideo}
+                                                        />
+                                                        <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
+                                                        </View>
 
-              </ScrollView>
-            </View>
-            
+                                                        <TouchableOpacity
+                                                              onPress={() => navigation.navigate("OpenVideoGuanabara")}
+                                                            >
+                                                            <Image 
+                                                              source={assets.TumbnailGuanabara}
+                                                              style={{width: 300, height: 175, borderRadius: 10}}
+                                                              />
+                                                            </TouchableOpacity>  
+                                                              <View style={{paddingTop: 3}}>
+                                                                <Text
+                                                                  style={{
+                                                                    fontWeight: '700',
+                                                                    fontSize: 16
+                                                                  }}>
+                                                                      Curso Pyhton #01 - Seja Programador
+                                                                  </Text>
+                                                              </View>
+                                                      </View>
 
-        </Animated.View>
+                                              <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
+                                                      <IconLike />
+                                                      <IconWarning />
+                                                      <IconSave />
+                                                      <IconComment />
+                                              </View>
+                                                        <Text></Text>
+                                        </View>
+                                   </View>
 
-      </Animated.View>
-      </View>
+                                   
+                                     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: -30, height: '100%'}}>
+                                          <View style={[styles.card, styles.elevation, styles.center]}>
+                                                    <View style={styles.center}>
+                                                      <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 8, marginRight: 130}}>
+                                                        <Image 
+                                                        style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+                                                        source={assets.ImgCursoEmVideo}
+                                                        />
+                                                        <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
+                                                        </View>
+
+                                                        <TouchableOpacity
+                                                              onPress={() => navigation.navigate("OpenVideoGuanabara")}
+                                                            >
+                                                            <Image 
+                                                              source={assets.TumbnailGuanabara}
+                                                              style={{width: 300, height: 175, borderRadius: 10}}
+                                                              />
+                                                            </TouchableOpacity>  
+                                                              <View style={{paddingTop: 3}}>
+                                                                <Text
+                                                                  style={{
+                                                                    fontWeight: '700',
+                                                                    fontSize: 16
+                                                                  }}>
+                                                                      Curso Pyhton #01 - Seja Programador
+                                                                  </Text>
+                                                              </View>
+                                                      </View>
+
+                                              <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
+                                                      <IconLike />
+                                                      <IconWarning />
+                                                      <IconSave />
+                                                      <IconComment />
+                                              </View>
+                                                        <Text></Text>
+                                        </View>
+                                   </View>
+
+
+                                     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: -30, height: '100%'}}>
+                                          <View style={[styles.card, styles.elevation, styles.center]}>
+                                                    <View style={styles.center}>
+                                                      <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 8, marginRight: 130}}>
+                                                        <Image 
+                                                        style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+                                                        source={assets.ImgCursoEmVideo}
+                                                        />
+                                                        <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
+                                                        </View>
+
+                                                        <TouchableOpacity
+                                                              onPress={() => navigation.navigate("OpenVideoGuanabara")}
+                                                            >
+                                                            <Image 
+                                                              source={assets.TumbnailGuanabara}
+                                                              style={{width: 300, height: 175, borderRadius: 10}}
+                                                              />
+                                                            </TouchableOpacity>  
+                                                              <View style={{paddingTop: 3}}>
+                                                                <Text
+                                                                  style={{
+                                                                    fontWeight: '700',
+                                                                    fontSize: 16
+                                                                  }}>
+                                                                      Curso Pyhton #01 - Seja Programador
+                                                                  </Text>
+                                                              </View>
+                                                      </View>
+
+                                              <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
+                                                      <IconLike />
+                                                      <IconWarning />
+                                                      <IconSave />
+                                                      <IconComment />
+                                              </View>
+                                                        <Text></Text>
+                                        </View>
+                                   </View>
+
+
+                              </ScrollView>
+                       </View>
+                             </View>
+
+                                 <View style={{top: -160}}>
+                                    <Text
+                                     style={{
+                                        fontSize: 17,
+                                        fontWeight: '700',
+                                        paddingLeft: 10
+                                        }}>
+                                      Categorias
+                                      </Text>
+                                    
+                                  <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                                    <View style={{marginLeft: 10, flexDirection: 'row', width: 400}}>
+                                      <View style={[styles.cardCategoria, styles.elevationCategoria ]}>
+                                            <Image
+                                            style={{width: 105, height: 90, position: 'absolute', borderRadius: 8}}
+                                            source={assets.CatAngularMenu}
+                                            />
+                                              <View style={{top: 100, alignItems: 'center', justifyContent: 'center'}}>
+                                                  <Text style={{fontSize: 16, fontWeight: '600'}}>Angular</Text>
+                                              </View>
+                                      </View>
+                                      <View style={[styles.cardCategoria, styles.elevationCategoria ]}>
+                                            <Image
+                                            style={{width: 105, height: 90, position: 'absolute', borderRadius: 8}}
+                                            source={assets.CatAngularMenu}
+                                            />
+                                              <View style={{top: 100, alignItems: 'center', justifyContent: 'center'}}>
+                                                  <Text style={{fontSize: 16, fontWeight: '600'}}>Angular</Text>
+                                              </View>
+                                      </View>
+                                      <View style={[styles.cardCategoria, styles.elevationCategoria ]}>
+                                            <Image
+                                            style={{width: 105, height: 90, position: 'absolute', borderRadius: 8}}
+                                            source={assets.CatAngularMenu}
+                                            />
+                                              <View style={{top: 100, alignItems: 'center', justifyContent: 'center'}}>
+                                                  <Text style={{fontSize: 16, fontWeight: '600'}}>Angular</Text>
+                                              </View>
+                                      </View>
+
+                                      <View style={[styles.cardCategoria, styles.elevationCategoria ]}>
+                                            <Image
+                                            style={{width: 105, height: 90, position: 'absolute', borderRadius: 8}}
+                                            source={assets.CatAngularMenu}
+                                            />
+                                              <View style={{top: 100, alignItems: 'center', justifyContent: 'center'}}>
+                                                  <Text style={{fontSize: 16, fontWeight: '600'}}>Angular</Text>
+                                              </View>
+                                      </View>
+                                    </View>
+
+                                </ScrollView>
+
+
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                    <Text>VIDEO SCREEN</Text>
+                                </View>
+
+                    </ScrollView>
+              </Animated.View>
+           </Animated.View>
+         </View>
     </SafeAreaView>
   );
 }
 
 const Menu = () => {
-  const navigation = useNavigation(); 
+  const navigation = useNavigation();
+  const [data, setData] = useState([]);
+
+  const getUsers = () => {
+    db.collection('users')
+    .get()
+    .then((querySnapshot) => {
+      let d = [];
+      querySnapshot.forEach((doc) => {
+        console.log(doc.owner_uid, '=>', doc.data());
+        const user = {
+          owner_uid: doc.owner_uid,
+          username: doc.data().username,
+          email: doc.data().email,
+        };
+        d.push(user);
+      });
+      // console.log(d);
+      setData(d);
+    })
+    .catch(() => {
+      console.log('erroooooooooooooo!!!')
+    });
+
+  };
+
+  useEffect(() => {
+    getUsers()
+}, [])
+
+
+
   return (
     <View style={{top: -50}}>
   <TouchableOpacity 
@@ -417,6 +527,30 @@ const Menu = () => {
       }}>Configuração</Text>
     </View>
     </TouchableOpacity>
+
+    <FlatList 
+            data={data}
+            keyExtractor={(item) => item.username}
+            renderItem={({item}) =>{
+              return (
+                <View style={{marginLeft: 80, marginTop: -190}}>
+                  <TouchableOpacity
+                    onPress={() => navigation.navigate("UserProfileScreen")}
+                  >
+                     <Text
+                      style={{
+                        fontSize: 16,
+                        paddingVertical: 140,
+                         fontWeight: '600'
+                         }}>
+                          {item.username}
+                      </Text>
+                  </TouchableOpacity>
+
+                </View>
+              )
+            }}
+            />
   </View>
 );
 }
@@ -427,7 +561,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#98C2FF',
-
+    // alignItems: 'flex-start',
+    // justifyContent: 'flex-start',
   },
   containerSafeArea: {
     flex: 1,
@@ -448,7 +583,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingVertical: 15,
     paddingHorizontal: 15,
-    width: '95%',
+    width: '80%',
     marginVertical: 5,
   },
 
@@ -456,11 +591,31 @@ const styles = StyleSheet.create({
     elevation: 20,
     shadowColor: '#52006A',
   },
+
+  cardCategoria: {
+    backgroundColor: 'white',
+    borderRadius: 8,
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    width: '30%',
+    marginVertical: 5,
+    paddingBottom: 120,
+    resizeMode: 'cover',
+    margin: 5
+  },
+
+  elevationCategoria: {
+    elevation: 20,
+    shadowColor: '#52006A',
+  },
+
+
   center: {
     alignItems: 'center',
     justifyContent: 'center',
-    height: 290
+    height: 290, 
+    marginTop: 10
   }
 });
 
-export default HomeScreen
+export default VideoScreen

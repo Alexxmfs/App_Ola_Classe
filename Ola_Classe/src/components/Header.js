@@ -4,19 +4,22 @@ import {firebase} from '../../firebase';
 import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../constants'
 import Navbar  from '../components/Navbar';
  
-const handleSignout = async () => {
-try {
-    await firebase.auth().signOut()
-    console.log('Signed out succesfully!')
-} catch (error) {
-    console.log(error)
-    }
-}
+// const handleSignout = async () => {
+// try {
+//     await firebase.auth().signOut()
+//     console.log('Signed out succesfully!')
+// } catch (error) {
+//     console.log(error)
+//     }
+// }
+// No TouchableOpacity Abaixo 
+// onPress={handleSignout}
+
 const Header = ({navigation}) => {
   return (
 <View>
     <View style={styles.container}>
-        <TouchableOpacity onPress={handleSignout}>
+        <TouchableOpacity>
         <Image 
             style={styles.OlaClasse}
             source={assets.logo} 
