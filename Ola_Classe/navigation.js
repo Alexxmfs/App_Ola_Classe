@@ -27,6 +27,9 @@ import OpenVideoGuanabara from './src/Screens/videosScreen/OpenVideoGuanabara';
 import OpenVideoDechamps from './src/Screens/videosScreen/OpenVideoDechamps';
 import CategoryAngularScreen from './src/Screens/Category_Languages/CategoryAngularScreen';
 
+import CategoryJsScreen from './src/Screens/Category_Languages/CateogryJsScreen';
+
+
 const Stack = createStackNavigator();
 
 const theme = {
@@ -63,6 +66,7 @@ export const SignedInStack = () => {
         <Stack.Screen name="OpenVideoGuanabara" component={OpenVideoGuanabara} />
         <Stack.Screen name="OpenVideoDechamps" component={OpenVideoDechamps} />
         <Stack.Screen name="CategoryAngularScreen" component={CategoryAngularScreen} />
+        <Stack.Screen name="CategoryJsScreen" component={CategoryJsScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
