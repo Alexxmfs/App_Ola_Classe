@@ -15,8 +15,8 @@ const Features = () => {
     <div className={`${styles.section} ${styles.bgPrimary} banner03`}>
       <div className={`${styles.subSection} flex-col text-center`}>
         <div>
-          <h1 className={`${styles.h1Text} ${styles.whiteText}`}>Technologies</h1>
-          <p  className={`${styles.pText} ${styles.whiteText}`}>ProNef has been developed using a cross-platform technology, React Native.</p>
+          <h1 className={`${styles.h1Text} ${styles.whiteText}`}>Tecnologias</h1>
+          <p  className={`${styles.pText} ${styles.whiteText}`}>Corpo e alma do aplicativo 'Olá, classe!'</p>
         </div>
 
         <div className={styles.flexWrap}>
