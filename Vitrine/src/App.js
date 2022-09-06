@@ -5,8 +5,8 @@ const App = () => {
   return(
     <>
       <SectionWrapper
-        title="You own store of Nifty NFTs. Start Selling & Growing"
-        description="Buy, store, collect NFTS, exchange & earn crypto. Join 25+ million people using ProNef Marketplace."
+        title="Vamos desenvolver novas habilidades e conhecimentos"
+        description="Quer aprender uma nova linguagem de programação? Entende de lógica e gostaria de compartilhar este conhecimento com mais pessoas? Junte-se a maior e única rede social de aprendizado para dar também o seu 'Olá, classe!'"
 
         showBtn
         mockupImg={assets.HomePage}
