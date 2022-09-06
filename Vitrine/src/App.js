@@ -28,7 +28,7 @@ const App = () => {
 />
       <SectionWrapper
         title="Conteúdo direcionado"
-        description="É possíve salvar, curtir e interagir nas postagens e o conteúdo da sua página será de acordo com seus interesses."
+        description="É possível salvar, curtir e interagir nas postagens e o conteúdo da sua página será de acordo com seus interesses."
 
         mockupImg={assets.video}
         banner="banner02"
