@@ -47,12 +47,13 @@ npx expo start
    <img align="center" alt="Alex-React-Navigation" height="60" width="60" src="https://opencollective-production.s3.us-west-1.amazonaws.com/e0c11e40-0595-11ea-bb7c-cf9c6343ca68.png" hspace="10" />
 
 
-   <img align="center" alt="Alex-React-Navigation" height="60" width="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" hspace="10"       />
+   <img align="center" alt="Alex-React-Navigation" height="60" width="60"         src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" hspace="10"  />
 
-   <img align="center" alt="Alex-React-Navigation" height="60" width="60" src="https://icons-for-free.com/iconfiles/png/512/expo-1324440155568384208.png" hspace="10" />
+   <img align="center" alt="Alex-React-Navigation" height="60" width="60" src="https://icons-for-free.com/iconfiles/png/512/expo-1324440155568384208.png" hspace="10"       />
+   
+   <img align="center" alt="Alex-React-Navigation" height="60" width="60" src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" hspace="10" />
 
   </div>
-
 
 
 
