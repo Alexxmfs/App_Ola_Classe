@@ -8,7 +8,7 @@ const Download = () => {
     <div className={`${styles.section} ${styles.bgWhite}`}>
       <div className={`${styles.subSection} flex-col text-center`}>
         <div>
-          <h1 className={`${styles.h1Text} ${styles.blackText}`}>Acesse o código</h1>
+          <h1 className={`${styles.h1Text} ${styles.blackText}`}>Acesse o Código</h1>
           <p className={`${styles.pText} ${styles.blackText}`}>O código está disponível no GitHub</p>
         </div>
         <button className={`${styles.btnPrimary}`}>
