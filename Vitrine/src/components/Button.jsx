@@ -5,7 +5,7 @@ import styles from '../styles/Global';
 const Button = ({ assetUrl, Link }) => {
   return (
     <div className={styles.btnBlack}
-          onClick={() => window.open(Link, "_blank")}>
+          onClick={() => window.open('https://www.w3schools.com', "_blank")}>
       <img src={assetUrl} alt="expo_icon" 
       className={styles.btnIcon} />
       <div className="flex flex-col justify-start ml-4">
