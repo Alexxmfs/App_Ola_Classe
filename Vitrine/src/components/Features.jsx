@@ -24,7 +24,8 @@ const Features = () => {
           <FeatureCard iconUrl={assets.javascript} iconText="JavaScript" />  
           <FeatureCard iconUrl={assets.firebase} iconText="Firebase" />  
           <FeatureCard iconUrl={assets.ReactNavigate} iconText="React Navigation" />  
-          <FeatureCard iconUrl={assets.redux} iconText="Redux" />  
+          <FeatureCard iconUrl={assets.formik} iconText="Formik" />  
+          <FeatureCard iconUrl={assets.expo02} iconText="Expo" />  
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ import mockup from "./mockup.png";
 import HomePage from "./HomePage.png";
 import ReactNavigate from "./ReactNavigate.svg";
 import firebase from "./firebase.png";
-import redux from "./redux.png";
+import formik from "./formik.png";
 import AlunoProf from "./AlunoProf.png";
 import video from "./video.png";
 import telas from "./telas.png"
@@ -28,7 +28,7 @@ export default {
   HomePage,
   ReactNavigate,
   firebase,
-  redux,
+  formik,
   AlunoProf,
   video,
   telas,
