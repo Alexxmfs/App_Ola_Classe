@@ -7,7 +7,7 @@
 <h2><b>Instalação</b></h2>
 
 <br>
-<p style="font-size:5vw"><b>Baixe a última versão</b></p>
+<p style="font-size:5vw;"><b>Baixe a última versão</b></p>
 
 ```
 git clone https://github.com/Alexxmfs/App_Ola_Classe.git
