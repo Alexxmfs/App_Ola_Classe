@@ -10,8 +10,5 @@
 <br>
 
 ```
-git clone git@github.com:FluxionNetwork/fluxion.git
+git clone https://github.com/Alexxmfs/App_Ola_Classe.git
 
-# Or if you prefer https 
-
-git 
