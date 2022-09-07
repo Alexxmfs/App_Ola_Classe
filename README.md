@@ -5,3 +5,5 @@
 <p>Quer aprender uma nova linguagem de programação? Entende de lógica e gostaria de compartilhar este conhecimento com mais pessoas? Junte-se a maior e única rede social de aprendizado para dar também o seu 'Olá, classe!'</p>
 
 <h2><b>Instalação</b></h2>
+
+<p><b>Baixe a última versão</b></p>
