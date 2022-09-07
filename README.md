@@ -4,4 +4,4 @@
 
 <p>Quer aprender uma nova linguagem de programação? Entende de lógica e gostaria de compartilhar este conhecimento com mais pessoas? Junte-se a maior e única rede social de aprendizado para dar também o seu 'Olá, classe!'</p>
 
-<h3><b>Instalação</b></h3>
+<h2><b>Instalação</b></h2>
