@@ -7,3 +7,5 @@
 <h2><b>Instalação</b></h2>
 
 <p><b>Baixe a última versão</b></p>
+<br>
+git clone https://github.com/Alexxmfs/App_Ola_Classe.git
