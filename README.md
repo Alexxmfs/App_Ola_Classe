@@ -35,9 +35,13 @@ npx expo start
 <br>
 <h2><b>Tecnologias Utilizadas</b></h2>
 
+  <div style="display: inline_block"><br>
+  <img align="center" alt="Alex-Js" height="50" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"          hspace="10">
 
+  <img align="center" alt="Alex-React-Native" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" hspace="10" />
 
-
+<img align="center" alt="Alex-Firebase" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
+  </div>
 
 
 
