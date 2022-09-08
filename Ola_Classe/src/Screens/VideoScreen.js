@@ -52,7 +52,7 @@ const VideoScreen = ({navigation, item}) => {
               />
           </View>
           
-        <View style={{ flexGrow: 1, marginTop: 10,  padding: 15, height: '66%' }}>
+        <View style={{ flexGrow: 1, marginTop: 5,  padding: 15, height: '66%' }}>
 
           {Menu("Menu")}
 
@@ -150,24 +150,24 @@ const VideoScreen = ({navigation, item}) => {
             
             <ScrollView style={{width: '100%' , height: '80%'}}>
          
-                    <View> 
-                      <Text style={{fontSize: 18, fontWeight: '700', paddingTop: 18, paddingLeft: 5}}>Top Cursos</Text>
-                        <View style={{flexDirection: 'row', paddingTop: 15}}>
-                              <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                                     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: -45, height: '100%'}}>
-                                          <View style={[styles.card, styles.elevation, styles.center]}>
-                                                    <View style={styles.center}>
-                                                      <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 8, marginRight: 130}}>
-                                                        <Image 
-                                                        style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
-                                                        source={assets.ImgCursoEmVideo}
-                                                        />
-                                                        <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
-                                                        </View>
+         <View> 
+            <Text style={{fontSize: 18, fontWeight: '700', paddingTop: 15, paddingLeft: 5}}>Top Cursos</Text>
+                <View style={{flexDirection: 'row', marginTop: -10}}>
+                    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                          <View style={{alignItems: 'center', justifyContent: 'center', top: -65, height: '100%'}}>
+                                <View style={[styles.card, styles.elevation, styles.center]}>
+                                    <View style={styles.center}>
+                                          <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 8, marginRight: 130}}>
+                                                <Image 
+                                                 style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+                                                 source={assets.ImgCursoEmVideo}
+                                                  />
+                                                  <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
+                                            </View>
 
-                                                        <TouchableOpacity
-                                                              onPress={() => navigation.navigate("OpenVideoGuanabara")}
-                                                            >
+                                              <TouchableOpacity
+                                                onPress={() => navigation.navigate("OpenVideoGuanabara")}
+                                                >
                                                             <Image 
                                                               source={assets.TumbnailGuanabara}
                                                               style={{width: 300, height: 175, borderRadius: 10}}
@@ -195,7 +195,7 @@ const VideoScreen = ({navigation, item}) => {
                                    </View>
 
                                    
-                                     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: -30, height: '100%'}}>
+                                     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: -67, height: '100%'}}>
                                           <View style={[styles.card, styles.elevation, styles.center]}>
                                                     <View style={styles.center}>
                                                       <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 8, marginRight: 130}}>
@@ -236,7 +236,7 @@ const VideoScreen = ({navigation, item}) => {
                                    </View>
 
 
-                                     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: -30, height: '100%'}}>
+                                     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: -68, height: '100%'}}>
                                           <View style={[styles.card, styles.elevation, styles.center]}>
                                                     <View style={styles.center}>
                                                       <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 8, marginRight: 130}}>
@@ -281,7 +281,7 @@ const VideoScreen = ({navigation, item}) => {
                        </View>
                              </View>
 
-                                 <View style={{top: -160}}>
+                                 <View style={{top: -275}}>
                                     <Text
                                      style={{
                                         fontSize: 17,
@@ -291,48 +291,90 @@ const VideoScreen = ({navigation, item}) => {
                                       Categorias
                                       </Text>
                                     
-                                  <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                                    <View style={{marginLeft: 10, flexDirection: 'row', width: 400}}>
-                                      <View style={[styles.cardCategoria, styles.elevationCategoria ]}>
-                                            <Image
-                                            style={{width: 105, height: 90, position: 'absolute', borderRadius: 8}}
-                                            source={assets.CatAngularMenu}
-                                            />
-                                              <View style={{top: 100, alignItems: 'center', justifyContent: 'center'}}>
-                                                  <Text style={{fontSize: 16, fontWeight: '600'}}>Angular</Text>
-                                              </View>
-                                      </View>
-                                      <View style={[styles.cardCategoria, styles.elevationCategoria ]}>
-                                            <Image
-                                            style={{width: 105, height: 90, position: 'absolute', borderRadius: 8}}
-                                            source={assets.CatAngularMenu}
-                                            />
-                                              <View style={{top: 100, alignItems: 'center', justifyContent: 'center'}}>
-                                                  <Text style={{fontSize: 16, fontWeight: '600'}}>Angular</Text>
-                                              </View>
-                                      </View>
-                                      <View style={[styles.cardCategoria, styles.elevationCategoria ]}>
-                                            <Image
-                                            style={{width: 105, height: 90, position: 'absolute', borderRadius: 8}}
-                                            source={assets.CatAngularMenu}
-                                            />
-                                              <View style={{top: 100, alignItems: 'center', justifyContent: 'center'}}>
-                                                  <Text style={{fontSize: 16, fontWeight: '600'}}>Angular</Text>
-                                              </View>
-                                      </View>
+  <View style={{
+      flexDirection:"row"
+       }}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <View style={[styles.cardCategoria, styles.elevationCategoria]}>
+                 <View>
+                         <Image 
+                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
+                           source={assets.CatAngularMenu}
+                          />
 
-                                      <View style={[styles.cardCategoria, styles.elevationCategoria ]}>
-                                            <Image
-                                            style={{width: 105, height: 90, position: 'absolute', borderRadius: 8}}
-                                            source={assets.CatAngularMenu}
-                                            />
-                                              <View style={{top: 100, alignItems: 'center', justifyContent: 'center'}}>
-                                                  <Text style={{fontSize: 16, fontWeight: '600'}}>Angular</Text>
-                                              </View>
-                                      </View>
-                                    </View>
+                  </View>
+                          <View style={{marginTop: 30}}>
+                             <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
+                          </View>
+              </View>
+              
+            <View style={[styles.cardCategoria, styles.elevationCategoria]}>
+                 <View>
+                         <Image 
+                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
+                           source={assets.CatAngularMenu}
+                          />
 
-                                </ScrollView>
+                  </View>
+                          <View style={{marginTop: 30}}>
+                             <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
+                          </View>
+              </View>
+
+            <View style={[styles.cardCategoria, styles.elevationCategoria]}>
+                 <View>
+                         <Image 
+                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
+                           source={assets.CatAngularMenu}
+                          />
+
+                  </View>
+                          <View style={{marginTop: 30}}>
+                             <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
+                          </View>
+              </View>
+
+            <View style={[styles.cardCategoria, styles.elevationCategoria]}>
+                 <View>
+                         <Image 
+                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
+                           source={assets.CatAngularMenu}
+                          />
+
+                  </View>
+                          <View style={{marginTop: 30}}>
+                             <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
+                          </View>
+              </View>
+
+            <View style={[styles.cardCategoria, styles.elevationCategoria]}>
+                 <View>
+                         <Image 
+                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
+                           source={assets.CatAngularMenu}
+                          />
+
+                  </View>
+                          <View style={{marginTop: 30}}>
+                             <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
+                          </View>
+              </View>
+
+            <View style={[styles.cardCategoria, styles.elevationCategoria]}>
+                 <View>
+                         <Image 
+                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
+                           source={assets.CatAngularMenu}
+                          />
+
+                  </View>
+                          <View style={{marginTop: 30}}>
+                             <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
+                          </View>
+              </View>
+
+        </ScrollView>
+    </View>
 
 
                                     <Text>VIDEO SCREEN</Text>
@@ -570,7 +612,7 @@ const styles = StyleSheet.create({
   },
   HeaderOlaClasse: {
     marginTop: -69,
-    marginLeft: 12
+    marginLeft: 12,
   },
   heading: {
     paddingTop: 5,
@@ -593,13 +635,14 @@ const styles = StyleSheet.create({
   },
 
   cardCategoria: {
+    alignItems: 'center',
+    resizeMode: 'contain',
     backgroundColor: 'white',
     borderRadius: 8,
     paddingVertical: 15,
-    paddingHorizontal: 15,
-    width: '30%',
+    paddingHorizontal: 2,
+    height: 150,
     marginVertical: 5,
-    paddingBottom: 120,
     resizeMode: 'cover',
     margin: 5
   },

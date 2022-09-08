@@ -11,10 +11,11 @@ export const NavBarHome = () => {
   return (
     <View styles={{ alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         
-    <View style={{top: 35}}>
-        <Divider width={2} orientation='vertical' 
-                 style={{width: 1000,  marginLeft: -30}} />  
-            </View>
+    <View style={{top: 38}}>
+        <Divider width={2} orientation='vertical'
+        style={{width: 1000,  marginLeft: -30}}
+         />
+   </View>
 
         <View style={{flexDirection: 'row'}}>
 
@@ -74,10 +75,11 @@ export const NavBarVideo = () => {
   return (
     <View styles={{ alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         
-    <View style={{top: 40}}>
-        <Divider width={2} orientation='vertical' 
-                 style={{width: 1000,  marginLeft: -400}} />  
-            </View>
+        <View style={{top: 38}}>
+        <Divider width={2} orientation='vertical'
+        style={{width: 1000,  marginLeft: -30}}
+         />
+   </View>
 
         <View style={{flexDirection: 'row', marginLeft: -8}}>
 
@@ -144,10 +146,11 @@ export const NavBarPost = () => {
   return (
     <View styles={{ alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         
-    <View style={{top: 38}}>
-        <Divider width={2} orientation='vertical' 
-                 style={{width: 1000,  marginLeft: -400}} />  
-            </View>
+        <View style={{top: 38}}>
+        <Divider width={2} orientation='vertical'
+        style={{width: 100,  marginLeft: -100}}
+         />
+        </View>
 
         <View style={{flexDirection: 'row', marginLeft: -8}}>
 

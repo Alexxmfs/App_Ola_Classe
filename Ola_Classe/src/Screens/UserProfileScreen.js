@@ -65,7 +65,7 @@ export const Upload = () => {
           <View>
         <TouchableOpacity style={styles.button} onPress={imagePickerCall}>
             <Image 
-                style={{top: -25, marginLeft: 50}}
+                style={{top: -25, marginLeft: 65}}
                 source={assets.iconCam}
             />
         </TouchableOpacity>
@@ -245,7 +245,7 @@ const UserProfileScreen = ({navigation}) => {
               source={assets.backgroundProfile}
           />
         </View>
-        <View style={{top: -75}}>
+        <View style={{top: -70}}>
                 <UploadBackground />
             </View>
         <View style={styles.circleButton}>
@@ -351,7 +351,7 @@ const styles = StyleSheet.create({
       },
       avatarBackground: {
         width: 395,
-        height: 200,
+        height: 192,
       }
 });
 
