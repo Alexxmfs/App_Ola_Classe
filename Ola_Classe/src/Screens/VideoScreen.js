@@ -279,6 +279,13 @@ const VideoScreen = ({navigation, item}) => {
 
                               </ScrollView>
                        </View>
+
+
+
+
+
+
+                       
                              </View>
 
                                  <View style={{top: -275}}>
@@ -298,20 +305,20 @@ const VideoScreen = ({navigation, item}) => {
             <View style={[styles.cardCategoria, styles.elevationCategoria]}>
                  <View>
                          <Image 
-                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
-                           source={assets.CatAngularMenu}
+                           style={{width: 98, height: 80, borderRadius: 8, marginTop: -10}}
+                           source={assets.imgVueJS}
                           />
 
                   </View>
                           <View style={{marginTop: 30}}>
-                             <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
+                             <Text style={{fontWeight: '600', fontSize: 16}}>Vue.js</Text>
                           </View>
               </View>
               
             <View style={[styles.cardCategoria, styles.elevationCategoria]}>
                  <View>
                          <Image 
-                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
+                           style={{width: 98, height: 80, borderRadius: 8, marginTop: -10}}
                            source={assets.CatAngularMenu}
                           />
 
@@ -324,7 +331,20 @@ const VideoScreen = ({navigation, item}) => {
             <View style={[styles.cardCategoria, styles.elevationCategoria]}>
                  <View>
                          <Image 
-                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
+                           style={{width: 98, height: 80, borderRadius: 8, marginTop: -10}}
+                           source={assets.ImgNode}
+                          />
+
+                  </View>
+                          <View style={{marginTop: 30}}>
+                             <Text style={{fontWeight: '600', fontSize: 16}}>Node.js</Text>
+                          </View>
+              </View>
+
+            <View style={[styles.cardCategoria, styles.elevationCategoria]}>
+                 <View>
+                         <Image 
+                           style={{width: 98, height: 80, borderRadius: 8, marginTop: -10}}
                            source={assets.CatAngularMenu}
                           />
 
@@ -337,7 +357,7 @@ const VideoScreen = ({navigation, item}) => {
             <View style={[styles.cardCategoria, styles.elevationCategoria]}>
                  <View>
                          <Image 
-                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
+                           style={{width: 98, height: 80, borderRadius: 8, marginTop: -10}}
                            source={assets.CatAngularMenu}
                           />
 
@@ -350,20 +370,7 @@ const VideoScreen = ({navigation, item}) => {
             <View style={[styles.cardCategoria, styles.elevationCategoria]}>
                  <View>
                          <Image 
-                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
-                           source={assets.CatAngularMenu}
-                          />
-
-                  </View>
-                          <View style={{marginTop: 30}}>
-                             <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
-                          </View>
-              </View>
-
-            <View style={[styles.cardCategoria, styles.elevationCategoria]}>
-                 <View>
-                         <Image 
-                           style={{width: 98, height: 70, borderRadius: 8, marginTop: -10}}
+                           style={{width: 98, height: 80, borderRadius: 8, marginTop: -10}}
                            source={assets.CatAngularMenu}
                           />
 
@@ -375,7 +382,8 @@ const VideoScreen = ({navigation, item}) => {
 
         </ScrollView>
     </View>
-
+              
+              
 
                                     <Text>VIDEO SCREEN</Text>
                                     <Text>VIDEO SCREEN</Text>
@@ -640,7 +648,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 8,
     paddingVertical: 15,
-    paddingHorizontal: 2,
+    paddingHorizontal: 1,
     height: 150,
     marginVertical: 5,
     resizeMode: 'cover',

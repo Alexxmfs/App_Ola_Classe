@@ -76,6 +76,10 @@ import tumbnailAngular3 from "../assets/image/tumbnailAngular3.png";
 import imgSujeitoProgramador from "../assets/image/imgSujeitoProgramador.png";
 import imgJS from "../assets/image/imgJS.png";
 import postJS from "../assets/image/postJS.png";
+import postJS02 from "../assets/image/postJS02.png";
+import postJS03 from "../assets/image/postJS03.png";
+import imgVueJS from "../assets/image/imgVueJS.png";
+import ImgNode from "../assets/image/ImgNode.png";
 
 
 
@@ -120,4 +124,8 @@ tumbnailAngular2,
 tumbnailAngular3,
 imgJS,
 postJS,
+postJS02,
+postJS03,
+imgVueJS,
+ImgNode,
 };

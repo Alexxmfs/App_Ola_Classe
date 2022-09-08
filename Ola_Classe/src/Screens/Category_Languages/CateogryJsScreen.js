@@ -68,7 +68,7 @@ const CategoryJsScreen = ({ navigation }) => {
                 </Text>
               </View>
 
-              <View style={{ right: 80 }}>
+              <View style={{ right: 90 }}>
                 <Text
                   style={{
                     color: "gray",
@@ -130,7 +130,7 @@ const CategoryJsScreen = ({ navigation }) => {
                     marginRight: 235,
                     marginTop: -8,
                   }}
-                  source={assets.imgJordan}
+                  source={assets.imgAsh}
                 />
                 <Text
                   style={{ marginLeft: -225, fontWeight: "600", fontSize: 16 }}
@@ -139,14 +139,14 @@ const CategoryJsScreen = ({ navigation }) => {
                 </Text>
               </View>
 
-              <View style={{ right: 15 }}>
+              <View style={{ right: 20 }}>
                 <Text
                   style={{
                     color: "gray",
                     fontSize: 16,
                   }}
                 >
-                  Como dar um show em  JavaScript
+                  Como dar um show em JavaScript
                 </Text>
 
                 <Text style={{ color: "#63AFFE" }}>#Angular</Text>
@@ -154,7 +154,7 @@ const CategoryJsScreen = ({ navigation }) => {
               <View style={{ paddingTop: 10 }}>
                 <TouchableOpacity onPress={() => navigation.navigate("#")}>
                   <Image
-                    source={assets.tumbnailAngular2}
+                    source={assets.postJS02}
                     style={{ width: 300, height: 175, borderRadius: 10 }}
                   />
                 </TouchableOpacity>
@@ -210,22 +210,22 @@ const CategoryJsScreen = ({ navigation }) => {
                 </Text>
               </View>
 
-              <View style={{ right: 35 }}>
+              <View style={{ right: 20 }}>
                 <Text
                   style={{
                     color: "gray",
                     fontSize: 16,
                   }}
                 >
-                  Angular, o melhor framework JS
+                  O que o EcmaScript  afetou no JS
                 </Text>
 
-                <Text style={{ color: "#63AFFE" }}>#Angular</Text>
+                <Text style={{ color: "#63AFFE" }}>#JS</Text>
               </View>
               <View style={{ paddingTop: 10 }}>
                 <TouchableOpacity onPress={() => navigation.navigate("#")}>
                   <Image
-                    source={assets.tumbnailAngular3}
+                    source={assets.postJS03}
                     style={{ width: 300, height: 175, borderRadius: 10 }}
                   />
                 </TouchableOpacity>
