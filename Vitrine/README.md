@@ -1,5 +1,5 @@
-# NFT Marketplace - Showcase
-![NFT Marketplace](https://i.ibb.co/X5kYdvB/image.png)
+# Olá Classe - Vitrine
+![Education Marketplace](https://raw.githubusercontent.com/Alexxmfs/App_Ola_Classe/logoOlaClasse/imgVitrine.PNG)
 
 ## Introduction
 This is a code repository for the corresponding video tutorial.
