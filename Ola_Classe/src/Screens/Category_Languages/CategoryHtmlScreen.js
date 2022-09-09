@@ -30,7 +30,7 @@ const CategoryHtmlScreen = ({ navigation }) => {
         <View style={{ alignItems: "center", justifyContent: "center" }}>
           <Image
             style={{ width: 70, height: 70, borderRadius: 50 }}
-            source={assets.imgJS}
+            source={assets.imgHTML}
           />
           <Text style={styles.textAngular}>HTML5</Text>
         </View>
@@ -83,7 +83,7 @@ const CategoryHtmlScreen = ({ navigation }) => {
               <View style={{ paddingTop: 10 }}>
                 <TouchableOpacity onPress={() => navigation.navigate("#")}>
                   <Image
-                    source={assets.postJS}
+                    source={assets.postHtml}
                     style={{ width: 300, height: 175, borderRadius: 10 }}
                   />
                 </TouchableOpacity>
@@ -154,7 +154,7 @@ const CategoryHtmlScreen = ({ navigation }) => {
               <View style={{ paddingTop: 10 }}>
                 <TouchableOpacity onPress={() => navigation.navigate("#")}>
                   <Image
-                    source={assets.postJS02}
+                    source={assets.tumbnailHTML01}
                     style={{ width: 300, height: 175, borderRadius: 10 }}
                   />
                 </TouchableOpacity>
@@ -225,7 +225,7 @@ const CategoryHtmlScreen = ({ navigation }) => {
               <View style={{ paddingTop: 10 }}>
                 <TouchableOpacity onPress={() => navigation.navigate("#")}>
                   <Image
-                    source={assets.postJS03}
+                    source={assets.tumbnailHTML02}
                     style={{ width: 300, height: 175, borderRadius: 10 }}
                   />
                 </TouchableOpacity>
