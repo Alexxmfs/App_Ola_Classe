@@ -16,7 +16,7 @@ import {
   IconComment,
 } from "../../components/IconsCard";
 
-const CategoryJsScreen = ({ navigation }) => {
+const CategoryHtmlScreen = ({ navigation }) => {
   return (
     <View>
       <ScrollView>
@@ -32,7 +32,7 @@ const CategoryJsScreen = ({ navigation }) => {
             style={{ width: 70, height: 70, borderRadius: 50 }}
             source={assets.imgJS}
           />
-          <Text style={styles.textAngular}>JavaScript</Text>
+          <Text style={styles.textAngular}>HTML5</Text>
         </View>
 
         <View
@@ -68,17 +68,17 @@ const CategoryJsScreen = ({ navigation }) => {
                 </Text>
               </View>
 
-              <View style={{ right: 90 }}>
+              <View style={{ right: 50 }}>
                 <Text
                   style={{
                     color: "gray",
                     fontSize: 16,
                   }}
                 >
-                  Macetes do JS
+                  Tags semânticas do HTML5
                 </Text>
 
-                <Text style={{ color: "#63AFFE" }}>#JS</Text>
+                <Text style={{ color: "#63AFFE" }}>#HTML5</Text>
               </View>
               <View style={{ paddingTop: 10 }}>
                 <TouchableOpacity onPress={() => navigation.navigate("#")}>
@@ -139,17 +139,17 @@ const CategoryJsScreen = ({ navigation }) => {
                 </Text>
               </View>
 
-              <View style={{ right: 20 }}>
+              <View style={{ right: 10 }}>
                 <Text
                   style={{
                     color: "gray",
                     fontSize: 16,
                   }}
                 >
-                  Como dar um show em JavaScript
+                  Erros de iniciantes ao utilizar o HTML5
                 </Text>
 
-                <Text style={{ color: "#63AFFE" }}>#JS</Text>
+                <Text style={{ color: "#63AFFE" }}>#HTML5</Text>
               </View>
               <View style={{ paddingTop: 10 }}>
                 <TouchableOpacity onPress={() => navigation.navigate("#")}>
@@ -210,17 +210,17 @@ const CategoryJsScreen = ({ navigation }) => {
                 </Text>
               </View>
 
-              <View style={{ right: 20 }}>
+              <View style={{ right: 65 }}>
                 <Text
                   style={{
                     color: "gray",
                     fontSize: 16,
                   }}
                 >
-                  O que o EcmaScript  afetou no JS
+                  O HTML5 vai acabar??
                 </Text>
 
-                <Text style={{ color: "#63AFFE" }}>#JS</Text>
+                <Text style={{ color: "#63AFFE" }}>#HTML5</Text>
               </View>
               <View style={{ paddingTop: 10 }}>
                 <TouchableOpacity onPress={() => navigation.navigate("#")}>
@@ -292,4 +292,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CategoryJsScreen;
+export default CategoryHtmlScreen;
