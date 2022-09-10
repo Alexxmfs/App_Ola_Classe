@@ -80,11 +80,16 @@ import postJS02 from "../assets/image/postJS02.png";
 import postJS03 from "../assets/image/postJS03.png";
 import imgVueJS from "../assets/image/imgVueJS.png";
 import ImgNode from "../assets/image/ImgNode.png";
+import imgKotlin from "../assets/image/imgKotlin.png";
 
 import imgHTML from "../assets/image/imgHTML.png";
 import postHtml from "../assets/image/postHtml.png";
 import tumbnailHTML01 from "../assets/image/tumbnailHTML01.png";
 import tumbnailHTML02 from "../assets/image/tumbnailHTML02.png";
+
+import tumbnailCodigoFonteCarousel from "../assets/image/tumbnailCodigoFonteCarousel.png";
+import tumbnailGuanabaraCarousel from "../assets/image/tumbnailGuanabaraCarousel.png";
+import imgCodigoFonte from "../assets/image/imgCodigoFonte.png";
 
 
 
@@ -133,9 +138,15 @@ postJS02,
 postJS03,
 imgVueJS,
 ImgNode,
-
+imgKotlin,
 imgHTML,
 postHtml,
 tumbnailHTML01,
 tumbnailHTML02,
+tumbnailCodigoFonteCarousel,
+imgCodigoFonte,
+tumbnailGuanabaraCarousel,
+
+
+
 };

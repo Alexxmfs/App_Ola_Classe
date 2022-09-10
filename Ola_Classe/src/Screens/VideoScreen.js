@@ -166,8 +166,8 @@ const HomeScreen = ({navigation, item}) => {
                                       <View style={styles.center}>
                                         <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 5, marginRight: 130}}>
                                           <Image 
-                                          style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
-                                          source={assets.ImgCursoEmVideo}
+                                          style={{width: 40, height: 40, borderRadius: 50, marginRight: 235, marginTop: -8}}
+                                          source={assets.imgCodigoFonte}
                                           />
                                           <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
                                           </View>
@@ -176,7 +176,7 @@ const HomeScreen = ({navigation, item}) => {
                                                 onPress={() => navigation.navigate("OpenVideoGuanabara")}
                                               >
                                               <Image 
-                                                source={assets.TumbnailGuanabara}
+                                                source={assets.tumbnailCodigoFonteCarousel}
                                                 style={{width: 300, height: 175, borderRadius: 10}}
                                                 />
                                               </TouchableOpacity>  
@@ -254,7 +254,7 @@ const HomeScreen = ({navigation, item}) => {
                                                 onPress={() => navigation.navigate("OpenVideoGuanabara")}
                                               >
                                               <Image 
-                                                source={assets.TumbnailGuanabara}
+                                                source={assets.tumbnailGuanabaraCarousel}
                                                 style={{width: 300, height: 175, borderRadius: 10}}
                                                 />
                                               </TouchableOpacity>  
@@ -334,13 +334,13 @@ const HomeScreen = ({navigation, item}) => {
             <View style={[styles.cardCategoria, styles.elevationCategoria]}>
                  <View>
                          <Image 
-                           style={{width: 98, height: 80, borderRadius: 8, marginTop: -10}}
-                           source={assets.CatAngularMenu}
+                           style={{width: 102, height: 80, borderRadius: 8, marginTop: -10}}
+                           source={assets.imgKotlin}
                           />
 
                   </View>
                           <View style={{marginTop: 30}}>
-                             <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
+                             <Text style={{fontWeight: '600', fontSize: 16}}>Kotlin</Text>
                           </View>
               </View>
 
