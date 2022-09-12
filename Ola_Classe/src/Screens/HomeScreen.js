@@ -32,7 +32,7 @@ const HomeScreen = ({navigation, item}) => {
           width: 230,
           height: 200,
           borderRadius: 10,
-          marginTop: 5,
+          marginTop: 15,
           marginRight: 10,
           top: 20
         }}></Image>
@@ -148,8 +148,8 @@ const HomeScreen = ({navigation, item}) => {
             </View>
 
             </View>
-          <View style={{width: '100%', height:'80%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
-            <ScrollView style={{width: '100%' , height: '75%'}}>
+          <View style={{width: '100%', height:'85%', alignItems: 'center', justifyContent: 'center', marginTop: 5}}>
+            <ScrollView style={{width: '100%' , height: '80%'}}>
 
           
     <View style={styles.center}>
@@ -266,19 +266,22 @@ const HomeScreen = ({navigation, item}) => {
                     <IconSave />
                     <IconComment />
                   </View>
+                  <View>
+
+                  </View>
               </View>
           </View>
             
+                  
+                    <Text>ignora</Text>
+                    <Text>ignora</Text>
+                    <Text>ignora</Text>
 
-              </ScrollView>
-            </View>
-            
-
-        </Animated.View>
-
+                  </ScrollView>
+                </View>
+              </Animated.View>
            </Animated.View>
          </View>
-
     </SafeAreaView>
   );
 }
@@ -451,7 +454,7 @@ const Menu = () => {
               return (
                 <View style={{marginLeft: 80, marginTop: -190}}>
                   <TouchableOpacity
-                    onPress={() => navigation.navigate("profileScreen")}
+                    onPress={() => navigation.navigate("UserProfileScreen")}
                   >
                      <Text
                       style={{
@@ -467,8 +470,6 @@ const Menu = () => {
               )
             }}
             />
-
-
   </View>
 );
 }

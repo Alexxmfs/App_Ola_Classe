@@ -59,7 +59,6 @@ export default function CreatePostScreen({navigation}) {
       xhr.send(null);
     });
 
-    //tirar o ('images')
     const ref = Firebase.storage().ref('images').child(new Date().toISOString())
     const snapshot = ref.put(blob);
   

@@ -62,11 +62,10 @@ export const Upload = () => {
           style={styles.avatar}
         />
 
-
           <View>
         <TouchableOpacity style={styles.button} onPress={imagePickerCall}>
             <Image 
-                style={{top: -25, marginLeft: 50}}
+                style={{top: -25, marginLeft: 65}}
                 source={assets.iconCam}
             />
         </TouchableOpacity>
@@ -75,6 +74,7 @@ export const Upload = () => {
       </View>
     );
   }
+  
 export const UploadBackground = () => {
     const [avatar, setAvatar] = useState();
   
@@ -140,7 +140,72 @@ export const UploadBackground = () => {
     );
   }
 
-const profileScreen = ({navigation}) => {
+export const UploadPost = () => {
+    const [avatar, setAvatar] = useState();
+  
+    async function imagePickerCallBackground() {
+      if (Constants.platform.ios) {
+        const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+  
+        if (status !== "granted") {
+          alert("Nós precisamos dessa permissão.");
+          return;
+        }
+      }
+  
+      const data3 = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ImagePicker.MediaTypeOptions.All
+      });
+  
+      if (data3.cancelled) {
+        return;
+      }
+  
+      if (!data3.uri) {
+        return;
+      }
+  
+      setAvatar(data3);
+    }
+  
+    async function uploadImage() {
+      const data3 = new FormData();
+  
+      data3.append("avatar", {
+        uri: avatar.uri,
+        type: avatar.type
+      });
+  
+      await Axios.post("http://localhost:3333/files", data3);
+    }
+  
+    return (
+        <View style={styles.container}>
+
+        <Image
+          source={{
+            uri: avatar
+              ? avatar.uri
+              : "https://mltmpgeox6sf.i.optimole.com/w:761/h:720/q:auto/https://redbanksmilesnj.com/wp-content/uploads/2015/11/man-avatar-placeholder.png"
+          }}
+          style={styles.avatar}
+        />
+
+
+          <View>
+        <TouchableOpacity style={styles.button} onPress={imagePickerCallBackground}>
+            <Image 
+                style={{top: 50, marginRight: 80 }}
+                source={assets.iconCam}
+            />
+        </TouchableOpacity>
+        </View>
+  
+      </View>
+    );
+  }
+
+const UserProfileScreen = ({navigation}) => {
   const [data, setData] = useState([]);
 
     const getUsers = () => {
@@ -173,14 +238,14 @@ const profileScreen = ({navigation}) => {
 
 
   return (
-      <SafeAreaView style={{marginTop: -5}}>
+      <SafeAreaView style={{marginTop: 2}}>
         <View style={{marginTop: 25}}>
            <Image 
               style={{width: 395}}
               source={assets.backgroundProfile}
           />
         </View>
-        <View style={{top: -75}}>
+        <View style={{top: -70}}>
                 <UploadBackground />
             </View>
         <View style={styles.circleButton}>
@@ -201,9 +266,7 @@ const profileScreen = ({navigation}) => {
 
         </View>
 
-             <View style={{top: 21}}>
-                 <Upload />
-              </View>
+
 
 
               {/* username */}
@@ -239,6 +302,10 @@ const profileScreen = ({navigation}) => {
             />
         </View>
         <>
+        <View style={{top: -235}}>
+                 <Upload />
+              </View>
+
           <View style={{width: '100%', height: 90, marginLeft: 70, marginTop: -120, flexDirection: 'row', paddingVertical: 5}}>
               <Text style={{marginLeft: -19, fontSize: 15, color: '#898989'}}>Seguidores</Text>
               <Text style={{paddingHorizontal: 50, fontSize: 15, color: '#898989'}}>Posts</Text>
@@ -250,10 +317,16 @@ const profileScreen = ({navigation}) => {
                 </View>
           </View>
 
-          <View style={{alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}}>
+          <View style={{alignItems: 'center', justifyContent: 'center', flexDirection: 'row', marginTop: -10}}>
             <ButtonImagens />
             <ButtonVideos />
           </View>
+
+
+            {/* <View style={{alignItems: 'center', justifyContent: 'center'}}>
+              <UploadPost />
+            </View> */}
+
         </>
         </SafeAreaView>
   );
@@ -278,11 +351,11 @@ const styles = StyleSheet.create({
       },
       avatarBackground: {
         width: 395,
-        height: 200,
+        height: 192,
       }
 });
 
 
 
 
-export default profileScreen
+export default UserProfileScreen

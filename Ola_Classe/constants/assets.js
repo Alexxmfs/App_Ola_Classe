@@ -69,9 +69,27 @@ import memeCebola from "../assets/image/memeCebola.png";
 import icon_Dislike from '../assets/icons/dislike.json';
 import imgDechamps from "../assets/image/imgDechamps.png";
 import iconLogout  from "../assets/icons/iconLogout.png";
-import tumbnailSujeitoProgram from "../assets/image/tumbnailSujeitoProgram.png";
+import tumbnailSujeitoProgram from "../assets/image/tumbnailSujeitoProgram.png"; 
+import tumbnailAngular from "../assets/image/tumbnailAngular.png"; 
+import tumbnailAngular2 from "../assets/image/tumbnailAngular2.png"; 
+import tumbnailAngular3 from "../assets/image/tumbnailAngular3.png"; 
 import imgSujeitoProgramador from "../assets/image/imgSujeitoProgramador.png";
+import imgJS from "../assets/image/imgJS.png";
+import postJS from "../assets/image/postJS.png";
+import postJS02 from "../assets/image/postJS02.png";
+import postJS03 from "../assets/image/postJS03.png";
+import imgVueJS from "../assets/image/imgVueJS.png";
+import ImgNode from "../assets/image/ImgNode.png";
+import imgKotlin from "../assets/image/imgKotlin.png";
 
+import imgHTML from "../assets/image/imgHTML.png";
+import postHtml from "../assets/image/postHtml.png";
+import tumbnailHTML01 from "../assets/image/tumbnailHTML01.png";
+import tumbnailHTML02 from "../assets/image/tumbnailHTML02.png";
+
+import tumbnailCodigoFonteCarousel from "../assets/image/tumbnailCodigoFonteCarousel.png";
+import tumbnailGuanabaraCarousel from "../assets/image/tumbnailGuanabaraCarousel.png";
+import imgCodigoFonte from "../assets/image/imgCodigoFonte.png";
 
 
 
@@ -111,5 +129,24 @@ imgDechamps,
 iconLogout,
 tumbnailSujeitoProgram,
 imgSujeitoProgramador,
+tumbnailAngular,
+tumbnailAngular2,
+tumbnailAngular3,
+imgJS,
+postJS,
+postJS02,
+postJS03,
+imgVueJS,
+ImgNode,
+imgKotlin,
+imgHTML,
+postHtml,
+tumbnailHTML01,
+tumbnailHTML02,
+tumbnailCodigoFonteCarousel,
+imgCodigoFonte,
+tumbnailGuanabaraCarousel,
+
+
 
 };

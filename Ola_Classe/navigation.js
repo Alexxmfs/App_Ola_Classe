@@ -22,10 +22,14 @@ import ChatScreen from "./src/Screens/ChatScreen";
 import NotificationScreen from "./src/Screens/NotificationScreen";
 import FriendsMenu from "./src/Screens/FriendsMenu";
 import CategoryMenu from "./src/Screens/CategoryMenu";
-import profileScreen from './src/Screens/profileScreen'
+import UserProfileScreen from './src/Screens/UserProfileScreen'
 import OpenVideoGuanabara from './src/Screens/videosScreen/OpenVideoGuanabara';
 import OpenVideoDechamps from './src/Screens/videosScreen/OpenVideoDechamps';
+import CategoryAngularScreen from './src/Screens/Category_Languages/CategoryAngularScreen';
+import CategoryJsScreen from './src/Screens/Category_Languages/CateogryJsScreen';
+import CategoryHtmlScreen from './src/Screens/Category_Languages/CategoryHtmlScreen';
 
+import MessagesScreen from "./src/Screens/MessagesScreen";
 
 const Stack = createStackNavigator();
 
@@ -59,9 +63,13 @@ export const SignedInStack = () => {
         <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
         <Stack.Screen name="FriendsMenu" component={FriendsMenu} />
         <Stack.Screen name="CategoryMenu" component={CategoryMenu} />
-        <Stack.Screen name="profileScreen" component={profileScreen} />
+        <Stack.Screen name="UserProfileScreen" component={UserProfileScreen} />
         <Stack.Screen name="OpenVideoGuanabara" component={OpenVideoGuanabara} />
         <Stack.Screen name="OpenVideoDechamps" component={OpenVideoDechamps} />
+        <Stack.Screen name="CategoryAngularScreen" component={CategoryAngularScreen} />
+        <Stack.Screen name="CategoryJsScreen" component={CategoryJsScreen} />
+        <Stack.Screen name="CategoryHtmlScreen" component={CategoryHtmlScreen} />
+        <Stack.Screen name="MessagesScreen" component={MessagesScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>

@@ -28,7 +28,9 @@ const CategoryMenu = ({navigation}) => {
 
                   
        <View style={styles.center}>
-       <TouchableOpacity style={styles.center}>
+       <TouchableOpacity style={styles.center}
+        onPress={() => navigation.navigate("CategoryAngularScreen")}
+       >
         
           <View style={[styles.card, styles.elevation, styles.center]}>
             <View style={styles.center}>
@@ -57,7 +59,9 @@ const CategoryMenu = ({navigation}) => {
             </View>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.center}>
+            <TouchableOpacity style={styles.center}
+              onPress={() => navigation.navigate("CategoryHtmlScreen")}
+            >
           <View style={[styles.card, styles.elevation, styles.center]}>
             <View style={styles.center}>
                 <Image 
@@ -85,7 +89,9 @@ const CategoryMenu = ({navigation}) => {
             </View>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.center}>
+            <TouchableOpacity style={styles.center}
+            onPress={() => navigation.navigate("CategoryJsScreen")}
+            >
           <View style={[styles.card, styles.elevation, styles.center]}>
             <View style={styles.center}>
                 <Image 
