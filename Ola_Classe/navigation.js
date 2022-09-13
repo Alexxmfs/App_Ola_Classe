@@ -29,6 +29,7 @@ import CategoryAngularScreen from './src/Screens/Category_Languages/CategoryAngu
 import CategoryJsScreen from './src/Screens/Category_Languages/CateogryJsScreen';
 import CategoryHtmlScreen from './src/Screens/Category_Languages/CategoryHtmlScreen';
 
+import MessagesScreen from "./src/Screens/MessagesScreen";
 
 const Stack = createStackNavigator();
 
@@ -68,6 +69,7 @@ export const SignedInStack = () => {
         <Stack.Screen name="CategoryAngularScreen" component={CategoryAngularScreen} />
         <Stack.Screen name="CategoryJsScreen" component={CategoryJsScreen} />
         <Stack.Screen name="CategoryHtmlScreen" component={CategoryHtmlScreen} />
+        <Stack.Screen name="MessagesScreen" component={MessagesScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>

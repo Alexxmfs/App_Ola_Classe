@@ -1,7 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React, { useState, useEffect }from 'react'
 import { assets } from '../../constants'
-import { Divider } from 'react-native-elements'
+// import { Divider } from 'react-native-elements'
 import { useNavigation } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
 
@@ -11,11 +11,11 @@ export const NavBarHome = () => {
   return (
     <View styles={{ alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         
-    <View style={{top: 38}}>
+    {/* <View style={{top: 38}}>
         <Divider width={2} orientation='vertical'
         style={{width: 1000,  marginLeft: -30}}
          />
-   </View>
+   </View> */}
 
         <View style={{flexDirection: 'row'}}>
 
@@ -75,11 +75,11 @@ export const NavBarVideo = () => {
   return (
     <View styles={{ alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         
-        <View style={{top: 38}}>
+        {/* <View style={{top: 38}}>
         <Divider width={2} orientation='vertical'
         style={{width: 1000,  marginLeft: -30}}
          />
-   </View>
+   </View> */}
 
         <View style={{flexDirection: 'row', marginLeft: -8}}>
 
@@ -146,11 +146,11 @@ export const NavBarPost = () => {
   return (
     <View styles={{ alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         
-        <View style={{top: 38}}>
+        {/* <View style={{top: 38}}>
         <Divider width={2} orientation='vertical'
         style={{width: 100,  marginLeft: -100}}
          />
-        </View>
+        </View> */}
 
         <View style={{flexDirection: 'row', marginLeft: -8}}>
 
@@ -217,10 +217,10 @@ export const NavBarChat = () => {
   return (
     <View styles={{ alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         
-    <View style={{top: 38}}>
+    {/* <View style={{top: 38}}>
         <Divider width={2} orientation='vertical' 
                  style={{width: 1000,  marginLeft: -400}} />  
-            </View>
+            </View> */}
 
         <View style={{flexDirection: 'row', marginLeft: -8}}>
 
@@ -287,10 +287,10 @@ export const NavBarNotification = () => {
   return (
     <View styles={{ alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         
-    <View style={{top: 38}}>
+    {/* <View style={{top: 38}}>
         <Divider width={2} orientation='vertical' 
                  style={{width: 1000,  marginLeft: -400}} />  
-            </View>
+            </View> */}
 
         <View style={{flexDirection: 'row', marginLeft: -8}}>
 
