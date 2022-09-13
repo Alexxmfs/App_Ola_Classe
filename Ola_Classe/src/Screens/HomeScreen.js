@@ -67,6 +67,7 @@ const HomeScreen = ({navigation, item}) => {
                 paddingVertical: 8,
                 paddingLeft: 13,
                 paddingRight: 35,
+                paddingTop: 20,
                 borderRadius: 8,
                 marginTop: -120,
                 backgroundColor: '#98C2FF'
@@ -273,7 +274,6 @@ const HomeScreen = ({navigation, item}) => {
           </View>
             
                   
-                    <Text>ignora</Text>
                     <Text>ignora</Text>
                     <Text>ignora</Text>
 
