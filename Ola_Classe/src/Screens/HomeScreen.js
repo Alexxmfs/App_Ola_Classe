@@ -74,13 +74,14 @@ const HomeScreen = ({navigation, item}) => {
               }}>
                 
                 <Image source={assets.iconLogout} style={{
-                  width: 35, height: 35,
+                  width: 35, height: 35, marginTop: -10
                 }}></Image>
 
                 <Text style={{
                   fontSize: 17,
                   fontWeight: 'bold',
                   paddingLeft: 15,
+                  marginTop: -10
                 }}>Sair</Text>
               </View>
               </TouchableOpacity>
@@ -473,7 +474,6 @@ const Menu = () => {
   </View>
 );
 }
-
 
 
 const styles = StyleSheet.create({
