@@ -93,11 +93,11 @@ export default class MessagesScreen extends Component {
       },
       {
         _id: Math.round(Math.random() * 1000000),
-        text: '',
+        text: 'Opa',
         createdAt: new Date(),
         user: {
           _id: 2,
-          name: 'React Native',
+          name: 'Ash',
         },
         sent: true,
         received: true,
@@ -122,6 +122,7 @@ export default class MessagesScreen extends Component {
         user: {
           _id: 2,
           name: 'React Native',
+          avatar: 'https://www.ofuxico.com.br/wp-content/uploads/2022/05/conheca-a-historia-de-wanda-maximoff-foto.jpg'
         },
         sent: true,
         received: true
