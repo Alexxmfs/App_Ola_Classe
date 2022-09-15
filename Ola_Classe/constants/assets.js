@@ -91,6 +91,9 @@ import tumbnailCodigoFonteCarousel from "../assets/image/tumbnailCodigoFonteCaro
 import tumbnailGuanabaraCarousel from "../assets/image/tumbnailGuanabaraCarousel.png";
 import imgCodigoFonte from "../assets/image/imgCodigoFonte.png";
 
+import headerLine from "../assets/image/headerLine.png";
+import arrowBackChat from "../assets/image/arrowBackChat.png";
+
 
 
 
@@ -146,6 +149,8 @@ tumbnailHTML02,
 tumbnailCodigoFonteCarousel,
 imgCodigoFonte,
 tumbnailGuanabaraCarousel,
+headerLine,
+arrowBackChat,
 
 
 
