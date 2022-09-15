@@ -53,37 +53,38 @@ const HomeScreen = ({navigation, item}) => {
               />
           </View>
           
-        <View style={{ flexGrow: 1, marginTop: 10,  padding: 15, height: '66%' }}>
+          <View style={{ flexGrow: 1, marginTop: 10,  padding: 15, height: '66%' }}>
 
-          {Menu("Menu")}
+                {Menu("Menu")}
 
 
-              <TouchableOpacity 
-                 onPress={handleSignout}
-                 >
-              <View style={{
-                flexDirection: "row",
-                alignItems: 'center',
-                paddingVertical: 8,
-                paddingLeft: 13,
-                paddingRight: 35,
-                borderRadius: 8,
-                marginTop: -120,
-                backgroundColor: '#98C2FF'
-              }}>
-                
-                <Image source={assets.iconLogout} style={{
-                  width: 35, height: 35,
-                }}></Image>
+                <TouchableOpacity 
+                  onPress={handleSignout}
+                  >
+                <View style={{
+                  flexDirection: "row",
+                  alignItems: 'center',
+                  paddingVertical: 8,
+                  paddingLeft: 13,
+                  paddingRight: 35,
+                  paddingTop: 20,
+                  borderRadius: 8,
+                  marginTop: -120,
+                  backgroundColor: '#98C2FF'
+                }}>
+                  
+                  <Image source={assets.iconLogout} style={{
+                    width: 35, height: 35,
+                  }}></Image>
 
-                <Text style={{
-                  fontSize: 17,
-                  fontWeight: 'bold',
-                  paddingLeft: 15,
-                }}>Sair</Text>
-              </View>
-              </TouchableOpacity>
-      </View>
+                  <Text style={{
+                    fontSize: 17,
+                    fontWeight: 'bold',
+                    paddingLeft: 15,
+                  }}>Sair</Text>
+                </View>
+                </TouchableOpacity>
+</View>
         
         <Animated.View style={{
         flexGrow: 1,
