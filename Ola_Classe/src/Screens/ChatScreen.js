@@ -7,9 +7,6 @@ import { NavBarChat } from '../components/Navbar';
 
 import { firebase, db } from '../../firebase';
 
-
-
-
 const ChatScreen = ({navigation, item}) => {
 
   const [showMenu, setShowMenu] = useState(false);
@@ -165,12 +162,12 @@ const ChatScreen = ({navigation, item}) => {
                     />
                         <Text style={{fontSize: 18, fontWeight: '700', marginLeft: 15}}>Ash</Text>
                           <Text style={{
-                            fontSize: 18,
+                            fontSize: 17,
                             fontWeight: '700',
                             marginLeft: -35,
                             marginTop: 25,
                             color: 'gray'}}>
-                              O que é angular?
+                              online há 1 hora atrás
                           </Text>
 
                   </View>

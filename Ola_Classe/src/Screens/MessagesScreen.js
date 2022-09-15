@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Image, Text } from 'react-native';
 import { ArrowBackChat } from '../components/Button';
 import { GiftedChat } from 'react-native-gifted-chat';
 import { assets } from '../../constants';
@@ -110,7 +110,7 @@ export const BackScreen = () => {
       <View>
             <View>
                     <View>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('ChatScreen')}>
 
                             <Image 
                             source={assets.arrowBackChat}
@@ -120,11 +120,20 @@ export const BackScreen = () => {
 
                     </View>
                     
-                        <View>
+                        <View style={{flexDirection: 'row'}}>
                             <Image 
                             source={assets.imgAsh}
                             style={{width: 55, height: 55, marginLeft: 50, top: 5}}
                             />
+
+                            <Text style={{
+                                    fontWeight: '700',
+                                    fontSize: 21,
+                                    marginLeft: 20,
+                                    marginTop: 12}}>
+                                      Ash
+                            </Text>
+
                         </View>
           </View>
           
