@@ -167,7 +167,25 @@ const ChatScreen = ({navigation, item}) => {
                             marginLeft: -35,
                             marginTop: 25,
                             color: 'gray'}}>
-                              online há 1 hora atrás
+                              online há 1 minuto atrás
+                          </Text>
+
+                  </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={() => navigation.push("MessagesScreen")}>
+                  <View style={{paddingTop: 20, flexDirection: 'row'}}>
+                    <Image 
+                    source={assets.imgJordan}
+                    />
+                        <Text style={{fontSize: 18, fontWeight: '700', marginLeft: 15}}>Jordan</Text>
+                          <Text style={{
+                            fontSize: 17,
+                            fontWeight: '700',
+                            marginLeft: -57,
+                            marginTop: 25,
+                            color: 'gray'}}>
+                              online há 3 minuto atrás
                           </Text>
 
                   </View>

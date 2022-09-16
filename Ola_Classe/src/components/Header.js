@@ -25,7 +25,7 @@ const Header = ({navigation}) => {
             source={assets.logo} 
           />
           </TouchableOpacity>
-          <View>
+          {/* <View>
             <Image 
             style={{
                 width: 38,
@@ -35,7 +35,7 @@ const Header = ({navigation}) => {
             }} 
             source={assets.iconSearch}
             />
-          </View>
+          </View> */}
         </View>
     </View>
   )

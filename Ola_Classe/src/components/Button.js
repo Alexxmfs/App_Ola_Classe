@@ -503,7 +503,7 @@ export const ButtonFriends = ({ onPress }) => {
             alignItems: 'center',
             justifyContent: 'center'
             }}>
-          Amigos
+          Adicionar
         </Text>
     </TouchableOpacity>
     </View>
