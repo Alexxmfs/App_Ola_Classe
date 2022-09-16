@@ -218,6 +218,7 @@ const UserProfileScreen = ({navigation}) => {
           const user = {
             owner_uid: doc.owner_uid,
             username: doc.data().username,
+            name: doc.data().name,
             email: doc.data().email,
           };
           d.push(user);
@@ -292,7 +293,7 @@ const UserProfileScreen = ({navigation}) => {
                         fontSize: 16,
                         color: '#898989'
                          }}>
-                          {item.email}
+                          {item.name}
                       </Text>
                     </View>
 

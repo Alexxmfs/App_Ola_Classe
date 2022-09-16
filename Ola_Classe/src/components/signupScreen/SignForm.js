@@ -17,6 +17,7 @@ import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../../constants'
 
 const SignupForm = ({navigation}) => {
   const SignupFormSchema = Yup.object().shape({
+    name: Yup.string().required().min(1, 'É necessario uma caractere'),
     email: Yup.string().email().required('An email is required'),
     username: Yup.string().required().min(2, 'A username is required'),
     password: Yup.string()
@@ -30,31 +31,32 @@ const SignupForm = ({navigation}) => {
     return data.results[0].picture.large
   }
 
-  const onSignup = async (email, password, username) => {
+  const onSignup = async (email, password, username, name) => {
     try {
      const authUser = await firebase.auth().createUserWithEmailAndPassword(email, password)
-      console.log('🔥 Firebase User Created Successfully ✅', email, password)
+      console.log('🔥 Firebase User Created Successfully ✅', email, password, name)
     
 
       db.collection('users')
       .doc(authUser.user.email)
       .set({
         owner_uid: authUser.user.uid,
+        name: name,
         username: username,
         email: authUser.user.email,
         profile_picture: await getRandomProfilePicture(),
       })
     } catch(error) {
-      Alert.alert('🔥 My Lord...', error.message)
+      Alert.alert('🔥 Não foi possivel efetuar a conexão', error.message)
     }
   }
 
   return (
   <View style={styles.wrapper}>
   <Formik
-  initialValues={{email: '', username: '', password: ''}}
+  initialValues={{email: '', name: '', username: '', password: ''}}
   onSubmit={(values) => {
-    onSignup(values.email, values.password, values.username)
+    onSignup(values.email, values.password, values.username, values.name)
   }}
   validationSchema={SignupFormSchema}
   validateOnMount={true}
@@ -84,6 +86,29 @@ const SignupForm = ({navigation}) => {
   value={values.email}
   />
   </View>
+
+
+  <View    
+   style={[
+      styles.inputField,
+      {
+       borderColor: 
+       1 > values.name.length || values.name.length >= 1 
+        ? '#ACD3FC' 
+        : 'red'
+      },
+   ]}
+  >
+      <TextInput
+      placeholderTextColor="#444"
+      placeholder="name"
+      autoCapitalize='none'
+      textContentType='name'
+      onChangeText={handleChange('name')}
+      onBlur={handleBlur('name')}
+      value={values.name}
+      />
+      </View>
 
 
   <View    
