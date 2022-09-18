@@ -155,7 +155,7 @@ const ChatScreen = ({navigation, item}) => {
                     Conversas
                   </Text>
 
-                <TouchableOpacity onPress={() => navigation.push("MessagesScreen")}>
+                <TouchableOpacity onPress={() => navigation.push("MessagesScreenAsh")}>
                   <View style={{paddingTop: 20, flexDirection: 'row'}}>
                     <Image 
                     source={assets.imgAsh}
@@ -173,7 +173,7 @@ const ChatScreen = ({navigation, item}) => {
                   </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.push("MessagesScreen")}>
+                <TouchableOpacity onPress={() => navigation.navigate("MessagesScreenJordan")}>
                   <View style={{paddingTop: 20, flexDirection: 'row'}}>
                     <Image 
                     source={assets.imgJordan}

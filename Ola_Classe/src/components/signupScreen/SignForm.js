@@ -101,7 +101,7 @@ const SignupForm = ({navigation}) => {
   >
       <TextInput
       placeholderTextColor="#444"
-      placeholder="name"
+      placeholder="Nome"
       autoCapitalize='none'
       textContentType='name'
       onChangeText={handleChange('name')}

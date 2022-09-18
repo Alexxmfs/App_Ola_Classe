@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, TouchableOpacity, Image, Text } from 'react-native';
-import { ArrowBackChat } from '../components/Button';
 import { GiftedChat } from 'react-native-gifted-chat';
-import { assets } from '../../constants';
+import { assets } from '../../../constants';
 import { useNavigation } from '@react-navigation/native';
 
-export default class MessagesScreen extends Component {
+export default class MessagesScreenAsh extends Component {
   state = {
     messages: [],
   };
