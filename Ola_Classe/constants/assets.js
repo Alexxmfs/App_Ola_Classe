@@ -1,4 +1,7 @@
 import easyAccess from "../assets/image/easyAccess.png";
+import BallBlue from "../assets/image/BallBlue.png";
+import BallGray from "../assets/image/BallGray.png";
+import arrowBlue from "../assets/image/arrowBlue.png";
 import onlineSchool from "../assets/image/onlineSchool.png";
 import findCourse from "../assets/image/findCourse.png";
 import next from "../assets/icons/next.png";
@@ -115,41 +118,18 @@ iconChatActivated, iconBell, iconBellActivated, imgAsh, imgJordan,
 CatAngularMenu, CatCSharpMenu, CathtmMenu, CatCSSMenu, CatJsMenu,
 CatDartMenu, CatJavaMenu, CatKotlinMenu, ImgProfileMenu, iconCam,
 backgroundProfile, likeAnimation, iconDenunciation, IconSave,
-IconComment,
-postMeme,
-GuanabaraVideo,
-TumbnailGuanabara,
-tumbnailGuanabara2,
-placeholderImg,
-ImgCursoEmVideo,
-tumbnailDechamps,
-DechampsVideo,
-memeCebola,
-icon_Dislike,
-imgDechamps,
-iconLogout,
-tumbnailSujeitoProgram,
-imgSujeitoProgramador,
-tumbnailAngular,
-tumbnailAngular2,
-tumbnailAngular3,
-imgJS,
-postJS,
-postJS02,
-postJS03,
-imgVueJS,
-ImgNode,
-imgKotlin,
-imgHTML,
-postHtml,
-tumbnailHTML01,
-tumbnailHTML02,
-tumbnailCodigoFonteCarousel,
-imgCodigoFonte,
-tumbnailGuanabaraCarousel,
+IconComment, postMeme, GuanabaraVideo, TumbnailGuanabara, tumbnailGuanabara2,
+placeholderImg, ImgCursoEmVideo, tumbnailDechamps, DechampsVideo,
+memeCebola, icon_Dislike, imgDechamps, iconLogout, tumbnailSujeitoProgram,
+imgSujeitoProgramador, tumbnailAngular, tumbnailAngular2, tumbnailAngular3,
+imgJS, postJS, postJS02, postJS03, imgVueJS, ImgNode, imgKotlin,
+imgHTML, postHtml, tumbnailHTML01, tumbnailHTML02, tumbnailCodigoFonteCarousel,
+imgCodigoFonte, tumbnailGuanabaraCarousel,
 headerLine,
 arrowBackChat,
 imageDenunciation,
-
+BallBlue,
+BallGray,
+arrowBlue
 
 };

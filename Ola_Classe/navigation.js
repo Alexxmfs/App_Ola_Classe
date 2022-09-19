@@ -32,6 +32,10 @@ import MessagesScreenAsh from "./src/Screens/Messages/MessagesScreenAsh";
 import MessagesScreenJordan from "./src/Screens/Messages/MessagesScreenJordan";
 import DenunciationScreen from "./src/Screens/DenunciationScreen";
 import CommentScreen from "./src/Screens/CommentScreen";
+import AccountSettingsScreen from "./src/Screens/Settings/AccountSettingsScreen";
+
+
+
 
 const Stack = createStackNavigator();
 
@@ -75,6 +79,7 @@ export const SignedInStack = () => {
         <Stack.Screen name="MessagesScreenJordan" component={MessagesScreenJordan} />
         <Stack.Screen name="DenunciationScreen" component={DenunciationScreen} />
         <Stack.Screen name="CommentScreen" component={CommentScreen} />
+        <Stack.Screen name="AccountSettingsMenu" component={AccountSettingsScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>

@@ -35,6 +35,20 @@ const SecondIntroduction = ({navigation}) => {
     onPress={() => navigation.navigate("ThirdIntroduction")}
     />
         </View>
+
+        <View style={{flexDirection: 'row', top: 50, alignItems: 'center', justifyContent: 'center'}}>
+              <Image 
+              source={assets.BallBlue}
+              />
+              <Image 
+              source={assets.BallBlue}
+              style={{marginLeft: 10}}
+              />
+              <Image 
+              source={assets.BallGray}
+              style={{marginLeft: 10}}
+              />
+        </View>
     </View>
   </SafeAreaView>
     )

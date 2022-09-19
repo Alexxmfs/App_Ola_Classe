@@ -52,7 +52,7 @@ export default class CommentScreen extends Component {
         },
         {
           _id: Math.round(Math.random() * 1000000),
-          text: "You are officially rocking GiftedChat.",
+          text: "Bem-Vindo ao Comentário",
           createdAt: new Date(),
           system: true,
         },

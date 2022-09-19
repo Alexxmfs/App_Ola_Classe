@@ -622,7 +622,7 @@ const Menu = () => {
     </TouchableOpacity>
 
     <TouchableOpacity 
-    onPress={() => navigation.navigate("ConfigMenu")}
+    onPress={() => navigation.navigate("AccountSettingsMenu")}
     >
     <View style={{
       flexDirection: "row",
