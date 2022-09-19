@@ -52,7 +52,9 @@ const AccountSettingsScreen = ({ navigation }) => {
         />
       </View>
 
-      <TouchableOpacity onPress={() => navigation.navigate("#")}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("DeleteAccountScreen")}
+      >
         <View style={{ flexDirection: "row", marginTop: 20 }}>
           <Text style={{ fontSize: 17, marginLeft: 15 }}>Excluir Conta</Text>
 

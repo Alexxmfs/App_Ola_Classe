@@ -33,6 +33,7 @@ import MessagesScreenJordan from "./src/Screens/Messages/MessagesScreenJordan";
 import DenunciationScreen from "./src/Screens/DenunciationScreen";
 import CommentScreen from "./src/Screens/CommentScreen";
 import AccountSettingsScreen from "./src/Screens/Settings/AccountSettingsScreen";
+import DeleteAccountScreen from "./src/Screens/Settings/DeleteAccountScreen";
 
 
 
@@ -80,6 +81,7 @@ export const SignedInStack = () => {
         <Stack.Screen name="DenunciationScreen" component={DenunciationScreen} />
         <Stack.Screen name="CommentScreen" component={CommentScreen} />
         <Stack.Screen name="AccountSettingsMenu" component={AccountSettingsScreen} />
+        <Stack.Screen name="DeleteAccountScreen" component={DeleteAccountScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
