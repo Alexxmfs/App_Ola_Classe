@@ -1,4 +1,4 @@
-import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../constants';
+import { assets } from '../../constants';
 import { ScrollView, FlatList, Animated, Image, StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Button } from 'react-native';
 import React, { useRef, useState, useEffect } from 'react';
 import Header from '../components/Header';
@@ -9,7 +9,7 @@ import { IconLike, IconWarning, IconSave, IconComment }   from '../components/Ic
 import { firebase, db } from '../../firebase';
 
 
-const HomeScreen = ({navigation, item}) => {
+const HomeScreen = ({navigation}) => {
 
   const [showMenu, setShowMenu] = useState(false);
   const offsetValue = useRef(new Animated.Value(0)).current;

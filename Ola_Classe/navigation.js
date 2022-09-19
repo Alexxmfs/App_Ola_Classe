@@ -28,9 +28,10 @@ import OpenVideoDechamps from './src/Screens/videosScreen/OpenVideoDechamps';
 import CategoryAngularScreen from './src/Screens/Category_Languages/CategoryAngularScreen';
 import CategoryJsScreen from './src/Screens/Category_Languages/CateogryJsScreen';
 import CategoryHtmlScreen from './src/Screens/Category_Languages/CategoryHtmlScreen';
-
 import MessagesScreenAsh from "./src/Screens/Messages/MessagesScreenAsh";
 import MessagesScreenJordan from "./src/Screens/Messages/MessagesScreenJordan";
+import DenunciationScreen from "./src/Screens/DenunciationScreen";
+import CommentScreen from "./src/Screens/CommentScreen";
 
 const Stack = createStackNavigator();
 
@@ -72,6 +73,8 @@ export const SignedInStack = () => {
         <Stack.Screen name="CategoryHtmlScreen" component={CategoryHtmlScreen} />
         <Stack.Screen name="MessagesScreenAsh" component={MessagesScreenAsh} />
         <Stack.Screen name="MessagesScreenJordan" component={MessagesScreenJordan} />
+        <Stack.Screen name="DenunciationScreen" component={DenunciationScreen} />
+        <Stack.Screen name="CommentScreen" component={CommentScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
