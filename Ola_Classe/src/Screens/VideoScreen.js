@@ -162,7 +162,7 @@ const HomeScreen = ({navigation, item}) => {
                      horizontal={true}
                      showsHorizontalScrollIndicator={false}>
 
-                            <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+                            <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10, right: 35}}>
                                     <View style={[styles.cardHorizontal, styles.elevation, styles.center]}>
                                       <View style={styles.center}>
                                         <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 5, marginRight: 130}}>
@@ -201,7 +201,7 @@ const HomeScreen = ({navigation, item}) => {
                                       </View>
                                       </View>
 
-                            <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+                            <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10, marginLeft: -105}}>
                                     <View style={[styles.cardHorizontal, styles.elevation, styles.center]}>
                                       <View style={styles.center}>
                                         <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 5, marginRight: 130}}>
@@ -240,7 +240,7 @@ const HomeScreen = ({navigation, item}) => {
                                       </View>
                                       </View>
 
-                            <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+                            <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10, marginLeft: -70}}>
                                     <View style={[styles.cardHorizontal, styles.elevation, styles.center]}>
                                       <View style={styles.center}>
                                         <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 5, marginRight: 130}}>
@@ -305,19 +305,20 @@ const HomeScreen = ({navigation, item}) => {
                              <Text style={{fontWeight: '600', fontSize: 16}}>Vue.js</Text>
                           </View>
               </View>
-              
+
+         <TouchableOpacity onPress={() => navigation.push('CategoryAngularScreen')}>
             <View style={[styles.cardCategoria, styles.elevationCategoria]}>
                  <View>
                          <Image 
                            style={{width: 98, height: 80, borderRadius: 8, marginTop: -10}}
                            source={assets.CatAngularMenu}
                           />
-
                   </View>
                           <View style={{marginTop: 30}}>
                              <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
                           </View>
               </View>
+          </TouchableOpacity>
 
             <View style={[styles.cardCategoria, styles.elevationCategoria]}>
                  <View>
