@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { CircleButton, ButtonSeguir } from "../../components/Button";
+import { CircleButton, ButtonSeguir, ButtonImagens, ButtonVideos } from "../../components/Button";
 import { assets } from "../../../constants";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 
@@ -50,6 +50,18 @@ const profileCursoemVideo = ({ navigation }) => {
           </View>
 
       <ButtonSeguir />
+
+      <View style={{alignItems: 'center', justifyContent: 'center', flexDirection: 'row', marginTop: 20}}>
+          
+            <ButtonImagens
+              onPress={() => navigation.navigate('#')}
+            />
+            <ButtonVideos 
+              onPress={() => navigation.navigate('#')}
+            />
+          </View>
+      
+
     </View>
   );
 };
