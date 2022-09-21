@@ -95,7 +95,10 @@ import headerLine from "../assets/image/headerLine.png";
 import arrowBackChat from "../assets/image/arrowBackChat.png";
 import imageDenunciation from "../assets/image/imageDenunciation.png";
 
-
+import imgJava from '../assets/image/imgJava.png';
+import imgDart from '../assets/image/imgDart.png';
+import imgBackgroundCursoemVideo from '../assets/image/imgBackgroundCursoemVideo.png';
+import largeImgGuanabara from '../assets/image/largeImgGuanabara.png';
 
 
 
@@ -130,6 +133,10 @@ arrowBackChat,
 imageDenunciation,
 BallBlue,
 BallGray,
-arrowBlue
+arrowBlue,
+imgJava,
+imgDart,
+imgBackgroundCursoemVideo,
+largeImgGuanabara,
 
 };

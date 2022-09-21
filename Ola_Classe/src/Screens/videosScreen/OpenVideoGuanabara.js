@@ -22,8 +22,12 @@ const OpenVideoGuanabara = ({navigation}) => {
         style={{width: 50, height: 50}}
         source={assets.ImgCursoEmVideo}
         />
+
+        <TouchableOpacity
+        onPress={() => navigation.navigate("profileCursoemVideo")}>
            <Text style={{marginLeft: 15, marginTop: 9 ,fontSize: 19, fontWeight: '600'}}>Curso em Video</Text>
-            
+           </TouchableOpacity>
+           
             <View style={{marginLeft: 90, marginTop: 5}}>
               <TouchableOpacity style={styles.buttonSeguir}>
                 <Text style={styles.textSeguir}>Seguir</Text>

@@ -350,12 +350,12 @@ const HomeScreen = ({navigation, item}) => {
                  <View>
                          <Image 
                            style={{width: 98, height: 80, borderRadius: 8, marginTop: -10}}
-                           source={assets.CatAngularMenu}
+                           source={assets.imgJava}
                           />
 
                   </View>
                           <View style={{marginTop: 30}}>
-                             <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
+                             <Text style={{fontWeight: '600', fontSize: 16}}>Java</Text>
                           </View>
               </View>
 
@@ -363,12 +363,12 @@ const HomeScreen = ({navigation, item}) => {
                  <View>
                          <Image 
                            style={{width: 98, height: 80, borderRadius: 8, marginTop: -10}}
-                           source={assets.CatAngularMenu}
+                           source={assets.imgDart}
                           />
 
                   </View>
                           <View style={{marginTop: 30}}>
-                             <Text style={{fontWeight: '600', fontSize: 16}}>Angular</Text>
+                             <Text style={{fontWeight: '600', fontSize: 16}}>Dart</Text>
                           </View>
               </View>
 
