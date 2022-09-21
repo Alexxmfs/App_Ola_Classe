@@ -1,5 +1,5 @@
-import React from "react";
-import { CircleButton } from "../../components/Button";
+import React, { Component } from "react";
+import { CircleButton, ButtonSeguir } from "../../components/Button";
 import { assets } from "../../../constants";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 
@@ -21,7 +21,10 @@ const profileCursoemVideo = ({ navigation }) => {
       </View>
 
       <View>
-        <TouchableOpacity style={styles.buttonMessage}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('MessagesScreenGuana')}
+          style={styles.buttonMessage}
+        >
           <Text style={styles.textMessage}>Mensagem</Text>
         </TouchableOpacity>
       </View>
@@ -35,7 +38,6 @@ const profileCursoemVideo = ({ navigation }) => {
         <Text style={styles.textName}>Guanabara</Text>
       </View>
 
-      
       <View style={{width: '100%', height: 90, marginLeft: 70, marginTop: 15, flexDirection: 'row', paddingVertical: 5}}>
               <Text style={{marginLeft: -19, fontSize: 15, color: '#898989'}}>Seguidores</Text>
               <Text style={{paddingHorizontal: 50, fontSize: 15, color: '#898989'}}>Posts</Text>
@@ -47,7 +49,7 @@ const profileCursoemVideo = ({ navigation }) => {
                 </View>
           </View>
 
-
+      <ButtonSeguir />
     </View>
   );
 };
@@ -82,12 +84,12 @@ const styles = StyleSheet.create({
   },
   textUsername: {
     fontSize: 22,
-    fontWeight: '450'
+    fontWeight: "450",
   },
   textName: {
     fontSize: 17,
-    color: '#7D7979',
-  }
+    color: "#7D7979",
+  },
 });
 
 export default profileCursoemVideo;

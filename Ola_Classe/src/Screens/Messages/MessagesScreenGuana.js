@@ -4,7 +4,7 @@ import { GiftedChat } from 'react-native-gifted-chat';
 import { assets } from '../../../constants';
 import { useNavigation } from '@react-navigation/native';
 
-export default class MessagesScreenAsh extends Component {
+export default class MessagesScreenGuana extends Component {
   state = {
     messages: [],
   };
@@ -19,30 +19,7 @@ export default class MessagesScreenAsh extends Component {
       }]})
     }
     this.setState({ messages:  [
-      {
-        _id: Math.round(Math.random() * 1000000),
-        text: 'O que é Angular?',
-        createdAt: new Date(),
-        user: {
-          _id: 2,
-          name: 'Ash',
-          avatar: 'https://raw.githubusercontent.com/Alexxmfs/App_Ola_Classe/logoOlaClasse/imgAsh.png'
-        },
-        sent: true,
-        received: true
-      },
-      {
-        _id: Math.round(Math.random() * 1000000),
-        text: 'Opa tudo bem?',
-        createdAt: new Date(),
-        user: {
-          _id: 2,
-          name: 'React Native',
-          avatar: 'https://www.ofuxico.com.br/wp-content/uploads/2022/05/conheca-a-historia-de-wanda-maximoff-foto.jpg'
-        },
-        sent: true,
-        received: true
-      },
+
       {
         _id: Math.round(Math.random() * 1000000),
         text: "You are officially rocking GiftedChat.",
@@ -121,8 +98,8 @@ export const BackScreen = () => {
                     
                         <View style={{flexDirection: 'row'}}>
                             <Image 
-                            source={assets.imgAsh}
-                            style={{width: 55, height: 55, marginLeft: 50, top: 5}}
+                            source={assets.largeImgGuanabara}
+                            style={{width: 55, height: 55, borderRadius: 50, marginLeft: 50, top: 5}}
                             />
 
                             <Text style={{
@@ -130,7 +107,7 @@ export const BackScreen = () => {
                                     fontSize: 21,
                                     marginLeft: 20,
                                     marginTop: 12}}>
-                                      Ash
+                                      Curso em Video
                             </Text>
 
                         </View>
@@ -145,3 +122,4 @@ export const BackScreen = () => {
     </View>
   );
 }
+

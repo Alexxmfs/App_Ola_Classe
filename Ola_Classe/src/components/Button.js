@@ -537,6 +537,46 @@ export const DeleteButton = ({ onPress }) => {
   );  
 } 
 
+export class ButtonSeguir extends Component {
+  state = {
+    textValue: 'Seguir'
+  }
+
+  onPress = () => {
+    this.setState({
+      textValue: 'Seguindo✅',
+    })
+  }
+
+  render() {
+    return (
+      <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: -15}}>
+
+        <TouchableOpacity onPress={this.onPress}
+         style={{
+              width: 300,
+              padding: 12,
+              backgroundColor: '#0A58EE',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: 10
+              }}>
+
+        <Text style={{
+          color: '#FFF',
+          fontSize: 18,
+          fontWeight: '700'
+      
+          }}>
+            {this.state.textValue}
+        </Text>
+
+        </TouchableOpacity>
+      </View>
+    )
+  }
+}
+
 const styles = StyleSheet.create({
   container: {
     marginTop: 25,

@@ -97,7 +97,7 @@ export const BackScreen = () => {
       <View>
             <View>
                     <View>
-                        <TouchableOpacity onPress={() => navigation.navigate('ChatScreen')}>
+                        <TouchableOpacity onPress={() => navigation.goBack()}>
 
                             <Image 
                             source={assets.arrowBackChat}
