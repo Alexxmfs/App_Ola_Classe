@@ -1,6 +1,11 @@
 import React, { Component } from "react";
-import { CircleButton, ButtonSeguir, ButtonImagens, ButtonVideos } from "../../components/Button";
-import { assets } from "../../../constants";
+import {
+  CircleButton,
+  ButtonSeguir,
+  ButtonImagens,
+  ButtonVideos,
+} from "../../../components/Button";
+import { assets } from "../../../../constants";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 
 const profileCursoemVideo = ({ navigation }) => {
@@ -22,7 +27,7 @@ const profileCursoemVideo = ({ navigation }) => {
 
       <View>
         <TouchableOpacity
-          onPress={() => navigation.navigate('MessagesScreenGuana')}
+          onPress={() => navigation.navigate("MessagesScreenGuana")}
           style={styles.buttonMessage}
         >
           <Text style={styles.textMessage}>Mensagem</Text>
@@ -51,17 +56,51 @@ const profileCursoemVideo = ({ navigation }) => {
 
       <ButtonSeguir />
 
-      <View style={{alignItems: 'center', justifyContent: 'center', flexDirection: 'row', marginTop: 20}}>
-          
-            <ButtonImagens
-              onPress={() => navigation.navigate('#')}
-            />
-            <ButtonVideos 
-              onPress={() => navigation.navigate('#')}
-            />
-          </View>
-      
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "row",
+          marginTop: 20,
+        }}
+      >
+        <ButtonImagens onPress={() => navigation.navigate("#")} />
+        <ButtonVideos onPress={() => navigation.navigate("#")} />
+      </View>
 
+      <View>
+        <TouchableOpacity onPress={() => navigation.navigate("#")}>
+          <Image
+            source={assets.publicationVueJS}
+            style={{ marginTop: 10, marginLeft: 25 }}
+          />
+
+          <Image
+            source={assets.postGuanabara02}
+            style={{ marginLeft: 260, marginTop: -172 }}
+          />
+
+          <Image
+            source={assets.postGuanabara03}
+            style={{ marginLeft: 260, marginTop: 9 }}
+          />
+
+          <Image
+            source={assets.postGuanabara04}
+            style={{ marginLeft: 260, marginTop: 8 }}
+          />
+
+          <Image
+            source={assets.postGuanabara05}
+            style={{ marginLeft: 142, marginTop: -84 }}
+          />
+
+          <Image
+            source={assets.postGuanabara06}
+            style={{ marginLeft: 25, marginTop: -85 }}
+          />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

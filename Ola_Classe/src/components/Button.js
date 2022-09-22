@@ -144,6 +144,83 @@ export const ButtonVideos = ({ onPress }) => {
     );
   }
 
+
+
+
+  // TESTE HOVER PROFILE BUTTONS  
+
+  export const ButtonImagensHover = ({ onPress }) => {
+    return (
+      <View style={{marginRight: -30}}>
+      <TouchableOpacity
+      style={{
+        width: 134,
+        height: 45,
+        borderWidth: 2,
+        borderColor: '#E8E8E8',
+        backgroundColor: '#E8E8E8',
+        borderRadius: SIZES.medium - 3,
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+      onPress={onPress}
+    >
+
+      <Text style={{ 
+        color: 'black',
+        fontSize: SIZES.font + 2,
+        marginRight: 20,
+        marginTop: -3
+      }}>
+        Imagens
+      </Text>
+  
+      </TouchableOpacity>
+    </View>
+    );
+  }
+
+export const ButtonVideosHover = ({ onPress }) => {
+    return (
+      <View>
+      <TouchableOpacity
+      style={{
+        width: 134,
+        height: 45,
+        backgroundColor: '#E8E8E8',
+        borderRadius: SIZES.medium - 3,
+        borderColor: COLORS.DarkBlue,
+
+        padding: SIZES.small - 2,
+      }}
+      onPress={onPress}
+    >
+
+      <Text style={{ 
+        color: 'black',
+        fontSize: SIZES.font + 2,
+        textAlign: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+        Vídeos
+      </Text>
+  
+      </TouchableOpacity>
+      </View>
+    );
+  }
+
+
+
+
+
+
+
+
+
+
+
   export const ButtonCreateAccount = ({ onPress }) => {
   return (
     <View style={{ alignItems: 'center', justifyContent: 'center'}}>

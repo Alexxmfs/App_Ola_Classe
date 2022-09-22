@@ -99,7 +99,12 @@ import imgJava from '../assets/image/imgJava.png';
 import imgDart from '../assets/image/imgDart.png';
 import imgBackgroundCursoemVideo from '../assets/image/imgBackgroundCursoemVideo.png';
 import largeImgGuanabara from '../assets/image/largeImgGuanabara.png';
-
+import publicationVueJS from '../assets/image/publicationVueJS.png';
+import postGuanabara02 from '../assets/image/postGuanabara02.png';
+import postGuanabara03 from '../assets/image/postGuanabara03.png';
+import postGuanabara04 from '../assets/image/postGuanabara04.png';
+import postGuanabara05 from '../assets/image/postGuanabara05.png';
+import postGuanabara06 from '../assets/image/postGuanabara06.png';
 
 
 
@@ -138,5 +143,16 @@ imgJava,
 imgDart,
 imgBackgroundCursoemVideo,
 largeImgGuanabara,
+publicationVueJS,
+postGuanabara02,
+postGuanabara03,
+postGuanabara04,
+postGuanabara05,
+postGuanabara06,
+
+
+
+
+
 
 };

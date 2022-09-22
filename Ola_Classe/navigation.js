@@ -36,7 +36,7 @@ import CommentScreen from "./src/Screens/CommentScreen";
 import AccountSettingsScreen from "./src/Screens/Settings/AccountSettingsScreen";
 import DeleteAccountScreen from "./src/Screens/Settings/DeleteAccountScreen";
 
-import profileCursoemVideo from "./src/Screens/Profiles/profileCursoemVideo";
+import profileCursoemVideo from "./src/Screens/Profiles/Curso_Em_Video/profileCursoemVideo";
 
 
 
