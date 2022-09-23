@@ -69,7 +69,7 @@ const profileCursoemVideo = ({ navigation }) => {
       </View>
 
       <View>
-        <TouchableOpacity onPress={() => navigation.navigate("#")}>
+        <TouchableOpacity onPress={() => navigation.navigate("feedPostGuanabara")}>
           <Image
             source={assets.publicationVueJS}
             style={{ marginTop: 10, marginLeft: 25 }}

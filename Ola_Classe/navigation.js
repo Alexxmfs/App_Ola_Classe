@@ -37,6 +37,7 @@ import AccountSettingsScreen from "./src/Screens/Settings/AccountSettingsScreen"
 import DeleteAccountScreen from "./src/Screens/Settings/DeleteAccountScreen";
 
 import profileCursoemVideo from "./src/Screens/Profiles/Curso_Em_Video/profileCursoemVideo";
+import feedPostGuanabara from "./src/Screens/Profiles/Curso_Em_Video/feedPostGuanabara";
 
 
 
@@ -87,6 +88,7 @@ export const SignedInStack = () => {
         <Stack.Screen name="AccountSettingsMenu" component={AccountSettingsScreen} />
         <Stack.Screen name="DeleteAccountScreen" component={DeleteAccountScreen} />
         <Stack.Screen name="profileCursoemVideo" component={profileCursoemVideo} />
+        <Stack.Screen name="feedPostGuanabara" component={feedPostGuanabara} />
 
       </Stack.Navigator>
     </NavigationContainer>
