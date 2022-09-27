@@ -614,6 +614,82 @@ export const DeleteButton = ({ onPress }) => {
   );  
 } 
 
+export class ButtonExcluirAmigo extends Component {
+  state = {
+    textValue: 'Excluir'
+  }
+
+  onPress = () => {
+    this.setState({
+      textValue: 'Excluido❌',
+    })
+  }
+
+  render() {
+    return (
+      <View style={{ marginLeft: 25, marginTop: 55 }}>
+
+        <TouchableOpacity onPress={this.onPress}
+         style={{
+          width: 100,
+          padding: 10,
+          borderRadius: 10,
+          backgroundColor: "#D9D9D9",
+          alignItems: "center",
+          justifyContent: "center",
+              }}>
+
+        <Text style={{
+            fontSize: 14,
+            fontWeight: '400'
+          }}>
+            {this.state.textValue}
+        </Text>
+
+        </TouchableOpacity>
+      </View>
+    )
+  }
+}
+
+export class ButtonAdicionar extends Component {
+  state = {
+    textValue: 'Adicionar'
+  }
+
+  onPress = () => {
+    this.setState({
+      textValue: 'Amigos✅',
+    })
+  }
+
+  render() {
+    return (
+      <View style={{ marginLeft: -220, marginTop: 55 }}>
+
+        <TouchableOpacity onPress={this.onPress}
+         style={{
+          width: 100,
+          padding: 10,
+          borderRadius: 10,
+          backgroundColor: "#ACD3FC",
+          alignItems: "center",
+          justifyContent: "center",
+              }}>
+
+        <Text style={{
+            fontSize: 14,
+            fontWeight: '400'
+          }}>
+            {this.state.textValue}
+        </Text>
+
+        </TouchableOpacity>
+      </View>
+    )
+  }
+}
+
 export class ButtonSeguir extends Component {
   state = {
     textValue: 'Seguir'

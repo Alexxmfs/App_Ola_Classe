@@ -107,6 +107,7 @@ import postGuanabara04 from '../assets/image/postGuanabara04.png';
 import postGuanabaraLarge04 from '../assets/image/postGuanabaraLarge04.png';
 import postGuanabara05 from '../assets/image/postGuanabara05.png';
 import postGuanabara06 from '../assets/image/postGuanabara06.png';
+import imgJohnBarros from '../assets/image/imgJohnBarros.png';
 
 
 
@@ -154,7 +155,7 @@ postGuanabara06,
 postGuanabaraLarge02,
 postGuanabaraLarge03,
 postGuanabaraLarge04,
-
+imgJohnBarros,
 
 
 
