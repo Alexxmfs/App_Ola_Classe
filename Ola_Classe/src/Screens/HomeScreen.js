@@ -277,8 +277,9 @@ const HomeScreen = ({navigation}) => {
           </View>
             
                   
-                    <Text>ignora</Text>
-                    <Text>ignora</Text>
+                    <Text></Text>
+                    <Text></Text>
+                    <Text></Text>
 
                   </ScrollView>
                 </View>
