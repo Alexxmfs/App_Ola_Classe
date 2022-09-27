@@ -195,7 +195,7 @@ const HomeScreen = ({navigation, item}) => {
                                         <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
                                                 <IconLike />
                                                 <IconWarning />
-                                                <IconSave />
+                                                {/* <IconSave /> */}
                                                 <IconComment />
                                                 </View>
                                       </View>
@@ -234,7 +234,7 @@ const HomeScreen = ({navigation, item}) => {
                                         <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
                                                 <IconLike />
                                                 <IconWarning />
-                                                <IconSave />
+                                                {/* <IconSave /> */}
                                                 <IconComment />
                                                 </View>
                                       </View>
@@ -273,7 +273,7 @@ const HomeScreen = ({navigation, item}) => {
                                         <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
                                                 <IconLike />
                                                 <IconWarning />
-                                                <IconSave />
+                                                {/* <IconSave /> */}
                                                 <IconComment />
                                                 </View>
                                       </View>
@@ -410,7 +410,7 @@ const HomeScreen = ({navigation, item}) => {
             <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
                     <IconLike />
                     <IconWarning />
-                    <IconSave />
+                    {/* <IconSave /> */}
                     <IconComment />
                     </View>
           </View>
@@ -439,7 +439,7 @@ const HomeScreen = ({navigation, item}) => {
             <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
                     <IconLike />
                     <IconWarning />
-                    <IconSave />
+                    {/* <IconSave /> */}
                     <IconComment />
                   </View>
               </View>
@@ -463,7 +463,7 @@ const HomeScreen = ({navigation, item}) => {
             <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
                     <IconLike />
                     <IconWarning />
-                    <IconSave />
+                    {/* <IconSave /> */}
                     <IconComment />
                   </View>
                   <View>

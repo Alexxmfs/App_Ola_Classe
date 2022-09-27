@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 export const IconLike = () => {
     const lottieRef = useRef(null);
     return(
-    <View style={{left: 35}}>
+    <View style={{left: 20}}>
         <TouchableOpacity
             onPress={() => {
                lottieRef.current.play()
@@ -53,7 +53,7 @@ export const IconDislike = () => {
 export const IconWarning = () => {
   const navigation = useNavigation();
   return(
-    <View style={{top: 25, left: 250}}>
+    <View style={{top: 25, left: 230}}>
         <TouchableOpacity 
           onPress={() => navigation.navigate("DenunciationScreen")}
         >
@@ -69,7 +69,7 @@ export const IconWarning = () => {
   
 export const IconSave = () => {
     return(
-    <View style={{top: 23, left: 185}}>
+    <View style={{}}>
         <TouchableOpacity>
           <Image  
             style={{ width: 25, height: 25 }}
@@ -83,7 +83,7 @@ export const IconSave = () => {
 export const IconComment = () => {
   const navigation = useNavigation();
     return(
-    <View style={{top: 23, left: 118}}>
+    <View style={{top: 23, left: 165}}>
         <TouchableOpacity
         onPress={() => navigation.navigate("CommentScreen")}
         >
@@ -96,5 +96,19 @@ export const IconComment = () => {
     );
   }
   
+// export const IconSave = () => {
+//     return(
+//     <View style={{top: 23, left: 185}}>
+//         <TouchableOpacity>
+//           <Image  
+//             style={{ width: 25, height: 25 }}
+//             source={assets.IconSave}
+//           />
+//         </TouchableOpacity>
+//       </View>
+//     );
+//   }
+  
+
 
   
