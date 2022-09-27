@@ -250,221 +250,188 @@ const Menu = () => {
   const [data, setData] = useState([]);
 
   const getUsers = () => {
-    db.collection("users")
-      .get()
-      .then((querySnapshot) => {
-        let d = [];
-        querySnapshot.forEach((doc) => {
-          console.log(doc.owner_uid, "=>", doc.data());
-          const user = {
-            owner_uid: doc.owner_uid,
-            username: doc.data().username,
-            email: doc.data().email,
-          };
-          d.push(user);
-        });
-        // console.log(d);
-        setData(d);
-      })
-      .catch(() => {
-        console.log("erroooooooooooooo!!!");
+    db.collection('users')
+    .get()
+    .then((querySnapshot) => {
+      let d = [];
+      querySnapshot.forEach((doc) => {
+        console.log(doc.owner_uid, '=>', doc.data());
+        const user = {
+          owner_uid: doc.owner_uid,
+          username: doc.data().username,
+          email: doc.data().email,
+        };
+        d.push(user);
       });
+      // console.log(d);
+      setData(d);
+    })
+    .catch(() => {
+      console.log('erroooooooooooooo!!!')
+    });
+
   };
 
   useEffect(() => {
-    getUsers();
-  }, []);
+    getUsers()
+}, [])
+
+
 
   return (
-    <View style={{ top: -50 }}>
-      <TouchableOpacity onPress={() => navigation.navigate("FriendsMenu")}>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            paddingVertical: 3,
-            paddingLeft: 13,
-            paddingRight: 35,
-            borderRadius: 8,
-            marginTop: -42,
-          }}
-        >
-          <Image
-            source={assets.iconFriends}
-            style={{
-              width: 35,
-              height: 35,
-            }}
-          ></Image>
-
-          <Text
-            style={{
-              fontSize: 17,
-              fontWeight: "bold",
-              paddingLeft: 15,
-            }}
-          >
-            Amigos
-          </Text>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate("CategoryMenu")}>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            paddingVertical: 8,
-            paddingLeft: 13,
-            paddingRight: 35,
-            borderRadius: 8,
-            marginTop: 15,
-          }}
-        >
-          <Image
-            source={assets.iconCategory}
-            style={{
-              width: 35,
-              height: 35,
-            }}
-          ></Image>
-
-          <Text
-            style={{
-              fontSize: 17,
-              fontWeight: "bold",
-              paddingLeft: 15,
-            }}
-          >
-            Categoria
-          </Text>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate("SavedItemsMenu")}>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            paddingVertical: 8,
-            paddingLeft: 13,
-            paddingRight: 35,
-            borderRadius: 8,
-            marginTop: 15,
-          }}
-        >
-          <Image
-            source={assets.iconSaved}
-            style={{
-              width: 35,
-              height: 35,
-            }}
-          ></Image>
-
-          <Text
-            style={{
-              fontSize: 17,
-              fontWeight: "bold",
-              paddingLeft: 15,
-            }}
-          >
-            Itens Salvos
-          </Text>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate("TermsUseMenu")}>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            paddingVertical: 8,
-            paddingLeft: 13,
-            paddingRight: 35,
-            borderRadius: 8,
-            marginTop: 15,
-          }}
-        >
-          <Image
-            source={assets.iconTermsUse}
-            style={{
-              width: 35,
-              height: 35,
-            }}
-          ></Image>
-
-          <Text
-            style={{
-              fontSize: 17,
-              fontWeight: "bold",
-              paddingLeft: 15,
-            }}
-          >
-            Termos de Uso
-          </Text>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        onPress={() => navigation.navigate("AccountSettingsMenu")}
-      >
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            paddingVertical: 8,
-            paddingLeft: 13,
-            paddingRight: 35,
-            borderRadius: 8,
-            marginTop: 15,
-          }}
-        >
-          <Image
-            source={assets.iconConfig}
-            style={{
-              width: 35,
-              height: 35,
-            }}
-          ></Image>
-
-          <Text
-            style={{
-              fontSize: 17,
-              fontWeight: "bold",
-              paddingLeft: 15,
-            }}
-          >
-            Configuração
-          </Text>
-        </View>
-      </TouchableOpacity>
-
-      <FlatList
-        data={data}
-        keyExtractor={(item) => item.username}
-        renderItem={({ item }) => {
-          return (
-            <View style={{ marginLeft: 80, marginTop: -190 }}>
-              <TouchableOpacity
-                onPress={() => navigation.navigate("UserProfileScreen")}
-              >
-                <Text
-                  style={{
-                    fontSize: 16,
-                    paddingVertical: 140,
-                    fontWeight: "600",
-                  }}
-                >
-                  {item.username}
-                </Text>
-              </TouchableOpacity>
-            </View>
-          );
-        }}
-      />
+    <View style={{top: -50}}>
+  <TouchableOpacity 
+  onPress={() => navigation.navigate("FriendsMenu")}
+  >
+    <View style={{
+      flexDirection: "row",
+      alignItems: 'center',
+      paddingVertical: 3,
+      paddingLeft: 13,
+      paddingRight: 35,
+      borderRadius: 8,
+      marginTop: -42
+    }}>
+      
+      <Image source={assets.iconFriends} style={{
+        width: 35, height: 35,
+      }}></Image>
+      
+      <Text style={{
+        fontSize: 17,
+        fontWeight: 'bold',
+        paddingLeft: 15,
+      }}>Amigos</Text>
+      
     </View>
-  );
-};
+    </TouchableOpacity>
+
+    <TouchableOpacity 
+    onPress={() => navigation.navigate("CategoryMenu")}
+    >
+    <View style={{
+      flexDirection: "row",
+      alignItems: 'center',
+      paddingVertical: 8,
+      paddingLeft: 13,
+      paddingRight: 35,
+      borderRadius: 8,
+      marginTop: 15
+    }}>
+      
+      <Image source={assets.iconCategory} style={{
+        width: 35, height: 35,
+      }}></Image>
+
+      <Text style={{
+        fontSize: 17,
+        fontWeight: 'bold',
+        paddingLeft: 15,
+      }}>Categoria</Text>
+    </View>
+    </TouchableOpacity>
+
+    {/* <TouchableOpacity 
+    onPress={() => navigation.navigate("SavedItemsMenu")}
+    >
+    <View style={{
+      flexDirection: "row",
+      alignItems: 'center',
+      paddingVertical: 8,
+      paddingLeft: 13,
+      paddingRight: 35,
+      borderRadius: 8,
+      marginTop: 15
+    }}>
+      
+      <Image source={assets.iconSaved} style={{
+        width: 35, height: 35,
+      }}></Image>
+
+      <Text style={{
+        fontSize: 17,
+        fontWeight: 'bold',
+        paddingLeft: 15,
+      }}>Itens Salvos</Text>
+    </View>
+    </TouchableOpacity> */}
+
+    <TouchableOpacity 
+    onPress={() => navigation.navigate("TermsUseMenu")}
+    >
+    <View style={{
+      flexDirection: "row",
+      alignItems: 'center',
+      paddingVertical: 8,
+      paddingLeft: 13,
+      paddingRight: 35,
+      borderRadius: 8,
+      marginTop: 15
+    }}>
+      
+      <Image source={assets.iconTermsUse} style={{
+        width: 35, height: 35,
+      }}></Image>
+
+      <Text style={{
+        fontSize: 17,
+        fontWeight: 'bold',
+        paddingLeft: 15,
+      }}>Termos de Uso</Text>
+    </View>
+    </TouchableOpacity>
+
+    <TouchableOpacity 
+    onPress={() => navigation.navigate("AccountSettingsMenu")}
+    >
+    <View style={{
+      flexDirection: "row",
+      alignItems: 'center',
+      paddingVertical: 8,
+      paddingLeft: 13,
+      paddingRight: 35,
+      borderRadius: 8,
+      marginTop: 15
+    }}>
+      
+      <Image source={assets.iconConfig} style={{
+        width: 35, height: 35,
+      }}></Image>
+
+      <Text style={{
+        fontSize: 17,
+        fontWeight: 'bold',
+        paddingLeft: 15,
+      }}>Configuração</Text>
+    </View>
+    </TouchableOpacity>
+
+    <FlatList 
+            data={data}
+            keyExtractor={(item) => item.username}
+            renderItem={({item}) =>{
+              return (
+                <View style={{marginLeft: 80, marginTop: -158}}>
+                  <TouchableOpacity
+                    onPress={() => navigation.navigate("UserProfileScreen")}
+                  >
+                     <Text
+                      style={{
+                        fontSize: 16,
+                        paddingVertical: 140,
+                         fontWeight: '600'
+                         }}>
+                          {item.username}
+                      </Text>
+                  </TouchableOpacity>
+
+                </View>
+              )
+            }}
+            />
+  </View>
+);
+}
 
 const styles = StyleSheet.create({
   container: {

@@ -287,7 +287,7 @@ const Menu = () => {
     </View>
     </TouchableOpacity>
 
-    <TouchableOpacity 
+    {/* <TouchableOpacity 
     onPress={() => navigation.navigate("SavedItemsMenu")}
     >
     <View style={{
@@ -310,7 +310,7 @@ const Menu = () => {
         paddingLeft: 15,
       }}>Itens Salvos</Text>
     </View>
-    </TouchableOpacity>
+    </TouchableOpacity> */}
 
     <TouchableOpacity 
     onPress={() => navigation.navigate("TermsUseMenu")}
@@ -367,7 +367,7 @@ const Menu = () => {
             keyExtractor={(item) => item.username}
             renderItem={({item}) =>{
               return (
-                <View style={{marginLeft: 80, marginTop: -190}}>
+                <View style={{marginLeft: 80, marginTop: -158}}>
                   <TouchableOpacity
                     onPress={() => navigation.navigate("UserProfileScreen")}
                   >
