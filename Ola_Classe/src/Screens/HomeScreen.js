@@ -182,13 +182,16 @@ const HomeScreen = ({navigation}) => {
     <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
         <View style={[styles.card, styles.elevation, styles.center]}>
           <View style={styles.center}>
-            <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 5, marginRight: 130}}>
-              <Image 
-              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
-              source={assets.ImgCursoEmVideo}
-              />
-               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
-               </View>
+              <TouchableOpacity onPress={() => navigation.navigate("profileCursoemVideo")}>
+                <View style={{flexDirection: 'row', paddingBottom: 2, paddingTop: 5, marginRight: 140}}>
+            
+                      <Image 
+                          style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+                          source={assets.ImgCursoEmVideo}
+                        />
+                      <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
+                  </View>
+                </TouchableOpacity>
 
                <TouchableOpacity
                     onPress={() => navigation.navigate("OpenVideoGuanabara")}
