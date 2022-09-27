@@ -97,6 +97,7 @@ import imageDenunciation from "../assets/image/imageDenunciation.png";
 import imgJava from '../assets/image/imgJava.png';
 import imgDart from '../assets/image/imgDart.png';
 import imgBackgroundCursoemVideo from '../assets/image/imgBackgroundCursoemVideo.png';
+import backgroundAsh from '../assets/image/backgroundAsh.png';
 import largeImgGuanabara from '../assets/image/largeImgGuanabara.png';
 import publicationVueJS from '../assets/image/publicationVueJS.png';
 import postGuanabara02 from '../assets/image/postGuanabara02.png';
@@ -108,6 +109,13 @@ import postGuanabaraLarge04 from '../assets/image/postGuanabaraLarge04.png';
 import postGuanabara05 from '../assets/image/postGuanabara05.png';
 import postGuanabara06 from '../assets/image/postGuanabara06.png';
 import imgJohnBarros from '../assets/image/imgJohnBarros.png';
+
+import postAsh01 from '../assets/image/postAsh01.png';
+import postAsh02 from '../assets/image/postAsh02.png';
+import postAsh03 from '../assets/image/postAsh03.png';
+import largePostAsh01 from '../assets/image/largePostAsh01.png';
+import largePostAsh02 from '../assets/image/largePostAsh02.png';
+import largePostAsh03 from '../assets/image/largePostAsh03.png';
 
 
 
@@ -156,8 +164,12 @@ postGuanabaraLarge02,
 postGuanabaraLarge03,
 postGuanabaraLarge04,
 imgJohnBarros,
-
-
-
+backgroundAsh,
+postAsh01,
+postAsh02,
+postAsh03,
+largePostAsh01,
+largePostAsh02,
+largePostAsh03,
 
 };

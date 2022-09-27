@@ -16,7 +16,7 @@ import {
   IconComment,
 } from "../../../components/IconsCard";
 
-const feedPostGuanabara = ({ navigation }) => {
+const feedPostAsh = ({ navigation }) => {
   return (
     <View>
       <ScrollView>
@@ -45,7 +45,7 @@ const feedPostGuanabara = ({ navigation }) => {
                 style={{
                   flexDirection: "row",
                   paddingBottom: 8,
-                  marginRight: 145,
+                  marginRight: 220,
                 }}
               >
                 <Image
@@ -55,16 +55,16 @@ const feedPostGuanabara = ({ navigation }) => {
                     marginRight: 235,
                     marginTop: -8,
                   }}
-                  source={assets.ImgCursoEmVideo}
+                  source={assets.imgAsh}
                 />
                 <Text
                   style={{ marginLeft: -225, fontWeight: "600", fontSize: 16 }}
                 >
-                  Curso em Video
+                  Ash
                 </Text>
               </View>
               <Image
-                source={assets.publicationVueJS}
+                source={assets.largePostAsh01}
                 style={{ width: 300, height: 175, borderRadius: 10 }}
               />
             </View>
@@ -92,7 +92,7 @@ const feedPostGuanabara = ({ navigation }) => {
                 style={{
                   flexDirection: "row",
                   paddingBottom: 8,
-                  marginRight: 145,
+                  marginRight: 210,
                 }}
               >
                 <Image
@@ -102,16 +102,16 @@ const feedPostGuanabara = ({ navigation }) => {
                     marginRight: 235,
                     marginTop: -8,
                   }}
-                  source={assets.ImgCursoEmVideo}
+                  source={assets.imgAsh}
                 />
                 <Text
                   style={{ marginLeft: -225, fontWeight: "600", fontSize: 16 }}
                 >
-                  Curso em Video
+                  Ash
                 </Text>
               </View>
               <Image
-                source={assets.postGuanabaraLarge02}
+                source={assets.largePostAsh02}
                 style={{ width: 300, height: 175, borderRadius: 10 }}
               />
             </View>
@@ -139,7 +139,7 @@ const feedPostGuanabara = ({ navigation }) => {
                 style={{
                   flexDirection: "row",
                   paddingBottom: 8,
-                  marginRight: 145,
+                  marginRight: 210,
                 }}
               >
                 <Image
@@ -149,16 +149,16 @@ const feedPostGuanabara = ({ navigation }) => {
                     marginRight: 235,
                     marginTop: -8,
                   }}
-                  source={assets.ImgCursoEmVideo}
+                  source={assets.imgAsh}
                 />
                 <Text
                   style={{ marginLeft: -225, fontWeight: "600", fontSize: 16 }}
                 >
-                  Curso em Video
+                 Ash
                 </Text>
               </View>
               <Image
-                source={assets.postGuanabaraLarge03}
+                source={assets.largePostAsh03}
                 style={{ width: 300, height: 175, borderRadius: 10 }}
               />
             </View>
@@ -173,52 +173,6 @@ const feedPostGuanabara = ({ navigation }) => {
           </View>
         </View>
 
-        <View
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: 20,
-          }}
-        >
-          <View style={[styles.card, styles.elevation, styles.center]}>
-            <View style={styles.center}>
-              <View
-                style={{
-                  flexDirection: "row",
-                  paddingBottom: 8,
-                  marginRight: 145,
-                }}
-              >
-                <Image
-                  style={{
-                    width: 40,
-                    height: 40,
-                    marginRight: 235,
-                    marginTop: -8,
-                  }}
-                  source={assets.ImgCursoEmVideo}
-                />
-                <Text
-                  style={{ marginLeft: -225, fontWeight: "600", fontSize: 16 }}
-                >
-                  Curso em Video
-                </Text>
-              </View>
-              <Image
-                source={assets.postGuanabaraLarge04}
-                style={{ width: 300, height: 175, borderRadius: 10 }}
-              />
-            </View>
-            <View
-              style={{ flexDirection: "row", marginRight: 240, marginTop: -49 }}
-            >
-              <IconLike />
-              <IconWarning />
-              {/* <IconSave /> */}
-              <IconComment />
-            </View>
-          </View>
-        </View>
       </ScrollView>
     </View>
   );
@@ -250,4 +204,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default feedPostGuanabara;
+export default feedPostAsh;

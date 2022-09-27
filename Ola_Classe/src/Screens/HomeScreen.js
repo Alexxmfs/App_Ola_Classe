@@ -157,18 +157,21 @@ const HomeScreen = ({navigation}) => {
     <View style={styles.center}>
         <View style={[styles.card, styles.elevation, styles.center]}>
           <View style={styles.center}>
-            <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 220}}>
-              <Image 
-              style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
-              source={assets.imgAsh}
-              />
-               <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Ash</Text>
-               </View>
+            <TouchableOpacity onPress={() => navigation.navigate("profileAsh")}>
+                <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 220}}>
+                  <Image 
+                  style={{width: 40, height: 40, marginRight: 235, marginTop: -8}}
+                  source={assets.imgAsh}
+                  />
+                  <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Ash</Text>
+                  </View>
+              </TouchableOpacity>
               <Image 
                 source={assets.postMeme}
                 style={{width: 300, height: 175, borderRadius: 10}}
                  />
-            </View>
+               </View>
+        
             <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
                     <IconLike />
                     <IconWarning />

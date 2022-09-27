@@ -39,6 +39,9 @@ import DeleteAccountScreen from "./src/Screens/Settings/DeleteAccountScreen";
 import profileCursoemVideo from "./src/Screens/Profiles/Curso_Em_Video/profileCursoemVideo";
 import feedPostGuanabara from "./src/Screens/Profiles/Curso_Em_Video/feedPostGuanabara";
 
+import profileAsh from "./src/Screens/Profiles/Ash/profileAsh";
+import feedPostAsh from "./src/Screens/Profiles/Ash/feedPostAsh";
+
 
 
 
@@ -89,6 +92,8 @@ export const SignedInStack = () => {
         <Stack.Screen name="DeleteAccountScreen" component={DeleteAccountScreen} />
         <Stack.Screen name="profileCursoemVideo" component={profileCursoemVideo} />
         <Stack.Screen name="feedPostGuanabara" component={feedPostGuanabara} />
+        <Stack.Screen name="profileAsh" component={profileAsh} />
+        <Stack.Screen name="feedPostAsh" component={feedPostAsh} />
 
       </Stack.Navigator>
     </NavigationContainer>
