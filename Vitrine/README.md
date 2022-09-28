@@ -3,4 +3,4 @@
 
 ## Introdução
 
-nstagram é uma rede social visual, criativa e interativa. Possibilita o compartilhamento de imagens e vídeos de curta duração diretamente do aplicativo de celular. Nele, também é possível seguir usuários, curtir, comentar e compartilhar as publicações.
+Olá Classe é uma rede social visual, criativa e interativa. Possibilita o compartilhamento de imagens e vídeos de curta duração diretamente do aplicativo de celular. Nele, também é possível seguir usuários, curtir, comentar e compartilhar as publicações.
