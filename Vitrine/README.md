@@ -3,4 +3,4 @@
 
 ## Introdução
 
-Ao criar a conta é possível escolher entre ensinar ou buscar por conhecimento em diversos assuntos.
+nstagram é uma rede social visual, criativa e interativa. Possibilita o compartilhamento de imagens e vídeos de curta duração diretamente do aplicativo de celular. Nele, também é possível seguir usuários, curtir, comentar e compartilhar as publicações.
