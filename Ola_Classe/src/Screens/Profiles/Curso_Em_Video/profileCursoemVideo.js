@@ -65,7 +65,7 @@ const profileCursoemVideo = ({ navigation }) => {
         }}
       >
         <ButtonImagens onPress={() => navigation.navigate("#")} />
-        <ButtonVideos onPress={() => navigation.navigate("#")} />
+        <ButtonVideos onPress={() => navigation.navigate("VideosCursoEmVideo")} />
       </View>
 
       <View>
