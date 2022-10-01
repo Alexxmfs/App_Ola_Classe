@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { COLORS, SIZES, assets, FONTS, SHADOWS } from '../../constants';
-import { CircleButton, ButtonImagens, ButtonVideos } from '../components/Button';
+import { CircleButton, ButtonImagens, ButtonVideos, ButtonVideosHover, ButtonImagensHover } from '../components/Button';
 import { View, TouchableOpacity, Text, StyleSheet, Image, FlatList, VirtualizedList, SafeAreaView } from "react-native";
 import { firebase, db } from '../../firebase';
 
@@ -9,7 +9,6 @@ import * as Permissions from "expo-permissions";
 import * as ImagePicker from "expo-image-picker";
 import Axios from "axios";
 
-import Post from './Post';
 
 import * as SQLite from "expo-sqlite";
 
@@ -209,63 +208,9 @@ export const UploadPost = () => {
     );
   }
 
-const UserProfileScreen = ({navigation}) => {
+const UserProfileVideo = ({navigation}) => {
   const [data, setData] = useState([]);
-  const database = SQLite.openDatabase("dados.database");
-  const [DATAIMAGE, setDATA] = useState([]);
   
-  useEffect(() => {
-    database.transaction((tx) => {
-      tx.executeSql(
-        "create table if not exists nomes2 (id integer " +
-          "primary key not null, nome text, sobrenome text, imagem blob);"
-      );
-      tx.executeSql("Select * from nomes2;", [], (_, { rows }) => {
-        console.log(JSON.stringify(rows));
-        setDATA(rows);
-        // console.log(JSON.stringify(DATAIMAGE._array[1].nome));
-      });
-    });
-  }, []);
-
-  const getItem = (data, index) => ({
-    nome: JSON.stringify(data._array[index].nome),
-    sobrenome: JSON.stringify(data._array[index].sobrenome),
-    imagem: JSON.stringify(data._array[index].imagem)
-      .replace('"', "")
-      .replace('"', ""),
-  });
-
-  const getItemCount = (data) => data.length;
-
-  const Item = ({ foto, nome, sobrenome }) => (
-    <View style={styles.item}>
-      <Image style={styles.imagem} source={{ uri: foto }} />
-      <Text style={styles.nome}>{nome}</Text>
-      <Text style={styles.nome}>{sobrenome}</Text>
-    </View>
-  );
-
-  const atualizarDados = () => {
-    database.transaction((tx) => {
-      tx.executeSql(
-        "select id, nome, sobrenome, imagem from nomes2",
-        [],
-        (_, { rows }) => {
-          console.log(JSON.stringify(rows));
-          console.log(
-            JSON.stringify(rows._array[0].imagem)
-              .replace('"', "")
-              .replace('"', "")
-          );
-          setDATA(rows);
-          //
-          // console.log(JSON.stringify(DATAIMAGE._array[0].nome));
-        }
-      );
-    });
-  };
-
     const getUsers = () => {
       db.collection('users')
       .get()
@@ -377,35 +322,16 @@ const UserProfileScreen = ({navigation}) => {
           </View>
 
           <View style={{alignItems: 'center', justifyContent: 'center', flexDirection: 'row', marginTop: -10}}>
-            <ButtonImagens />
-            <ButtonVideos onPress={() => navigation.navigate('UserProfileVideo')} />
+            <ButtonImagensHover onPress={() => navigation.navigate('UserProfileScreen')} />
+            <ButtonVideosHover onPress={() => navigation.navigate('UserProfileVideo')} />
           </View>
 
-              {/* Apagar futuramente */}
-                <View style={{marginLeft: 250, top: 29}}>
-                    <Image 
-                        source={assets.placeHolderMore02}
-                        style={{width: 95, height: 95, borderTopRightRadius: 30}}
-                    />
-                </View>
 
-                <View style={{marginLeft: 250, top: 40}}>
-                    <Image 
-                        source={assets.placeHolderMore03}
-                        style={{width: 95, height: 95}}
-                    />
-                </View>
-              {/* Apagar futuramente */}
-
-            {/* <View style={{alignItems: 'center', justifyContent: 'center'}}>
-              <UploadPost />
-            </View> */}
-            <View style={{ marginTop: -197, marginLeft: 10}}>
-                        <Post />
-
-
+            <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 100}}>
+                  <Text style={{color: 'gray', fontWeight: '600', fontSize: 17}}>
+                    Nenhuma publicação 
+                  </Text>
             </View>
-
 
         </>
         </SafeAreaView>
@@ -438,4 +364,4 @@ const styles = StyleSheet.create({
 
 
 
-export default UserProfileScreen
+export default UserProfileVideo

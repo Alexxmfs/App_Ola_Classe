@@ -116,6 +116,9 @@ import postAsh03 from '../assets/image/postAsh03.png';
 import largePostAsh01 from '../assets/image/largePostAsh01.png';
 import largePostAsh02 from '../assets/image/largePostAsh02.png';
 import largePostAsh03 from '../assets/image/largePostAsh03.png';
+import PlaceHolder01 from '../assets/image/PlaceHolder01.png';
+import placeHolderMore02 from '../assets/image/placeHolderMore02.png';
+import placeHolderMore03 from '../assets/image/placeHolderMore03.png';
 
 
 
@@ -171,5 +174,7 @@ postAsh03,
 largePostAsh01,
 largePostAsh02,
 largePostAsh03,
-
+PlaceHolder01,
+placeHolderMore02,
+placeHolderMore03,
 };

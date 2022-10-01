@@ -35,12 +35,19 @@ import DenunciationScreen from "./src/Screens/DenunciationScreen";
 import CommentScreen from "./src/Screens/CommentScreen";
 import AccountSettingsScreen from "./src/Screens/Settings/AccountSettingsScreen";
 import DeleteAccountScreen from "./src/Screens/Settings/DeleteAccountScreen";
+import UserProfileVideo from "./src/Screens/UserProfileVideo";
 
 import profileCursoemVideo from "./src/Screens/Profiles/Curso_Em_Video/profileCursoemVideo";
 import feedPostGuanabara from "./src/Screens/Profiles/Curso_Em_Video/feedPostGuanabara";
+import VideosCursoEmVideo from "./src/Screens/Profiles/Curso_Em_Video/VideosCursoEmVideo";
 
 import profileAsh from "./src/Screens/Profiles/Ash/profileAsh";
 import feedPostAsh from "./src/Screens/Profiles/Ash/feedPostAsh";
+import ProfileVideoAsh from "./src/Screens/Profiles/Ash/ProfileVideoAsh";
+
+
+import Post from "./src/Screens/Post";
+import PublicarPost from "./src/Screens/PublicarPost";
 
 
 
@@ -94,6 +101,11 @@ export const SignedInStack = () => {
         <Stack.Screen name="feedPostGuanabara" component={feedPostGuanabara} />
         <Stack.Screen name="profileAsh" component={profileAsh} />
         <Stack.Screen name="feedPostAsh" component={feedPostAsh} />
+        <Stack.Screen name="Post" component={Post} />
+        <Stack.Screen name="PublicarPost" component={PublicarPost} />
+        <Stack.Screen name="UserProfileVideo" component={UserProfileVideo} />
+        <Stack.Screen name="ProfileVideoAsh" component={ProfileVideoAsh} />
+        <Stack.Screen name="VideosCursoEmVideo" component={VideosCursoEmVideo} />
 
       </Stack.Navigator>
     </NavigationContainer>

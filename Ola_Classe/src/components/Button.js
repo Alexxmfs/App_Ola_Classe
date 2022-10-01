@@ -187,9 +187,10 @@ export const ButtonVideosHover = ({ onPress }) => {
       style={{
         width: 134,
         height: 45,
-        backgroundColor: '#E8E8E8',
+        borderWidth: 2,
+        borderColor: '#E8E8E8',
+        backgroundColor: '#FFF',
         borderRadius: SIZES.medium - 3,
-        borderColor: COLORS.DarkBlue,
 
         padding: SIZES.small - 2,
       }}
@@ -202,6 +203,7 @@ export const ButtonVideosHover = ({ onPress }) => {
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'center',
+        top: -1
       }}>
         Vídeos
       </Text>
