@@ -47,13 +47,13 @@ const OpenVideoGuanabara = ({navigation}) => {
 
             <View style={styles.containerIcons}>
                   <View style={{marginRight: 90, width: '100%'}}>
-                      <View style={{marginTop: 25}}>
+                      <View style={{marginTop: 25, marginLeft: 14}}>
                         <IconLike />
                       </View>
-                          <View style={{left: 85, marginTop: -62}}>
+                          <View style={{left: 87, marginTop: -62}}>
                             <IconDislike />
                           </View>
-                              <View style={{left: 40, top: -75}}>
+                              <View style={{left: -5, top: -76}}>
                                <IconComment />
                              </View>
                   </View>
