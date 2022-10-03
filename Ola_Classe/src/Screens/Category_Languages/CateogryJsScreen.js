@@ -100,7 +100,7 @@ const CategoryJsScreen = ({ navigation }) => {
             >
               <IconLike />
               <IconWarning />
-              <IconSave />
+              {/* <IconSave /> */}
               <IconComment />
             </View>
           </View>
@@ -171,7 +171,7 @@ const CategoryJsScreen = ({ navigation }) => {
             >
               <IconLike />
               <IconWarning />
-              <IconSave />
+              {/* <IconSave /> */}
               <IconComment />
             </View>
           </View>
@@ -242,7 +242,7 @@ const CategoryJsScreen = ({ navigation }) => {
             >
               <IconLike />
               <IconWarning />
-              <IconSave />
+              {/* <IconSave /> */}
               <IconComment />
             </View>
           </View>
