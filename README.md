@@ -25,7 +25,7 @@ cd Ola_Classe
 
 **Instalação de dependências**
 ```
-yarn install
+npm install
 ```
 
 **Exexutar Olá Classe**
