@@ -223,7 +223,7 @@ const HomeScreen = ({navigation}) => {
           </View>
           </View>
 
-    <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+    <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 18}}>
         <View style={[styles.card, styles.elevation, styles.center]}>
           <View style={styles.center}>
             <View style={{flexDirection: 'row', paddingBottom: 8, marginRight: 110}}>
@@ -242,11 +242,20 @@ const HomeScreen = ({navigation}) => {
                     style={{width: 300, height: 175, borderRadius: 10}}
                     />
                   </TouchableOpacity>  
+                  <View style={{paddingTop: 2}}>
+                       <Text
+                        style={{
+                          fontWeight: '700',
+                          fontSize: 16
+                        }}>
+                             Um dos conceitos mais importantes...
+                        </Text>
+                     </View>
             </View>
-            <View style={{flexDirection: 'row', marginRight: 240, marginTop: -49}}>
+            
+            <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
                     <IconLike />
                     <IconWarning />
-                    {/* <IconSave /> */}
                     <IconComment />
                   </View>
               </View>

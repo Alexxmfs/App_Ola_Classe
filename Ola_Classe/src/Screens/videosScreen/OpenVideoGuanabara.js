@@ -95,7 +95,6 @@ const OpenVideoGuanabara = ({navigation}) => {
             <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
                     <IconLike />
                     <IconWarning />
-                    <IconSave />
                     <IconComment />
                     </View>
           </View>
@@ -134,7 +133,6 @@ const OpenVideoGuanabara = ({navigation}) => {
             <View style={{flexDirection: 'row', paddingTop: 10, marginRight: 240, marginTop: -49}}>
                     <IconLike />
                     <IconWarning />
-                    <IconSave />
                     <IconComment />
                     </View>
           </View>

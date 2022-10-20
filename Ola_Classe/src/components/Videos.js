@@ -31,7 +31,7 @@ export const VideoDechamps = () => {
         style={styles.video}
         source={assets.DechampsVideo}
         useNativeControls
-        resizeMode="container"
+        resizeMode="cover"
         isLooping
         onPlaybackStatusUpdate={status => setStatus(() => status)}
       />
