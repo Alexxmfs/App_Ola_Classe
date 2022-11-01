@@ -14,6 +14,7 @@ import formik from "./formik.png";
 import AlunoProf from "./AlunoProf.png";
 import video from "./video.png";
 import telas from "./telas.png"
+import tailwindcss from "./tailwindcss.png"
 
 export default {
   homeHero,
@@ -32,5 +33,5 @@ export default {
   AlunoProf,
   video,
   telas,
-  
+  tailwindcss,
 };
