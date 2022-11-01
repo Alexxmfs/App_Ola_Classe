@@ -170,7 +170,7 @@ const HomeScreen = ({navigation, item}) => {
                                           style={{width: 40, height: 40, borderRadius: 50, marginRight: 235, marginTop: -8}}
                                           source={assets.imgCodigoFonte}
                                           />
-                                          <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Curso em Video</Text>
+                                          <Text style={{marginLeft: -225, fontWeight: '600', fontSize: 16}}>Código Fonte TV</Text>
                                           </View>
 
                                           <TouchableOpacity
@@ -181,13 +181,13 @@ const HomeScreen = ({navigation, item}) => {
                                                 style={{width: 300, height: 175, borderRadius: 10}}
                                                 />
                                               </TouchableOpacity>  
-                                                <View style={{paddingTop: 5}}>
+                                                <View style={{paddingTop: 5, marginLeft: -40}}>
                                                   <Text
                                                     style={{
                                                       fontWeight: '700',
                                                       fontSize: 16
                                                     }}>
-                                                        Curso Pyhton #01 - Seja Programador
+                                                        Suba sua Aplicação Node.js em...
                                                     </Text>
                                                 </View>
                                         </View>
@@ -265,7 +265,7 @@ const HomeScreen = ({navigation, item}) => {
                                                       fontWeight: '700',
                                                       fontSize: 16
                                                     }}>
-                                                        Curso Pyhton #01 - Seja Programador
+                                                        Curso JavaScript #01 - Seja Progra...
                                                     </Text>
                                                 </View>
                                         </View>
