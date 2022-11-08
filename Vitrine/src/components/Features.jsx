@@ -22,7 +22,8 @@ const Features = () => {
         <div className={styles.flexWrap}>
           <FeatureCard iconUrl={assets.react} iconText="React Native" />  
           <FeatureCard iconUrl={assets.javascript} iconText="JavaScript" />  
-          <FeatureCard iconUrl={assets.firebase} iconText="Firebase" />  
+          <a href="https://console.firebase.google.com/u/0/project/ola-classe-c6a2f/firestore/data/~2Fusers~2FXPNfjxyj4UpQl5PRUXgq" target="_blank">
+          <FeatureCard iconUrl={assets.firebase} iconText="Firebase" /></a>
           <FeatureCard iconUrl={assets.ReactNavigate} iconText="React Navigation" />  
           <FeatureCard iconUrl={assets.formik} iconText="Formik" />  
           <FeatureCard iconUrl={assets.expo02} iconText="Expo" />  
